@@ -62,6 +62,8 @@
 		CE3B99371815F631006DDA1D /* DynamicBehaviorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3B99361815F631006DDA1D /* DynamicBehaviorViewController.m */; };
 		CE3B993A1815F822006DDA1D /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3B99391815F822006DDA1D /* NavigationController.m */; };
 		CE3B993D1815FCA9006DDA1D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3B993C1815FCA9006DDA1D /* RootViewController.m */; };
+		CED3F227181E5163009050F5 /* TransitioningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED3F226181E5163009050F5 /* TransitioningViewController.m */; };
+		CED3F22B181E53D3009050F5 /* MMMAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = CED3F22A181E53D3009050F5 /* MMMAnimatedTransitioning.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +139,10 @@
 		CE3B99391815F822006DDA1D /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		CE3B993B1815FCA9006DDA1D /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		CE3B993C1815FCA9006DDA1D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		CED3F225181E5163009050F5 /* TransitioningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitioningViewController.h; sourceTree = "<group>"; };
+		CED3F226181E5163009050F5 /* TransitioningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitioningViewController.m; sourceTree = "<group>"; };
+		CED3F229181E53D3009050F5 /* MMMAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMAnimatedTransitioning.h; sourceTree = "<group>"; };
+		CED3F22A181E53D3009050F5 /* MMMAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMAnimatedTransitioning.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +203,7 @@
 		CE3B98BA1815F5A9006DDA1D /* IOS7Sampler */ = {
 			isa = PBXGroup;
 			children = (
+				CED3F228181E53A4009050F5 /* AnimatedTransitioning */,
 				CE3B99341815F60F006DDA1D /* ViewControllers */,
 				CE3B98C31815F5A9006DDA1D /* AppDelegate.h */,
 				CE3B98C41815F5A9006DDA1D /* AppDelegate.m */,
@@ -292,8 +299,19 @@
 				CE3B993C1815FCA9006DDA1D /* RootViewController.m */,
 				CE3B99351815F631006DDA1D /* DynamicBehaviorViewController.h */,
 				CE3B99361815F631006DDA1D /* DynamicBehaviorViewController.m */,
+				CED3F225181E5163009050F5 /* TransitioningViewController.h */,
+				CED3F226181E5163009050F5 /* TransitioningViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CED3F228181E53A4009050F5 /* AnimatedTransitioning */ = {
+			isa = PBXGroup;
+			children = (
+				CED3F229181E53D3009050F5 /* MMMAnimatedTransitioning.h */,
+				CED3F22A181E53D3009050F5 /* MMMAnimatedTransitioning.m */,
+			);
+			name = AnimatedTransitioning;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,6 +453,8 @@
 				CE3B993A1815F822006DDA1D /* NavigationController.m in Sources */,
 				CE3B98C11815F5A9006DDA1D /* main.m in Sources */,
 				CE3B99371815F631006DDA1D /* DynamicBehaviorViewController.m in Sources */,
+				CED3F22B181E53D3009050F5 /* MMMAnimatedTransitioning.m in Sources */,
+				CED3F227181E5163009050F5 /* TransitioningViewController.m in Sources */,
 				CE3B993D1815FCA9006DDA1D /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,6 +658,7 @@
 				CE3B98DF1815F5AA006DDA1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE3B98E01815F5AA006DDA1D /* Build configuration list for PBXNativeTarget "IOS7SamplerTests" */ = {
 			isa = XCConfigurationList;
@@ -646,6 +667,7 @@
 				CE3B98E21815F5AA006DDA1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

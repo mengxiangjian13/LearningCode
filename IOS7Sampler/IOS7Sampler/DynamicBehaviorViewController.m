@@ -33,6 +33,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
     [self.view addGestureRecognizer:tap];
     

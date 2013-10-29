@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "DynamicBehaviorViewController.h"
+#import "TransitioningViewController.h"
 
 @interface RootViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -17,6 +18,15 @@
 @end
 
 @implementation RootViewController
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // return navi delegate to nil because of transitioning view
+    // very important or cause crash
+    self.navigationController.delegate = nil;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,13 +40,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.title = @"catalogue";
+    
 	// Do any additional setup after loading the view.
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     tableView.delegate = self;
     tableView.dataSource = self;
     [self.view addSubview:tableView];
     
-    titleNameArray = [[NSArray alloc] initWithObjects:@"DynamicBehavior", nil];
+    titleNameArray = [[NSArray alloc] initWithObjects:@"DynamicBehavior",@"TransitioningView", nil];
 }
 
 
@@ -65,11 +78,19 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.row == 0) {
+    if (indexPath.row == 0)
+    {
         DynamicBehaviorViewController *dynamicVC = [[DynamicBehaviorViewController alloc] init];
         dynamicVC.title = [titleNameArray objectAtIndex:indexPath.row];
         [self.navigationController pushViewController:dynamicVC animated:YES];
     }
+    else if (indexPath.row == 1)
+    {
+        TransitioningViewController *transitionVC = [[TransitioningViewController alloc] init];
+        transitionVC.title = @"transitioning";
+        [self.navigationController pushViewController:transitionVC animated:YES];
+    }
+    
 }
 
 
