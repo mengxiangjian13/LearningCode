@@ -54,7 +54,8 @@
     itemBehaviour.elasticity = 0.6;
     [_animator addBehavior:itemBehaviour];
     
-    //在dynamic动态期间，设置与dynamic冲突的 transform 都是会被重写的。
+    //在dynamic动态期间，设置与dynamic冲突的 transform 都是会被重写的，就是说设置页没有用
+    
     
 }
 
