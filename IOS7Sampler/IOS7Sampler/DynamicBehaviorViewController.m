@@ -34,6 +34,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    UILabel *label = [[UILabel alloc] initWithFrame:self.view.bounds];
+    label.textColor = [UIColor blackColor];
+    label.font = [UIFont systemFontOfSize:100];
+    label.text = @"TAP!";
+    label.backgroundColor = [UIColor clearColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:label];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];

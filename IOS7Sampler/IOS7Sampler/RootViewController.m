@@ -15,6 +15,8 @@
     NSArray *titleNameArray;
 }
 
+@property (nonatomic, strong) UITableView *tableView;
+
 @end
 
 @implementation RootViewController
@@ -37,6 +39,11 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -44,12 +51,24 @@
     self.title = @"catalogue";
     
 	// Do any additional setup after loading the view.
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     tableView.delegate = self;
     tableView.dataSource = self;
     [self.view addSubview:tableView];
+    self.tableView = tableView;
     
     titleNameArray = [[NSArray alloc] initWithObjects:@"DynamicBehavior",@"TransitioningView", nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(textFontChanged)
+                                                 name:UIContentSizeCategoryDidChangeNotification object:nil];
+}
+
+- (void)textFontChanged
+{
+    if (self.tableView) {
+        [self.tableView reloadData];
+    }
 }
 
 
@@ -69,6 +88,7 @@
     }
     
     cell.textLabel.text = [titleNameArray objectAtIndex:indexPath.row];
+    cell.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     
     return cell;
 }
@@ -93,6 +113,10 @@
     
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"Dynamic Text Font In This Page";
+}
 
 - (void)didReceiveMemoryWarning
 {
