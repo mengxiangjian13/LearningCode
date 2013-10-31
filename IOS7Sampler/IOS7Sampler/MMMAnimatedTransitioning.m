@@ -38,6 +38,8 @@
                          outcomeViewController.view.alpha = 0.0;
                          incomeViewController.view.alpha = 1.0;
                      } completion:^(BOOL finished) {
+                         // get rid of outcomeView
+                         [outcomeViewController.view removeFromSuperview];
                          [transitionContext completeTransition:YES];
                      }];
 }
