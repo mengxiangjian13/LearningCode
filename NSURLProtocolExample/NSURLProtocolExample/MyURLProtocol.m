@@ -43,10 +43,37 @@
 
 - (void)startLoading
 {
-    NSMutableURLRequest *newRequest = [self.request mutableCopy];
-    [NSURLProtocol setProperty:[NSNumber numberWithBool:YES] forKey:@"MyURLProtocolHandledKey" inRequest:newRequest];
+    CachedURLResponse *cachedResponse = [self cachedResponseForCurrentRequest];
     
-    self.connection = [NSURLConnection connectionWithRequest:newRequest delegate:self];
+    if (cachedResponse)
+    {
+         NSLog(@"serving response from cache");
+        
+        //有缓存
+        NSData *data = cachedResponse.data;
+        NSString *mimeType = cachedResponse.mimeType;
+        NSString *encoding = cachedResponse.encoding;
+        
+        NSURLResponse *response = [[NSURLResponse alloc] initWithURL:self.request.URL
+                                                            MIMEType:mimeType
+                                               expectedContentLength:data.length
+                                                    textEncodingName:encoding];
+        
+        [self.client URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageNotAllowed];
+        [self.client URLProtocol:self didLoadData:data];
+        [self.client URLProtocolDidFinishLoading:self];
+    }
+    else
+    {
+        NSLog(@"serving response from NSURLConnection");
+        
+        NSMutableURLRequest *newRequest = [self.request mutableCopy];
+        [NSURLProtocol setProperty:[NSNumber numberWithBool:YES] forKey:@"MyURLProtocolHandledKey" inRequest:newRequest];
+        
+        self.connection = [NSURLConnection connectionWithRequest:newRequest delegate:self];
+    }
+    
+    
 }
 
 - (void)stopLoading
@@ -101,6 +128,32 @@
     {
         NSLog(@"could not cache the response");
     }
+    
+}
+
+- (CachedURLResponse *)cachedResponseForCurrentRequest
+{
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [delegate managedObjectContext];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *description = [NSEntityDescription entityForName:@"CachedURLResponse"
+                                                   inManagedObjectContext:context];
+    [fetchRequest setEntity:description];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"url == %@",self.request.URL.absoluteString];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSArray *result = [context executeFetchRequest:fetchRequest
+                                             error:&error];
+    
+    if (result && [result count] > 0)
+    {
+        return result[0];
+    }
+    
+    return nil;
     
 }
 

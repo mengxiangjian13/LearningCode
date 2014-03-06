@@ -20,12 +20,6 @@
     // Override point for customization after application launch.
     [NSURLProtocol registerClass:[MyURLProtocol class]];
     
-    
-    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    NSURLConnection *connect = [NSURLConnection connectionWithRequest:request delegate:self];
-    [connect start];
-    
     return YES;
 }
 							
