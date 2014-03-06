@@ -11,9 +11,10 @@
 
 @implementation CachedURLResponse
 
-@dynamic timestamp;
 @dynamic encoding;
 @dynamic mimeType;
+@dynamic timestamp;
 @dynamic url;
+@dynamic data;
 
 @end

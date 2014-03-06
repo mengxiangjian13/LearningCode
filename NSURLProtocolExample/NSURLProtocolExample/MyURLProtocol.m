@@ -87,8 +87,21 @@
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     
-    CachedURLResponse *cachedResponse = [NSEntityDescription insertNewObjectForEntityForName:@"CachedResponse"
+    CachedURLResponse *cachedResponse = [NSEntityDescription insertNewObjectForEntityForName:@"CachedURLResponse"
                                                                       inManagedObjectContext:context];
+    cachedResponse.data = self.mutableData;
+    cachedResponse.url = self.request.URL.absoluteString;
+    cachedResponse.timestamp = [NSDate date];
+    cachedResponse.mimeType = self.response.MIMEType;
+    cachedResponse.encoding = self.response.textEncodingName;
+    
+    NSError *error = nil;
+    BOOL const success = [context save:&error];
+    if (!success)
+    {
+        NSLog(@"could not cache the response");
+    }
+    
 }
 
 @end

@@ -25,7 +25,7 @@
 		708DB48E185EA9CA00129526 /* NSURLProtocolExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 708DB48D185EA9CA00129526 /* NSURLProtocolExampleTests.m */; };
 		708DB499185EA9FE00129526 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 708DB498185EA9FE00129526 /* BrowserViewController.m */; };
 		CEA2B8D418C6C9F900DE8A89 /* MyURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2B8D318C6C9F900DE8A89 /* MyURLProtocol.m */; };
-		CEA2B91B18C7137B00DE8A89 /* CachedURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2B91A18C7137B00DE8A89 /* CachedURLResponse.m */; };
+		CEA2B97318C7246400DE8A89 /* CachedURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2B97218C7246400DE8A89 /* CachedURLResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +62,8 @@
 		708DB498185EA9FE00129526 /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
 		CEA2B8D218C6C9F900DE8A89 /* MyURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyURLProtocol.h; sourceTree = "<group>"; };
 		CEA2B8D318C6C9F900DE8A89 /* MyURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyURLProtocol.m; sourceTree = "<group>"; };
-		CEA2B91918C7137B00DE8A89 /* CachedURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachedURLResponse.h; sourceTree = "<group>"; };
-		CEA2B91A18C7137B00DE8A89 /* CachedURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachedURLResponse.m; sourceTree = "<group>"; };
+		CEA2B97118C7246400DE8A89 /* CachedURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachedURLResponse.h; sourceTree = "<group>"; };
+		CEA2B97218C7246400DE8A89 /* CachedURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachedURLResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,10 +133,10 @@
 				708DB46D185EA9CA00129526 /* Main.storyboard */,
 				708DB479185EA9CA00129526 /* Images.xcassets */,
 				708DB470185EA9CA00129526 /* NSURLProtocolExample.xcdatamodeld */,
-				CEA2B91918C7137B00DE8A89 /* CachedURLResponse.h */,
-				CEA2B91A18C7137B00DE8A89 /* CachedURLResponse.m */,
 				CEA2B8D218C6C9F900DE8A89 /* MyURLProtocol.h */,
 				CEA2B8D318C6C9F900DE8A89 /* MyURLProtocol.m */,
+				CEA2B97118C7246400DE8A89 /* CachedURLResponse.h */,
+				CEA2B97218C7246400DE8A89 /* CachedURLResponse.m */,
 				708DB462185EA9CA00129526 /* Supporting Files */,
 			);
 			path = NSURLProtocolExample;
@@ -270,7 +270,7 @@
 			files = (
 				CEA2B8D418C6C9F900DE8A89 /* MyURLProtocol.m in Sources */,
 				708DB46C185EA9CA00129526 /* AppDelegate.m in Sources */,
-				CEA2B91B18C7137B00DE8A89 /* CachedURLResponse.m in Sources */,
+				CEA2B97318C7246400DE8A89 /* CachedURLResponse.m in Sources */,
 				708DB499185EA9FE00129526 /* BrowserViewController.m in Sources */,
 				708DB468185EA9CA00129526 /* main.m in Sources */,
 				708DB472185EA9CA00129526 /* NSURLProtocolExample.xcdatamodeld in Sources */,
