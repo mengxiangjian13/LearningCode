@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE68509E18EB0A1A002FB421 /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE68509D18EB0A1A002FB421 /* ServerViewController.m */; };
+		CE6850A118EB0A25002FB421 /* ClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6850A018EB0A25002FB421 /* ClientViewController.m */; };
 		CED3FBDE18EACB8C00B6CDB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED3FBDD18EACB8C00B6CDB6 /* Foundation.framework */; };
 		CED3FBE018EACB8C00B6CDB6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED3FBDF18EACB8C00B6CDB6 /* CoreGraphics.framework */; };
 		CED3FBE218EACB8C00B6CDB6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED3FBE118EACB8C00B6CDB6 /* UIKit.framework */; };
@@ -33,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE68509C18EB0A1A002FB421 /* ServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerViewController.h; sourceTree = "<group>"; };
+		CE68509D18EB0A1A002FB421 /* ServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerViewController.m; sourceTree = "<group>"; };
+		CE68509F18EB0A25002FB421 /* ClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientViewController.h; sourceTree = "<group>"; };
+		CE6850A018EB0A25002FB421 /* ClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientViewController.m; sourceTree = "<group>"; };
 		CED3FBDA18EACB8C00B6CDB6 /* CocoaAsyncSocketTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaAsyncSocketTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED3FBDD18EACB8C00B6CDB6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CED3FBDF18EACB8C00B6CDB6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -116,6 +122,10 @@
 				CED3FBED18EACB8C00B6CDB6 /* AppDelegate.m */,
 				CED3FBEF18EACB8C00B6CDB6 /* Images.xcassets */,
 				CED3FBE418EACB8C00B6CDB6 /* Supporting Files */,
+				CE68509C18EB0A1A002FB421 /* ServerViewController.h */,
+				CE68509D18EB0A1A002FB421 /* ServerViewController.m */,
+				CE68509F18EB0A25002FB421 /* ClientViewController.h */,
+				CE6850A018EB0A25002FB421 /* ClientViewController.m */,
 			);
 			path = CocoaAsyncSocketTest;
 			sourceTree = "<group>";
@@ -247,6 +257,8 @@
 				CED3FC0E18EACBC700B6CDB6 /* GCDAsyncSocket.m in Sources */,
 				CED3FBEE18EACB8C00B6CDB6 /* AppDelegate.m in Sources */,
 				CED3FBEA18EACB8C00B6CDB6 /* main.m in Sources */,
+				CE68509E18EB0A1A002FB421 /* ServerViewController.m in Sources */,
+				CE6850A118EB0A25002FB421 /* ClientViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +378,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaAsyncSocketTest/CocoaAsyncSocketTest-Prefix.pch";
 				INFOPLIST_FILE = "CocoaAsyncSocketTest/CocoaAsyncSocketTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -379,6 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaAsyncSocketTest/CocoaAsyncSocketTest-Prefix.pch";
 				INFOPLIST_FILE = "CocoaAsyncSocketTest/CocoaAsyncSocketTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -400,6 +414,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "CocoaAsyncSocketTestTests/CocoaAsyncSocketTestTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -418,6 +433,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaAsyncSocketTest/CocoaAsyncSocketTest-Prefix.pch";
 				INFOPLIST_FILE = "CocoaAsyncSocketTestTests/CocoaAsyncSocketTestTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -443,6 +459,7 @@
 				CED3FC0818EACB8C00B6CDB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CED3FC0918EACB8C00B6CDB6 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocketTestTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +468,7 @@
 				CED3FC0B18EACB8C00B6CDB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

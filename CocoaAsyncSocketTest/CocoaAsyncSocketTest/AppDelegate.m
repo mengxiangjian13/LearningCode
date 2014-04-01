@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ServerViewController.h"
+#import "ClientViewController.h"
 
 @implementation AppDelegate
 
@@ -14,6 +16,16 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    ServerViewController *server = [[ServerViewController alloc] init];
+    server.title = @"server";
+    ClientViewController *client = [[ClientViewController alloc] init];
+    client.title = @"client";
+    
+    UITabBarController *tabVC = [[UITabBarController alloc] init];
+    tabVC.viewControllers = @[server,client];
+    self.window.rootViewController = tabVC;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
