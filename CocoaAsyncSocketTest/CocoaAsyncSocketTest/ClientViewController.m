@@ -33,6 +33,11 @@
     [sockt readDataWithTimeout:-1 tag:1];
 }
 
+- (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port
+{
+    NSLog(@"didConnectToHost:%@,port:%d",host,port);
+}
+
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
     if (tag == 1)
