@@ -11,13 +11,34 @@
 
 #include <iostream>
 
-class MyClass {
-public:
-    int x;
-    int y;
+namespace MyNamespace {
+    class MyClass {
+    public:
+        int x;
+        int y;
+        
+    public:
+        void foo(int &x);
     
-public:
-    void foo(int &x);
-};
+    private:
+        void another();
+    };
+}
+
+namespace YourNamespace {
+    class MyClass {
+    public:
+        int x;
+        int y;
+        
+    public:
+        void foo(int &x);
+        
+    private:
+        void another();
+    };
+}
+
+
 
 #endif /* defined(__CPPLearning__MyClass__) */

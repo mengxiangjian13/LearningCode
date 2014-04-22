@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2F466E190682DC00EAEBFB /* MySubClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2F466C190682DC00EAEBFB /* MySubClass.cpp */; };
 		CE45817518FF95C200DFF084 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE45817418FF95C200DFF084 /* main.cpp */; };
 		CE45817718FF95C200DFF084 /* CPPLearning.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE45817618FF95C200DFF084 /* CPPLearning.1 */; };
 		CE45817F18FF95DA00DFF084 /* MyClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE45817D18FF95DA00DFF084 /* MyClass.cpp */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE2F466C190682DC00EAEBFB /* MySubClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MySubClass.cpp; sourceTree = "<group>"; };
+		CE2F466D190682DC00EAEBFB /* MySubClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySubClass.h; sourceTree = "<group>"; };
 		CE45817118FF95C200DFF084 /* CPPLearning */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPPLearning; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE45817418FF95C200DFF084 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CE45817618FF95C200DFF084 /* CPPLearning.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = CPPLearning.1; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				CE45817618FF95C200DFF084 /* CPPLearning.1 */,
 				CE45817D18FF95DA00DFF084 /* MyClass.cpp */,
 				CE45817E18FF95DA00DFF084 /* MyClass.h */,
+				CE2F466C190682DC00EAEBFB /* MySubClass.cpp */,
+				CE2F466D190682DC00EAEBFB /* MySubClass.h */,
 			);
 			path = CPPLearning;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			files = (
 				CE45817F18FF95DA00DFF084 /* MyClass.cpp in Sources */,
 				CE45817518FF95C200DFF084 /* main.cpp in Sources */,
+				CE2F466E190682DC00EAEBFB /* MySubClass.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +239,7 @@
 				CE45817C18FF95C200DFF084 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

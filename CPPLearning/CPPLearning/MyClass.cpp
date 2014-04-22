@@ -9,7 +9,24 @@
 #include "MyClass.h"
 
 
-void MyClass::foo(int &x)
+void MyNamespace::MyClass::foo(int &x)
 {
     x = 6;
+    this->another();
+}
+
+void YourNamespace::MyClass::foo(int &x)
+{
+    x = 7;
+    this->another();
+}
+
+void YourNamespace::MyClass::another()
+{
+    std::cout << "调到这里yourname";
+}
+
+void MyNamespace::MyClass::another()
+{
+    std::cout << "调到这里myname";
 }
