@@ -7,3 +7,11 @@
 //
 
 #include "MySubClass.h"
+
+
+void MySubClass::foo(int &x)
+{
+    MyNamespace::MyClass *f = (MyNamespace::MyClass *)this;
+    f->foo(x);
+    x = 10;
+}

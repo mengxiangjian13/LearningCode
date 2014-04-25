@@ -19,6 +19,9 @@ namespace MyNamespace {
         
     public:
         void foo(int &x);
+        ~MyClass(){
+            printf("ggggg\n");
+        }
     
     private:
         void another();

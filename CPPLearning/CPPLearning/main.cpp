@@ -51,12 +51,27 @@ int main(int argc, const char * argv[])
     s.y = 3;
     s.foo(a);
     
+    MySubClass mms = s + 2;
+    std::cout << "lll" << mms.x;
+    
     MySubClass *ms = new MySubClass();
     ms->x = 2;
     ms->y = 4;
     ms->foo(a);
     
     std::cout << a;
+    
+    std::cout << "vector第三个元素是" << s.intArray.at(2)<< "\n";
+    std::cout << "vector第四个元素是" << ms->intArray.at(3)<< "\n";
+    
+    std::list<int>::iterator i;
+    int j=0;
+    for (i = s.intList.begin(); i != s.intList.end(); i ++)
+    {
+        int thisInt = *i;
+        j++;
+        std::cout << "list第"<< j << "个元素是" << thisInt << "\n";
+    }
     
     delete ms;
     
