@@ -538,6 +538,7 @@
 				CE541010190F4A59001CE1A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE541011190F4A59001CE1A4 /* Build configuration list for PBXNativeTarget "FacebookPopTestTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +547,7 @@
 				CE541013190F4A59001CE1A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
