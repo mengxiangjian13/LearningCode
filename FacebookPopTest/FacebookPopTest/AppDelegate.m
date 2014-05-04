@@ -20,7 +20,9 @@
     view.layer.cornerRadius = 50;
     [self.window addSubview:view];
     
-    [self performSelector:@selector(springViewWithView:) withObject:view afterDelay:3.0];
+//    [self performSelector:@selector(springViewWithView:) withObject:view afterDelay:3.0];
+    
+    [self performSelector:@selector(decayViewWithView:) withObject:view afterDelay:5.0];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -32,6 +34,14 @@
     POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerBounds];
     animation.toValue = [NSValue valueWithCGRect:CGRectMake(0, 0, 300, 300)];
     [view.layer pop_addAnimation:animation forKey:@"size"];
+}
+
+- (void)decayViewWithView:(UIView *)view
+{
+    POPDecayAnimation *animation = [POPDecayAnimation animationWithPropertyNamed:kPOPLayerPositionX];
+    animation.velocity = @120;
+    animation.deceleration = 0.99;
+    [view.layer pop_addAnimation:animation forKey:@"slide"];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

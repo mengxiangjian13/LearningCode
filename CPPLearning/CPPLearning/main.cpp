@@ -9,6 +9,7 @@
 #include <iostream>
 //#include "MyClass.h"
 #include "MySubClass.h"
+#include "Car.h"
 
 int main(int argc, const char * argv[])
 {
@@ -74,6 +75,35 @@ int main(int argc, const char * argv[])
     }
     
     delete ms;
+    
+    Car fordCar;
+    fordCar.name = "ford";
+    Tyre *fordCarTyre = new Tyre(4);
+    fordCar.tyre = fordCarTyre;
+    
+    Car audiCar;
+    audiCar.name = "audi";
+    Tyre *audiCarTyre = new Tyre(3);
+    audiCar.tyre = audiCarTyre;
+    
+    Car bmwCar;
+    bmwCar.name = "bmw";
+    Tyre *bmwCarTyre = new Tyre(5);
+    bmwCar.tyre = bmwCarTyre;
+    
+    std::vector<Car> *carArray = new std::vector<Car>;
+    carArray->push_back(fordCar);
+    carArray->push_back(audiCar);
+    carArray->push_back(bmwCar);
+    
+    for (int h=0; h<carArray->size(); h++)
+    {
+        std::string name = carArray->at(h).name;
+        std::cout << "第" << h << "种车的名字是" << name << ",";
+        std::cout << "这部车有" << carArray->at(h).tyre->count << "个车轮" << "\n";
+    }
+    
+    delete carArray;
     
     return 0;
 }

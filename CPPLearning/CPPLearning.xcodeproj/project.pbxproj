@@ -11,6 +11,8 @@
 		CE45817518FF95C200DFF084 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE45817418FF95C200DFF084 /* main.cpp */; };
 		CE45817718FF95C200DFF084 /* CPPLearning.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE45817618FF95C200DFF084 /* CPPLearning.1 */; };
 		CE45817F18FF95DA00DFF084 /* MyClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE45817D18FF95DA00DFF084 /* MyClass.cpp */; };
+		CE6F733519162C420077C391 /* Car.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE6F733319162C420077C391 /* Car.cpp */; };
+		CE6F7338191632390077C391 /* Tyre.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE6F7336191632390077C391 /* Tyre.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +36,10 @@
 		CE45817618FF95C200DFF084 /* CPPLearning.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = CPPLearning.1; sourceTree = "<group>"; };
 		CE45817D18FF95DA00DFF084 /* MyClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyClass.cpp; sourceTree = "<group>"; };
 		CE45817E18FF95DA00DFF084 /* MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
+		CE6F733319162C420077C391 /* Car.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Car.cpp; sourceTree = "<group>"; };
+		CE6F733419162C420077C391 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		CE6F7336191632390077C391 /* Tyre.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tyre.cpp; sourceTree = "<group>"; };
+		CE6F7337191632390077C391 /* Tyre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tyre.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,10 @@
 				CE45817E18FF95DA00DFF084 /* MyClass.h */,
 				CE2F466C190682DC00EAEBFB /* MySubClass.cpp */,
 				CE2F466D190682DC00EAEBFB /* MySubClass.h */,
+				CE6F733319162C420077C391 /* Car.cpp */,
+				CE6F733419162C420077C391 /* Car.h */,
+				CE6F7336191632390077C391 /* Tyre.cpp */,
+				CE6F7337191632390077C391 /* Tyre.h */,
 			);
 			path = CPPLearning;
 			sourceTree = "<group>";
@@ -129,7 +139,9 @@
 			files = (
 				CE45817F18FF95DA00DFF084 /* MyClass.cpp in Sources */,
 				CE45817518FF95C200DFF084 /* main.cpp in Sources */,
+				CE6F733519162C420077C391 /* Car.cpp in Sources */,
 				CE2F466E190682DC00EAEBFB /* MySubClass.cpp in Sources */,
+				CE6F7338191632390077C391 /* Tyre.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
