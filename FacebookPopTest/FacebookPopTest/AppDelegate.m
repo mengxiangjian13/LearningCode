@@ -20,9 +20,15 @@
     view.layer.cornerRadius = 50;
     [self.window addSubview:view];
     
-//    [self performSelector:@selector(springViewWithView:) withObject:view afterDelay:3.0];
     
     [self performSelector:@selector(decayViewWithView:) withObject:view afterDelay:5.0];
+
+    [self performSelector:@selector(customPropertySpringAnimationWithView:) withObject:view afterDelay:1.0];
+    
+    [self performSelector:@selector(springViewWithView:) withObject:view afterDelay:3.0];
+
+    
+    
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -32,9 +38,15 @@
 - (void)springViewWithView:(UIView *)view
 {
     POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerBounds];
+//    animation.velocity = @20.0;
+    //springBounciness 调整弹性 值域[0,20]，值越大弹性越好
+    animation.springBounciness = 18;
+    //springSpeed 调整速度 值域[0,20]，值越大速度越快
+    animation.springSpeed = 18;
     animation.toValue = [NSValue valueWithCGRect:CGRectMake(0, 0, 300, 300)];
     [view.layer pop_addAnimation:animation forKey:@"size"];
 }
+
 
 - (void)decayViewWithView:(UIView *)view
 {
@@ -42,6 +54,30 @@
     animation.velocity = @120;
     animation.deceleration = 0.99;
     [view.layer pop_addAnimation:animation forKey:@"slide"];
+}
+- (void)customPropertySpringAnimationWithView:(UIView *)view
+{
+    //自定义模拟了一个position在Y轴上的动画
+    POPMutableAnimatableProperty *prop = [POPMutableAnimatableProperty propertyWithName:@"custom.origin.y" initializer:^(POPMutableAnimatableProperty *_prop) {
+        _prop.readBlock = ^(id obj, CGFloat values[]){
+            values[0] = view.center.y;
+        };
+        
+        _prop.writeBlock = ^(id obj, const CGFloat values[]){
+            CGPoint point = CGPointMake(view.center.x, values[0]);
+            view.center = point;
+        };
+    }];
+    
+    POPSpringAnimation *animation = [POPSpringAnimation animation];
+    animation.property = prop;
+    //    animation.velocity = @20.0;
+    //springBounciness 调整弹性 值域[0,20]，值越大弹性越好
+    animation.springBounciness = 18;
+    //springSpeed 调整速度 值域[0,20]，值越大速度越快
+    animation.springSpeed = 18;
+    animation.toValue = @400;
+    [view.layer pop_addAnimation:animation forKey:@"originY"];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
