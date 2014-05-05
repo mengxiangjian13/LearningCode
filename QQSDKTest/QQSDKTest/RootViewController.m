@@ -11,6 +11,8 @@
 @interface RootViewController () <TencentSessionDelegate>
 {
     TencentOAuth *oauth;
+    UIButton *loginButton;
+    UIButton *infoButton;
 }
 
 @end
@@ -31,21 +33,56 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    loginButton.frame = CGRectMake(0, 0, 100, 100);
+    loginButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    loginButton.frame = CGRectMake(0, 150, 100, 100);
     [loginButton setTitle:@"登录" forState:UIControlStateNormal];
-    loginButton.center = self.view.center;
     [loginButton addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
     
+    infoButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    infoButton.frame = CGRectMake(0, 350, 100, 100);
+    [infoButton setTitle:@"个人信息" forState:UIControlStateNormal];
+    infoButton.center = self.view.center;
+    infoButton.enabled = NO;
+    [infoButton addTarget:self action:@selector(info) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:infoButton];
+    
     oauth = [[TencentOAuth alloc] initWithAppId:@"101074459"
                                     andDelegate:self];
+    
+//    NSDictionary *dict = [[NSUserDefaults standardUserDefaults] objectForKey:@"QQOauthData"];
+//    if (dict)
+//    {
+//        oauth.accessToken = [dict objectForKey:@"AccessToken"];
+//        oauth.expirationDate = [dict objectForKey:@"ExpirationDate"];
+//        oauth.openId = [dict objectForKey:@"OpenId"];
+//    }
+    
+    BOOL isLogin = [oauth isSessionValid];
+    
+    if (isLogin)
+    {
+        NSLog(@"登录了");
+        [loginButton setTitle:@"已登录" forState:UIControlStateNormal];
+        loginButton.enabled = NO;
+        infoButton.enabled = YES;
+    }
+    else
+    {
+        NSLog(@"没有登录");
+    }
+        
 }
 
 - (void)login
 {
-    NSArray *permissions = [NSArray arrayWithObjects:@"get_user_info", @"add_t", nil];
+    NSArray *permissions = [NSArray arrayWithObjects:@"all", nil];
     [oauth authorize:permissions];
+}
+
+- (void)info
+{
+    [oauth getUserInfo];
 }
 
 /**
@@ -54,6 +91,24 @@
 - (void)tencentDidLogin
 {
     NSLog(@"登录成功");
+//    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+//    if (oauth.accessToken)
+//    {
+//        [dict setObject:oauth.accessToken forKey:@"AccessToken"];
+//    }
+//    if (oauth.expirationDate)
+//    {
+//        [dict setObject:oauth.expirationDate forKey:@"ExpirationDate"];
+//    }
+//    if (oauth.openId)
+//    {
+//        [dict setObject:oauth.openId forKey:@"OpenId"];
+//    }
+//    [[NSUserDefaults standardUserDefaults] setObject:dict forKey:@"QQOauthData"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+    loginButton.enabled = NO;
+    infoButton.enabled = YES;
+    
 }
 
 /**
@@ -77,6 +132,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)getUserInfoResponse:(APIResponse*) response
+{
+    
 }
 
 /*
