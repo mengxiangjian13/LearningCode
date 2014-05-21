@@ -47,16 +47,16 @@
     [infoButton addTarget:self action:@selector(info) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:infoButton];
     
-    oauth = [[TencentOAuth alloc] initWithAppId:@"101074459"
+    oauth = [[TencentOAuth alloc] initWithAppId:@"101081627"
                                     andDelegate:self];
     
-//    NSDictionary *dict = [[NSUserDefaults standardUserDefaults] objectForKey:@"QQOauthData"];
-//    if (dict)
-//    {
-//        oauth.accessToken = [dict objectForKey:@"AccessToken"];
-//        oauth.expirationDate = [dict objectForKey:@"ExpirationDate"];
-//        oauth.openId = [dict objectForKey:@"OpenId"];
-//    }
+    NSDictionary *dict = [[NSUserDefaults standardUserDefaults] objectForKey:@"QQOauthData"];
+    if (dict)
+    {
+        oauth.accessToken = [dict objectForKey:@"AccessToken"];
+        oauth.expirationDate = [dict objectForKey:@"ExpirationDate"];
+        oauth.openId = [dict objectForKey:@"OpenId"];
+    }
     
     BOOL isLogin = [oauth isSessionValid];
     
@@ -91,21 +91,21 @@
 - (void)tencentDidLogin
 {
     NSLog(@"登录成功");
-//    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-//    if (oauth.accessToken)
-//    {
-//        [dict setObject:oauth.accessToken forKey:@"AccessToken"];
-//    }
-//    if (oauth.expirationDate)
-//    {
-//        [dict setObject:oauth.expirationDate forKey:@"ExpirationDate"];
-//    }
-//    if (oauth.openId)
-//    {
-//        [dict setObject:oauth.openId forKey:@"OpenId"];
-//    }
-//    [[NSUserDefaults standardUserDefaults] setObject:dict forKey:@"QQOauthData"];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    if (oauth.accessToken)
+    {
+        [dict setObject:oauth.accessToken forKey:@"AccessToken"];
+    }
+    if (oauth.expirationDate)
+    {
+        [dict setObject:oauth.expirationDate forKey:@"ExpirationDate"];
+    }
+    if (oauth.openId)
+    {
+        [dict setObject:oauth.openId forKey:@"OpenId"];
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:dict forKey:@"QQOauthData"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     loginButton.enabled = NO;
     infoButton.enabled = YES;
     

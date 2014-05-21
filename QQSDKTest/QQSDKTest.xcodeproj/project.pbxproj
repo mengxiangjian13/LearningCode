@@ -491,6 +491,7 @@
 				CE1E582C190E54100068FFFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE1E582D190E54100068FFFA /* Build configuration list for PBXNativeTarget "QQSDKTestTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +500,7 @@
 				CE1E582F190E54100068FFFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
