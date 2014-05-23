@@ -8,8 +8,12 @@
 
 #import "RootViewController.h"
 #import "CollectViewCell.h"
+#import "FlowLayout.h"
 
 @interface RootViewController () <UICollectionViewDelegate,UICollectionViewDataSource>
+{
+    FlowLayout *layout;
+}
 
 @end
 
@@ -24,13 +28,26 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [layout invalidateLayout];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.itemSize = CGSizeMake(90, 90);
+    layout = [[FlowLayout alloc] init];
     
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds
                                                           collectionViewLayout:layout];

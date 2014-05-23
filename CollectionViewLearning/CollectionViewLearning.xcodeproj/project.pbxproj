@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE6CD64E192F03CB006D506A /* FlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD64D192F03CB006D506A /* FlowLayout.m */; };
 		CEDCD759192D9D3A0015832A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDCD758192D9D3A0015832A /* Foundation.framework */; };
 		CEDCD75B192D9D3A0015832A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDCD75A192D9D3A0015832A /* CoreGraphics.framework */; };
 		CEDCD75D192D9D3A0015832A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDCD75C192D9D3A0015832A /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE6CD64C192F03CB006D506A /* FlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowLayout.h; sourceTree = "<group>"; };
+		CE6CD64D192F03CB006D506A /* FlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowLayout.m; sourceTree = "<group>"; };
 		CEDCD755192D9D3A0015832A /* CollectionViewLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDCD758192D9D3A0015832A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CEDCD75A192D9D3A0015832A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -121,6 +124,8 @@
 				CEDCD788192D9D590015832A /* RootViewController.m */,
 				CEDCD78A192D9E5A0015832A /* CollectViewCell.h */,
 				CEDCD78B192D9E5A0015832A /* CollectViewCell.m */,
+				CE6CD64C192F03CB006D506A /* FlowLayout.h */,
+				CE6CD64D192F03CB006D506A /* FlowLayout.m */,
 			);
 			path = CollectionViewLearning;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 			files = (
 				CEDCD769192D9D3A0015832A /* AppDelegate.m in Sources */,
 				CEDCD78C192D9E5A0015832A /* CollectViewCell.m in Sources */,
+				CE6CD64E192F03CB006D506A /* FlowLayout.m in Sources */,
 				CEDCD765192D9D3A0015832A /* main.m in Sources */,
 				CEDCD789192D9D590015832A /* RootViewController.m in Sources */,
 			);
@@ -449,6 +455,7 @@
 				CEDCD783192D9D3A0015832A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CEDCD784192D9D3A0015832A /* Build configuration list for PBXNativeTarget "CollectionViewLearningTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +464,7 @@
 				CEDCD786192D9D3A0015832A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
