@@ -68,6 +68,7 @@
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
 {
     UIScrollView *scrollView = self.collectionView;
+    NSLog(@"%f,%f,%f,%f",scrollView.bounds.origin.x,scrollView.bounds.origin.y,scrollView.bounds.size.width,scrollView.bounds.size.height);
     CGFloat delta = newBounds.origin.y - scrollView.bounds.origin.y;
     
     CGPoint touchLocation = [self.collectionView.panGestureRecognizer locationInView:self.collectionView];
