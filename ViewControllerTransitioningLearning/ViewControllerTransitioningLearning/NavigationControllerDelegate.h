@@ -10,4 +10,6 @@
 
 @interface NavigationControllerDelegate : NSObject <UINavigationControllerDelegate>
 
+@property (nonatomic,strong) id <UIViewControllerInteractiveTransitioning> interactViewController;
+
 @end

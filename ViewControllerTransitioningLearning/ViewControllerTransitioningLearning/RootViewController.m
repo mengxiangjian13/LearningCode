@@ -7,6 +7,8 @@
 //
 
 #import "RootViewController.h"
+#import "NavigationControllerDelegate.h"
+#import "SecondViewController.h"
 
 @interface RootViewController ()
 
@@ -27,7 +29,50 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+    [self.view addGestureRecognizer:pan];
 }
+
+- (void)pan:(id)sender
+{
+    UIPanGestureRecognizer *pan = (UIPanGestureRecognizer *)sender;
+    
+    if (pan.state == UIGestureRecognizerStateBegan)
+    {
+        CGPoint touchPoint = [pan locationInView:self.view];
+        if (touchPoint.x > CGRectGetMinX(self.view.bounds))
+        {
+            NavigationControllerDelegate *aDelegate = (NavigationControllerDelegate *)self.delegate;
+            aDelegate.interactViewController = [[UIPercentDrivenInteractiveTransition alloc] init];
+            SecondViewController *sVC = [SecondViewController new];
+            [self pushViewController:sVC animated:YES];
+        }
+    }
+    else if (pan.state == UIGestureRecognizerStateChanged)
+    {
+        CGPoint transition = [pan translationInView:self.view];
+        CGFloat d = (transition.x / CGRectGetWidth(self.view.bounds)) * -1;
+        
+        NavigationControllerDelegate *aDelegate = (NavigationControllerDelegate *)self.delegate;
+        [(UIPercentDrivenInteractiveTransition *)aDelegate.interactViewController updateInteractiveTransition:d];
+    }
+    else if (pan.state == UIGestureRecognizerStateEnded)
+    {
+        NavigationControllerDelegate *aDelegate = (NavigationControllerDelegate *)self.delegate;
+        if ([pan velocityInView:self.view].x > 0)
+        {
+            [(UIPercentDrivenInteractiveTransition *)aDelegate.interactViewController cancelInteractiveTransition];
+        }
+        else
+        {
+            [(UIPercentDrivenInteractiveTransition *)aDelegate.interactViewController finishInteractiveTransition];
+        }
+        aDelegate.interactViewController = nil;
+    }
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {

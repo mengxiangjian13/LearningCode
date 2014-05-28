@@ -10,6 +10,13 @@
 #import "Animation.h"
 
 @implementation NavigationControllerDelegate
+@synthesize interactViewController;
+
+- (id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
+                          interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>) animationController
+{
+    return interactViewController;
+}
 
 - (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
                                    animationControllerForOperation:(UINavigationControllerOperation)operation
@@ -23,5 +30,7 @@
     
     return nil;
 }
+
+
 
 @end
