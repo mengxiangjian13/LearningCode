@@ -84,6 +84,7 @@ for num in numArr{
 }
 largest
 
+var whose = ""
 let numDict = [
     "my" : [23,63,31,3,5,31],
     "your" : [903,394,32,32],
@@ -94,10 +95,50 @@ for (key,value) in numDict{
     for num in value{
         if largest < num{
             largest = num
+            whose = key
         }
     }
 }
 largest
+whose
+
+//..不包括3，即循环3次；...包括3，循环4次
+var loop = 0
+for i in 0...3{
+    loop += i
+}
+loop
+
+var aLoop = 0
+for var i = 1;i < 3; i++ {
+    aLoop += i
+}
+aLoop
+
+//function
+func greeting(name:String,day:String)->String{
+    return "Hello,\(name)!Today is \(day)!"
+}
+
+func score()->(Double,Double,Double){
+    return (2.34,34.33,32.32)
+}
+
+greeting("Paul","Sunday")
+score()
+
+func sum(numbers:Int...)->Int{
+    var sum = 0
+    for a in numbers{
+        sum += a
+    }
+    return sum
+}
+
+sum()
+sum(2,1,2,3,4)
+
+
 
 
 //object and Class
