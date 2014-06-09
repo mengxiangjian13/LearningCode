@@ -100,4 +100,96 @@ for (key,value) in numDict{
 largest
 
 
+//object and Class
+class Shape{
+    var numberOfSides = 0
+}
+
+var shape = Shape()
+shape.numberOfSides = 7
+//shape.simpleDescription()
+
+class NamedShape:Shape{
+    var name : String
+    init(name:String){
+        self.name = name
+    }
+    
+    func simpleDescription()->String{
+        return "A shape with \(numberOfSides) sides."
+    }
+}
+
+var namedShape = NamedShape(name:"aaaa")
+namedShape.name
+namedShape.numberOfSides
+
+class Triangle : NamedShape{
+    var sideLength = 0.0
+    
+    init(name:String,sideLength:Double){
+        super.init(name:name)
+        self.numberOfSides = 3
+        self.sideLength = sideLength
+    }
+    
+    var perimeter : Double {
+    get{
+        return 3.0 * self.sideLength
+    }
+    set{
+        self.sideLength = newValue / 3.0
+    }
+    }
+    
+    override func simpleDescription()->String{
+        return "A triangle with zhouchang \(perimeter)"
+    }
+}
+
+var triangle = Triangle(name:"triangle",sideLength:3.0)
+triangle.sideLength = 3.0
+triangle.perimeter
+triangle.simpleDescription()
+triangle.name
+triangle.perimeter = 27.0
+triangle.sideLength
+triangle.simpleDescription()
+
+// enum
+enum Rank : Int{
+    case Ace = 1
+    case Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten
+    case Jack,Queen,King
+    
+    func simpleDesc() -> String {
+        switch self {
+        case .Ace:
+            return "ace"
+        case .Jack:
+            return "jack"
+        case .Queen:
+            return "queen"
+        case .King:
+            return "king"
+        default:
+            return String(self.toRaw())
+        }
+    }
+}
+
+let ace = Rank.Ace
+let aceRawValue = ace.toRaw()
+let aceDesc = ace.simpleDesc()
+if let jack = Rank.fromRaw(11) {
+    let jackDesc = jack.simpleDesc()
+}
+
+
+
+
+
+
+
+
 
