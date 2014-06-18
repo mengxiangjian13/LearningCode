@@ -225,12 +225,3 @@ let aceDesc = ace.simpleDesc()
 if let jack = Rank.fromRaw(11) {
     let jackDesc = jack.simpleDesc()
 }
-
-
-
-
-
-
-
-
-
