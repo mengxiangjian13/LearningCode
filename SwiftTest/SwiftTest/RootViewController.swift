@@ -14,6 +14,8 @@ class RootViewController: UIViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
+    
+    var naviVC : UINavigationController? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,15 @@ class RootViewController: UIViewController {
         button!.setTitle("hao",forState:UIControlState.Normal)
         button!.setTitleColor(UIColor.blackColor(),forState:UIControlState.Normal)
         button!.addTarget(self, action: "tap", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        var label : UILabel = UILabel(frame:CGRectMake(0,0,200,50))
+        label.font = UIFont.systemFontOfSize(15)
+        label.text = "hellow,world!"
+        label.textAlignment = .Center
+        label.textColor = UIColor.blackColor()
+        label.center = self.view.center
+        self.view.addSubview(label)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +47,14 @@ class RootViewController: UIViewController {
     func tap(){
         println("tap tap tap")
         let tableView = TableViewController(nibName: nil, bundle: nil)
-        self.presentViewController(tableView, animated: true, completion: nil)
+        naviVC = UINavigationController(rootViewController:tableView)
+        let closeItem = UIBarButtonItem(barButtonSystemItem:.Cancel,target:self,action:"close")
+        tableView.navigationItem.leftBarButtonItem = closeItem;
+        self.presentViewController(naviVC, animated: true, completion: nil)
+    }
+    
+    func close(){
+       naviVC!.dismissViewControllerAnimated(true, completion: nil)
     }
 
     /*
