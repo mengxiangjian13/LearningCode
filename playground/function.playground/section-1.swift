@@ -55,6 +55,25 @@ inoutPara(&c)
 c
 
 
+func fivePlus(fun : (Int) ->Int){
+    let i = 5
+    let j = fun(i)
+    println(j)
+}
+
+fivePlus(addToOne)
+
+func plusOne() -> (Int)->Int
+{
+    return addToOne
+}
+
+let plus1 = plusOne()
+
+let tenPlusOne = plus1(10)
+
+
+
 
 
 
