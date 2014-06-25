@@ -35,9 +35,10 @@
     
     CABasicAnimation *lineAnimation = [CABasicAnimation animation];
     lineAnimation.keyPath = @"position.x";
-    lineAnimation.fromValue = @100;
+    lineAnimation.fromValue = @0;
     lineAnimation.toValue = @250;
     lineAnimation.duration = 1.0;
+    lineAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];//timing function
     [square.layer addAnimation:lineAnimation forKey:@"line"];
     
     //停留在最后的状态
@@ -75,6 +76,33 @@
     [satellite.layer addAnimation:circle forKey:@"circle"];
     
     
+    
+    // animation group
+    UIView *rect = [[UIView alloc] initWithFrame:CGRectMake(0, 480, 50, 50)];
+    rect.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:rect];
+    
+    CABasicAnimation *run = [CABasicAnimation animation];
+    run.keyPath = @"position.x";
+    run.fromValue = @25;
+    run.toValue = @295;
+    run.duration = 4.0;
+    
+    CAKeyframeAnimation *rotate = [CAKeyframeAnimation animation];
+    rotate.keyPath = @"transform.rotation.z";
+    rotate.duration = 4.0;
+    rotate.values = @[@0,@M_PI,@(2 *M_PI)];
+    rotate.keyTimes = @[@0,@0.5,@1.0];
+    rotate.additive = YES;
+    
+    CAAnimationGroup *group = [[CAAnimationGroup alloc] init];
+    group.duration = 4.0;
+    group.beginTime = 0.0;
+    group.animations = @[run,rotate];
+    
+    [rect.layer addAnimation:group forKey:@"zouni"];
+    
+    rect.layer.position = CGPointMake(295, 530);
 }
 
 
