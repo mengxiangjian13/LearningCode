@@ -21,6 +21,7 @@
 		CED41AFC1962B15F00F512EA /* MultiSectionCollectionViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED41AFB1962B15F00F512EA /* MultiSectionCollectionViewTests.m */; };
 		CED41B071962B18B00F512EA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED41B061962B18B00F512EA /* RootViewController.m */; };
 		CED41B0A1962B1D900F512EA /* CustomLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CED41B091962B1D900F512EA /* CustomLayout.m */; };
+		CED41B0D1962BD2B00F512EA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED41B0C1962BD2B00F512EA /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		CED41B061962B18B00F512EA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		CED41B081962B1D900F512EA /* CustomLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayout.h; sourceTree = "<group>"; };
 		CED41B091962B1D900F512EA /* CustomLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLayout.m; sourceTree = "<group>"; };
+		CED41B0B1962BD2B00F512EA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		CED41B0C1962BD2B00F512EA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				CED41ADD1962B15F00F512EA /* Supporting Files */,
 				CED41B051962B18B00F512EA /* RootViewController.h */,
 				CED41B061962B18B00F512EA /* RootViewController.m */,
+				CED41B0B1962BD2B00F512EA /* DetailViewController.h */,
+				CED41B0C1962BD2B00F512EA /* DetailViewController.m */,
 				CED41B081962B1D900F512EA /* CustomLayout.h */,
 				CED41B091962B1D900F512EA /* CustomLayout.m */,
 			);
@@ -249,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED41B0D1962BD2B00F512EA /* DetailViewController.m in Sources */,
 				CED41AE71962B15F00F512EA /* AppDelegate.m in Sources */,
 				CED41AE31962B15F00F512EA /* main.m in Sources */,
 				CED41B0A1962B1D900F512EA /* CustomLayout.m in Sources */,
@@ -451,6 +457,7 @@
 				CED41B011962B15F00F512EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CED41B021962B15F00F512EA /* Build configuration list for PBXNativeTarget "MultiSectionCollectionViewTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +466,7 @@
 				CED41B041962B15F00F512EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

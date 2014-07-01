@@ -7,6 +7,8 @@
 //
 
 #import "RootViewController.h"
+#import "DetailViewController.h"
+#import "CustomLayout.h"
 
 @interface RootViewController ()
 {
@@ -25,6 +27,14 @@
         // Custom initialization
     }
     return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
 }
 
 - (void)viewDidLoad
@@ -96,6 +106,19 @@
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return sectionCount;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CustomLayout *layout = [[CustomLayout alloc] init];
+    layout.itemSize = CGSizeMake(300, 300);
+    DetailViewController *detailVC = [[DetailViewController alloc] initWithCollectionViewLayout:layout];
+    detailVC.useLayoutToLayoutNavigationTransitions = YES;
+    detailVC.itemCount = [[itemCountArray objectAtIndex:indexPath.section] integerValue];
+    detailVC.selectItemIndex = indexPath.item;
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    detailVC.color = cell.contentView.backgroundColor;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
