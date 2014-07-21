@@ -137,14 +137,21 @@ class RecipeIngredient : Food
 class ShppingListItem : RecipeIngredient
 {
     var purchased = false
-    var descripion : String {
+    var description : String {
         var output = "\(quality) x \(name.lowercaseString)"
         output += purchased ? " ✔" : " ✘"
         return output
     }
 }
 
-var list = []
+var breakfast = ShppingListItem()
+breakfast.description
+
+var bacon = ShppingListItem(name: "Bacon")
+bacon.description
+
+var egg = ShppingListItem(name:"egg", quality:6)
+egg.description
 
 
 
