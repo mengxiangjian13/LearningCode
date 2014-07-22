@@ -72,7 +72,38 @@ var meng : Customer?
 meng = Customer(name: "meng")
 meng!.card = CreditCard(number: 123333, customer: meng!)
 
+//MARK:
+//TODO:closure ARC retain cycle
 
+// closure 
+
+class HTMLElement {
+    
+    let name : String
+    let text : String?
+    
+    lazy var asHTML : () -> String = {
+        [unowned self] in
+        if let text = self.text{
+            return "<\(self.name)>\(text)</\(self.name)>"
+        }
+        return "<\(self.name)/>"
+    }
+    
+    init(name:String,text:String? = nil)
+    {
+        self.name = name
+        self.text = text
+    }
+    
+    deinit{
+        println("ffff")
+    }
+}
+
+var paragraph :HTMLElement? = HTMLElement(name: "p", text: "hello,world")
+paragraph!.asHTML()
+paragraph = nil
 
 
 
