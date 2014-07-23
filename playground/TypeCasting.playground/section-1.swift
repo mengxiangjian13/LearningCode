@@ -40,16 +40,38 @@ let library = [
     Song(name: "Never Gonna Give You Up", artist: "Rick Astley")
 ]
 
+// type checking
+var songCount = 0
+var movieCount = 0
 for item in library
 {
-   if item is Movie
-   {
-    
-   }
+    if item is Movie
+    {
+        ++movieCount
+    }
     else
-   {
-    
+    {
+        ++songCount
+    }
+}
+movieCount
+songCount
+
+
+// downcasting as?
+for item in library
+{
+    if let movie = item as? Movie
+    {
+        println("Movie:\(movie.name),dir.\(movie.director)")
+    }
+    else if let song = item as? Song
+    {
+        println("Song:\(song.name),by\(song.artist)")
     }
 }
 
+//Any or AnyObject
+
+// 混合类型可以用Any（不包括function类型）和 AnyObject。使用的时候downcasting一下。
 
