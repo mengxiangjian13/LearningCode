@@ -78,9 +78,48 @@ extension Int {
     }
 }
 
-var b = 12345678
-let c = b[0]
+let c = 12345678[0]
 
 
+//嵌套类型 Nested Type
 
+extension Character
+{
+    enum Kind {
+        case Vowel, Consonant, Other
+    }
+    
+    // 字符类 嵌套kind枚举
+    var kind : Kind
+    {
+        switch String(self).lowercaseString{
+            case "a", "e", "i", "o", "u":
+                return .Vowel
+            case "b", "c", "d", "f", "g", "h", "j",
+                "k","l","m","n","p","q","r","s","t",
+                "v","w","x","y","z" :
+                return .Consonant
+            default :
+                return .Other
+        }
+    }
+}
+
+func printLetterKinds(word:String){
+    println("'\(word)' is made up of the following kinds of letter:")
+    for character in word
+    {
+        switch character.kind
+        {
+            case .Vowel:
+                println("wowel ")
+            case .Consonant:
+                println("consonant ")
+            case .Other:
+                println("other")
+        }
+    }
+}
+
+printLetterKinds("hello,world!")
 
