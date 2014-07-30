@@ -13,11 +13,33 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.title = "新闻"
         
+        // 登录按钮
+        let loginButton: AnyObject! = UIButton.buttonWithType(.System)
+        if let button = loginButton as? UIButton
+        {
+            button.frame = CGRectMake(0, 0, 44, 44)
+            button.setTitle("登录", forState: UIControlState.Normal)
+            button.addTarget(self, action: "login", forControlEvents:UIControlEvents.TouchUpInside)
+            
+            let leftItem = UIBarButtonItem(customView: button)
+            self.navigationItem.rightBarButtonItem = leftItem
+        }
+        
+        // 加载表格
         let tableView = UITableView(frame: self.view.bounds, style: .Plain)
         tableView.dataSource = self
         tableView.delegate = self
         self.view.addSubview(tableView)
+    }
+    
+    func login()
+    {
+        println("登录")
+        let loginVC = LoginViewController()
+        let loginNVC = UINavigationController(rootViewController: loginVC)
+        self.navigationController.presentViewController(loginNVC, animated: true, completion: {println("弹出登录框")})
     }
     
     var titleArray = ["1","2","3","4","5"]
@@ -41,6 +63,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell!.textLabel.text = titleArray[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
+    {
+        let articleViewController = ArticleViewController()
+        articleViewController.title = titleArray[indexPath.row]
+        self.navigationController.pushViewController(articleViewController, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
