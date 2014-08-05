@@ -757,6 +757,7 @@
 		CEAE3803198F9D7700258648 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -780,6 +781,7 @@
 		CEAE3804198F9D7700258648 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -872,6 +874,7 @@
 				CEAE3804198F9D7700258648 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CEAE3809198F9D7700258648 /* Build configuration list for PBXNativeTarget "SimpleTimerKitTests" */ = {
 			isa = XCConfigurationList;
@@ -880,6 +883,7 @@
 				CEAE3806198F9D7700258648 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

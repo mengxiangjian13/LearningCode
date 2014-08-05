@@ -13,7 +13,8 @@ class ViewController: UIViewController, TimerDelegate {
     
     var label:UILabel?
     var timer:Timer?
-    let totalTime = 3600
+    let totalTime = 5
+    var leftTime = 5;
     
     deinit
     {
@@ -25,6 +26,7 @@ class ViewController: UIViewController, TimerDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "willResignActive", name: UIApplicationWillResignActiveNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "openApp", name: "OpenAppFinished", object: nil)
         
         timer = Timer(delegate: self)
         
@@ -53,8 +55,18 @@ class ViewController: UIViewController, TimerDelegate {
         {
             button.setTitle("stop", forState: UIControlState.Normal)
             button.frame = CGRectMake(0, 0, 50, 50)
-            button.center = CGPointMake(160, 284 + 200)
+            button.center = CGPointMake(160, 284 + 150)
             button.addTarget(self, action: "stop", forControlEvents: UIControlEvents.TouchUpInside)
+            self.view.addSubview(button)
+        }
+        
+        let resetButton: AnyObject! = UIButton.buttonWithType(UIButtonType.System)
+        if let button = resetButton as? UIButton
+        {
+            button.setTitle("reset", forState: UIControlState.Normal)
+            button.frame = CGRectMake(0, 0, 50, 50)
+            button.center = CGPointMake(160, 284 + 200)
+            button.addTarget(self, action: "reset", forControlEvents: UIControlEvents.TouchUpInside)
             self.view.addSubview(button)
         }
         
@@ -81,11 +93,17 @@ class ViewController: UIViewController, TimerDelegate {
         }
     }
     
+    func openApp()
+    {
+        let alert = UIAlertView(title: "完成计时", message: nil, delegate: nil, cancelButtonTitle: "好的")
+        alert.show()
+    }
+    
     func start()
     {
         if let trueTimer = timer
         {
-            trueTimer.start(totalTime)
+            trueTimer.start(leftTime)
         }
     }
     func stop()
@@ -95,9 +113,18 @@ class ViewController: UIViewController, TimerDelegate {
             trueTimer.stop()
         }
     }
+    func reset()
+    {
+        self.stop()
+        leftTime = totalTime
+        label!.text = "\(leftTime)"
+    }
+    
+    
     func timerDidStop()
     {
-        label!.text = "\(totalTime)"
+        leftTime = timer!.leftTime
+        label!.text = "\(leftTime)"
     }
     func timerDidUpdate(remainTime:NSInteger)
     {
@@ -118,7 +145,7 @@ class ViewController: UIViewController, TimerDelegate {
         let userDefault = NSUserDefaults(suiteName: "group.develop")
         if timer
         {
-            userDefault.setInteger(timer!.leftTime, forKey: "LeftTime")
+            userDefault.setInteger(leftTime, forKey: "LeftTime")
             userDefault.setInteger(Int(NSDate().timeIntervalSince1970), forKey: "ThisTime")
         }
         userDefault.synchronize()

@@ -8,16 +8,20 @@
 
 import UIKit
 import NotificationCenter
+import SimpleTimerKit
 
-class TodayViewController: UIViewController {
+class TodayViewController: UIViewController, TimerDelegate{
     
     
     @IBOutlet weak var todayLabel: UILabel!
     
+    var timer : Timer?
         
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
+        
+        self.preferredContentSize = CGSizeMake(0, 100)
         
         let userDefault = NSUserDefaults(suiteName: "group.develop")
         
@@ -26,6 +30,60 @@ class TodayViewController: UIViewController {
         let showTime = leftTime - passTime
         todayLabel.text = "\(showTime)"
         
+        if timer == nil
+        {
+            if showTime > 0
+            {
+                timer = Timer(delegate: self)
+                timer!.start(showTime)
+            }
+            else
+            {
+                self.addButton()
+            }
+            
+        }
+        
+    }
+    
+    func timerDidStop()
+    {
+        if todayLabel
+        {
+            todayLabel.text = "\(timer!.leftTime)"
+        }
+        
+        if timer?.leftTime == 0
+        {
+            todayLabel.hidden = true
+            self.addButton()
+        }
+    }
+    
+    func addButton()
+    {
+        let backAppButton: AnyObject! = UIButton.buttonWithType(UIButtonType.System)
+        if let button = backAppButton as? UIButton
+        {
+            button.frame = CGRectMake(0, 50, 50, 63)
+            button.setTitle("Open", forState: UIControlState.Normal)
+            button.addTarget(self, action: "backToApp", forControlEvents: UIControlEvents.TouchUpInside)
+            self.view.addSubview(button)
+        }
+    }
+    
+    func backToApp()
+    {
+        // URL Scheme 的方式返回containing app
+        self.extensionContext.openURL(NSURL(string: "TodayExtension://finished"), completionHandler: nil)
+    }
+    
+    func timerDidUpdate(remainTime:NSInteger)
+    {
+        if todayLabel
+        {
+            todayLabel.text = "\(remainTime)"
+        }
     }
     
     override func didReceiveMemoryWarning() {

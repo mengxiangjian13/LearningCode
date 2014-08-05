@@ -48,8 +48,12 @@ public class Timer: NSObject {
     public func stop()
     {
         isRunning = false
-        timer!.invalidate()
-        timer = nil
+        if timer
+        {
+            timer!.invalidate()
+            timer = nil
+        }
+        
         // 剩余时间等于0
         if let timerDelegate =  self.delegate
         {

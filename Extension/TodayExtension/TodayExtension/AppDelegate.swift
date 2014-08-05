@@ -41,6 +41,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication!) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(application: UIApplication!, openURL url: NSURL!, sourceApplication: String!, annotation: AnyObject!) -> Bool
+    {
+        if url.scheme == "TodayExtension"
+        {
+            if url.host == "finished"
+            {
+                NSNotificationCenter.defaultCenter().postNotificationName("OpenAppFinished", object: nil)
+                return true
+            }
+        }
+        
+        return false
+    }
 
 
 }
