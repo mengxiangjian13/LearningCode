@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CED67A15199A041B0056F178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED67A14199A041B0056F178 /* AppDelegate.swift */; };
+		CED67A17199A041B0056F178 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED67A16199A041B0056F178 /* ViewController.swift */; };
+		CED67A1A199A041B0056F178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED67A18199A041B0056F178 /* Main.storyboard */; };
+		CED67A1C199A041B0056F178 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED67A1B199A041B0056F178 /* Images.xcassets */; };
+		CED67A28199A041B0056F178 /* EffectViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED67A27199A041B0056F178 /* EffectViewTests.swift */; };
+		CED67A32199A063E0056F178 /* wugui.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CED67A31199A063E0056F178 /* wugui.jpeg */; };
+		CED67A34199A07DD0056F178 /* EffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED67A33199A07DD0056F178 /* EffectViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CED67A22199A041B0056F178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CED67A07199A041A0056F178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CED67A0E199A041A0056F178;
+			remoteInfo = EffectView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CED67A0F199A041A0056F178 /* EffectView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED67A13199A041B0056F178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CED67A14199A041B0056F178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CED67A16199A041B0056F178 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CED67A19199A041B0056F178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CED67A1B199A041B0056F178 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CED67A21199A041B0056F178 /* EffectViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EffectViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED67A26199A041B0056F178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CED67A27199A041B0056F178 /* EffectViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectViewTests.swift; sourceTree = "<group>"; };
+		CED67A31199A063E0056F178 /* wugui.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wugui.jpeg; sourceTree = "<group>"; };
+		CED67A33199A07DD0056F178 /* EffectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CED67A0C199A041A0056F178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CED67A1E199A041B0056F178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CED67A06199A041A0056F178 = {
+			isa = PBXGroup;
+			children = (
+				CED67A11199A041A0056F178 /* EffectView */,
+				CED67A24199A041B0056F178 /* EffectViewTests */,
+				CED67A10199A041A0056F178 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CED67A10199A041A0056F178 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CED67A0F199A041A0056F178 /* EffectView.app */,
+				CED67A21199A041B0056F178 /* EffectViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CED67A11199A041A0056F178 /* EffectView */ = {
+			isa = PBXGroup;
+			children = (
+				CED67A31199A063E0056F178 /* wugui.jpeg */,
+				CED67A14199A041B0056F178 /* AppDelegate.swift */,
+				CED67A16199A041B0056F178 /* ViewController.swift */,
+				CED67A18199A041B0056F178 /* Main.storyboard */,
+				CED67A1B199A041B0056F178 /* Images.xcassets */,
+				CED67A12199A041B0056F178 /* Supporting Files */,
+				CED67A33199A07DD0056F178 /* EffectViewController.swift */,
+			);
+			path = EffectView;
+			sourceTree = "<group>";
+		};
+		CED67A12199A041B0056F178 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CED67A13199A041B0056F178 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CED67A24199A041B0056F178 /* EffectViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				CED67A27199A041B0056F178 /* EffectViewTests.swift */,
+				CED67A25199A041B0056F178 /* Supporting Files */,
+			);
+			path = EffectViewTests;
+			sourceTree = "<group>";
+		};
+		CED67A25199A041B0056F178 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CED67A26199A041B0056F178 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CED67A0E199A041A0056F178 /* EffectView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CED67A2B199A041B0056F178 /* Build configuration list for PBXNativeTarget "EffectView" */;
+			buildPhases = (
+				CED67A0B199A041A0056F178 /* Sources */,
+				CED67A0C199A041A0056F178 /* Frameworks */,
+				CED67A0D199A041A0056F178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EffectView;
+			productName = EffectView;
+			productReference = CED67A0F199A041A0056F178 /* EffectView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CED67A20199A041B0056F178 /* EffectViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CED67A2E199A041B0056F178 /* Build configuration list for PBXNativeTarget "EffectViewTests" */;
+			buildPhases = (
+				CED67A1D199A041B0056F178 /* Sources */,
+				CED67A1E199A041B0056F178 /* Frameworks */,
+				CED67A1F199A041B0056F178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CED67A23199A041B0056F178 /* PBXTargetDependency */,
+			);
+			name = EffectViewTests;
+			productName = EffectViewTests;
+			productReference = CED67A21199A041B0056F178 /* EffectViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CED67A07199A041A0056F178 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = cn.com.modernmedia;
+				TargetAttributes = {
+					CED67A0E199A041A0056F178 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					CED67A20199A041B0056F178 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = CED67A0E199A041A0056F178;
+					};
+				};
+			};
+			buildConfigurationList = CED67A0A199A041A0056F178 /* Build configuration list for PBXProject "EffectView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CED67A06199A041A0056F178;
+			productRefGroup = CED67A10199A041A0056F178 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CED67A0E199A041A0056F178 /* EffectView */,
+				CED67A20199A041B0056F178 /* EffectViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CED67A0D199A041A0056F178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED67A1A199A041B0056F178 /* Main.storyboard in Resources */,
+				CED67A1C199A041B0056F178 /* Images.xcassets in Resources */,
+				CED67A32199A063E0056F178 /* wugui.jpeg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CED67A1F199A041B0056F178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CED67A0B199A041A0056F178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED67A17199A041B0056F178 /* ViewController.swift in Sources */,
+				CED67A15199A041B0056F178 /* AppDelegate.swift in Sources */,
+				CED67A34199A07DD0056F178 /* EffectViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CED67A1D199A041B0056F178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED67A28199A041B0056F178 /* EffectViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CED67A23199A041B0056F178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CED67A0E199A041A0056F178 /* EffectView */;
+			targetProxy = CED67A22199A041B0056F178 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CED67A18199A041B0056F178 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CED67A19199A041B0056F178 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CED67A29199A041B0056F178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CED67A2A199A041B0056F178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CED67A2C199A041B0056F178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = EffectView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CED67A2D199A041B0056F178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = EffectView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CED67A2F199A041B0056F178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EffectViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EffectView.app/EffectView";
+			};
+			name = Debug;
+		};
+		CED67A30199A041B0056F178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EffectViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EffectView.app/EffectView";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CED67A0A199A041A0056F178 /* Build configuration list for PBXProject "EffectView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CED67A29199A041B0056F178 /* Debug */,
+				CED67A2A199A041B0056F178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CED67A2B199A041B0056F178 /* Build configuration list for PBXNativeTarget "EffectView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CED67A2C199A041B0056F178 /* Debug */,
+				CED67A2D199A041B0056F178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CED67A2E199A041B0056F178 /* Build configuration list for PBXNativeTarget "EffectViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CED67A2F199A041B0056F178 /* Debug */,
+				CED67A30199A041B0056F178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CED67A07199A041A0056F178 /* Project object */;
+}
