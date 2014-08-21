@@ -128,7 +128,7 @@ class RecipeIngredient : Food
         self.quality = quality;
         super.init(name: name)
     }
-    convenience init(name: String)
+    convenience override init(name: String)
     {
         self.init(name:name, quality:1)
     }
