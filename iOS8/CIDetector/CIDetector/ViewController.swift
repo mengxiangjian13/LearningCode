@@ -11,42 +11,42 @@ import UIKit
 class ViewController: UIViewController {
     
     var detector : CIDetector? = nil;
-    var imageView : UIImageView! = nil;
+    
+    let isRectangle = false;
                             
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        imageView = UIImageView(frame: self.view.bounds);
-        let image = UIImage(named: "paper.jpg");
-        imageView.image = image;
-        self.view.addSubview(imageView);
-        
-        let button = UIButton.buttonWithType(.System) as UIButton;
-        button.frame = CGRectMake(0, 0, 50, 50);
-        button.center = self.view.center;
-        button.setTitle("detect!", forState: UIControlState.Normal);
-        button.addTarget(self, action: "beginDetect", forControlEvents: UIControlEvents.TouchUpInside);
-        self.view.addSubview(button);
-        
         // 检查矩形
         // option: 准确性， 相对比例（长宽比）
-        let options = [CIDetectorAccuracy : CIDetectorAccuracyHigh, CIDetectorAspectRatio : 2.0];
-        detector = CIDetector(ofType: CIDetectorTypeRectangle, context: nil, options: options);
         
-        
-    }
-    
-    func beginDetect()
-    {
-        let ciImage = performRectangleDetection(imageView.image.CIImage);
-        let image = UIImage(CIImage: ciImage)
-        if image != nil
+        if isRectangle
         {
-            imageView.image = image;
+            detector = rectangleDetector();
+//            performRectangleDetection()
         }
+        else
+        {
+            detector = qrCodeDetector();
+        }
+        
     }
     
+    func rectangleDetector()->CIDetector
+    {
+        let options = [CIDetectorAccuracy : CIDetectorAccuracyHigh, CIDetectorAspectRatio : 2.0];
+         return CIDetector(ofType: CIDetectorTypeRectangle, context: nil, options: options);
+    }
+    
+    func qrCodeDetector()->CIDetector
+    {
+        let option = [CIDetectorAccuracy : CIDetectorAccuracyHigh];
+        return CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: option);
+    }
+    
+    
+    // 找到矩形
     func performRectangleDetection(image:CIImage) -> CIImage?
     {
         var resultImage : CIImage? = nil;
@@ -66,6 +66,28 @@ class ViewController: UIViewController {
         return resultImage;
     }
     
+    // 找到二维码
+    func performQRCodesDetection(image:CIImage)->(CIImage?,String?)
+    {
+        var resultImage : CIImage? = nil;
+        var codeString : String? = nil;
+        
+        if let detector = detector
+        {
+            var features = detector.featuresInImage(image);
+            
+            for feature in features as [CIBarcodeFeature]
+            {
+                resultImage = drawHighlightedOverlayForPoint(image, topLeft: feature.topLeft, topRight: feature.topRight, bottomLeft: feature.bottomLeft, bottomRight: feature.bottomRight);
+                codeString = feature.codeString;
+            }
+        }
+        
+        return (resultImage,codeString);
+    }
+    
+    
+    // 在找到的feature上面加一层红色的滤镜
     func drawHighlightedOverlayForPoint(image:CIImage,topLeft:CGPoint,topRight:CGPoint,bottomLeft:CGPoint,bottomRight:CGPoint) -> CIImage
     {
         // 创建红色的CIImage
