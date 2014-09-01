@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE77D86219B46338003377EC /* ColorfulSquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE77D86119B46338003377EC /* ColorfulSquareViewController.m */; };
 		CE8AFF7119ADD40E0051CB10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8AFF7019ADD40D0051CB10 /* Foundation.framework */; };
 		CE8AFF7319ADD40E0051CB10 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8AFF7219ADD40E0051CB10 /* CoreGraphics.framework */; };
 		CE8AFF7519ADD40E0051CB10 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8AFF7419ADD40E0051CB10 /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE77D86019B46338003377EC /* ColorfulSquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorfulSquareViewController.h; sourceTree = "<group>"; };
+		CE77D86119B46338003377EC /* ColorfulSquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorfulSquareViewController.m; sourceTree = "<group>"; };
 		CE8AFF6D19ADD40D0051CB10 /* GLKitLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLKitLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8AFF7019ADD40D0051CB10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE8AFF7219ADD40E0051CB10 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -128,6 +131,8 @@
 				CE8AFF7719ADD40E0051CB10 /* Supporting Files */,
 				CE8AFFA519ADE25D0051CB10 /* RootViewController.h */,
 				CE8AFFA619ADE25D0051CB10 /* RootViewController.m */,
+				CE77D86019B46338003377EC /* ColorfulSquareViewController.h */,
+				CE77D86119B46338003377EC /* ColorfulSquareViewController.m */,
 			);
 			path = GLKitLearning;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				CE8AFF8119ADD40E0051CB10 /* AppDelegate.m in Sources */,
 				CE8AFF7D19ADD40E0051CB10 /* main.m in Sources */,
 				CE8AFFA719ADE25D0051CB10 /* RootViewController.m in Sources */,
+				CE77D86219B46338003377EC /* ColorfulSquareViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +461,7 @@
 				CE8AFF9B19ADD40E0051CB10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE8AFF9C19ADD40E0051CB10 /* Build configuration list for PBXNativeTarget "GLKitLearningTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +470,7 @@
 				CE8AFF9E19ADD40E0051CB10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
