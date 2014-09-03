@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AdaptiveLayout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="katana.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="rma-jm-6F4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="katana.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="rma-jm-6F4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="339" width="600" height="261"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="157" height="400"/>
-                                </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="威武的武士刀" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="d9g-qL-zQV">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="威武的武士刀" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="d9g-qL-zQV">
+                                <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="d9g-qL-zQV" secondAttribute="height" multiplier="5:8" id="ssX-w0-qQX"/>
                                     <constraint firstAttribute="width" secondItem="d9g-qL-zQV" secondAttribute="height" multiplier="600:233" id="ypT-9m-uoZ"/>
@@ -35,22 +29,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="ssX-w0-qQX"/>
-                                        <exclude reference="ypT-9m-uoZ"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="ypT-9m-uoZ"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="ssX-w0-qQX"/>
-                                    </mask>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -70,49 +48,6 @@
                             <constraint firstItem="d9g-qL-zQV" firstAttribute="leading" secondItem="rma-jm-6F4" secondAttribute="trailing" id="pOw-R5-idd"/>
                             <constraint firstAttribute="trailing" secondItem="rma-jm-6F4" secondAttribute="trailing" id="yvl-Cj-qpC"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="3WO-Qv-hr1"/>
-                                <exclude reference="BAT-e8-OoZ"/>
-                                <exclude reference="dSW-9B-zrN"/>
-                                <exclude reference="jf2-dX-yDY"/>
-                                <exclude reference="yvl-Cj-qpC"/>
-                                <exclude reference="2YI-Q8-Yjd"/>
-                                <exclude reference="FzL-b0-So5"/>
-                                <exclude reference="Oes-mT-xc4"/>
-                                <exclude reference="VaZ-25-dpW"/>
-                                <exclude reference="g73-Ry-dUX"/>
-                                <exclude reference="pOw-R5-idd"/>
-                                <exclude reference="MzJ-nr-xl7"/>
-                                <exclude reference="c94-ux-05x"/>
-                                <exclude reference="iOW-aw-1qP"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular">
-                            <mask key="subviews">
-                                <include reference="d9g-qL-zQV"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="dSW-9B-zrN"/>
-                                <include reference="jf2-dX-yDY"/>
-                                <include reference="yvl-Cj-qpC"/>
-                                <include reference="FzL-b0-So5"/>
-                                <include reference="Oes-mT-xc4"/>
-                                <include reference="g73-Ry-dUX"/>
-                                <include reference="MzJ-nr-xl7"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="3WO-Qv-hr1"/>
-                                <include reference="BAT-e8-OoZ"/>
-                                <include reference="2YI-Q8-Yjd"/>
-                                <include reference="VaZ-25-dpW"/>
-                                <include reference="pOw-R5-idd"/>
-                                <include reference="c94-ux-05x"/>
-                                <include reference="iOW-aw-1qP"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -123,4 +58,9 @@
     <resources>
         <image name="katana.jpeg" width="1024" height="619"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
 </document>
