@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEFB731E19E4E2AA00C5FFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB731D19E4E2AA00C5FFD5 /* AppDelegate.swift */; };
+		CEFB732019E4E2AA00C5FFD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB731F19E4E2AA00C5FFD5 /* ViewController.swift */; };
+		CEFB732319E4E2AA00C5FFD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFB732119E4E2AA00C5FFD5 /* Main.storyboard */; };
+		CEFB732519E4E2AA00C5FFD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFB732419E4E2AA00C5FFD5 /* Images.xcassets */; };
+		CEFB732819E4E2AA00C5FFD5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFB732619E4E2AA00C5FFD5 /* LaunchScreen.xib */; };
+		CEFB733419E4E2AA00C5FFD5 /* KeychainAuthencationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB733319E4E2AA00C5FFD5 /* KeychainAuthencationTests.swift */; };
+		CEFB733E19E4E76900C5FFD5 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB733D19E4E76900C5FFD5 /* KeychainManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEFB732E19E4E2AA00C5FFD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEFB731019E4E2AA00C5FFD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEFB731719E4E2AA00C5FFD5;
+			remoteInfo = KeychainAuthencation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEFB731819E4E2AA00C5FFD5 /* KeychainAuthencation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainAuthencation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEFB731C19E4E2AA00C5FFD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEFB731D19E4E2AA00C5FFD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEFB731F19E4E2AA00C5FFD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEFB732219E4E2AA00C5FFD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEFB732419E4E2AA00C5FFD5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CEFB732719E4E2AA00C5FFD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CEFB732D19E4E2AA00C5FFD5 /* KeychainAuthencationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeychainAuthencationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEFB733219E4E2AA00C5FFD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEFB733319E4E2AA00C5FFD5 /* KeychainAuthencationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAuthencationTests.swift; sourceTree = "<group>"; };
+		CEFB733D19E4E76900C5FFD5 /* KeychainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEFB731519E4E2AA00C5FFD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFB732A19E4E2AA00C5FFD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEFB730F19E4E2AA00C5FFD5 = {
+			isa = PBXGroup;
+			children = (
+				CEFB731A19E4E2AA00C5FFD5 /* KeychainAuthencation */,
+				CEFB733019E4E2AA00C5FFD5 /* KeychainAuthencationTests */,
+				CEFB731919E4E2AA00C5FFD5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEFB731919E4E2AA00C5FFD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEFB731819E4E2AA00C5FFD5 /* KeychainAuthencation.app */,
+				CEFB732D19E4E2AA00C5FFD5 /* KeychainAuthencationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEFB731A19E4E2AA00C5FFD5 /* KeychainAuthencation */ = {
+			isa = PBXGroup;
+			children = (
+				CEFB731D19E4E2AA00C5FFD5 /* AppDelegate.swift */,
+				CEFB731F19E4E2AA00C5FFD5 /* ViewController.swift */,
+				CEFB732119E4E2AA00C5FFD5 /* Main.storyboard */,
+				CEFB732419E4E2AA00C5FFD5 /* Images.xcassets */,
+				CEFB732619E4E2AA00C5FFD5 /* LaunchScreen.xib */,
+				CEFB731B19E4E2AA00C5FFD5 /* Supporting Files */,
+				CEFB733D19E4E76900C5FFD5 /* KeychainManager.swift */,
+			);
+			path = KeychainAuthencation;
+			sourceTree = "<group>";
+		};
+		CEFB731B19E4E2AA00C5FFD5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEFB731C19E4E2AA00C5FFD5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEFB733019E4E2AA00C5FFD5 /* KeychainAuthencationTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEFB733319E4E2AA00C5FFD5 /* KeychainAuthencationTests.swift */,
+				CEFB733119E4E2AA00C5FFD5 /* Supporting Files */,
+			);
+			path = KeychainAuthencationTests;
+			sourceTree = "<group>";
+		};
+		CEFB733119E4E2AA00C5FFD5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEFB733219E4E2AA00C5FFD5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEFB731719E4E2AA00C5FFD5 /* KeychainAuthencation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEFB733719E4E2AA00C5FFD5 /* Build configuration list for PBXNativeTarget "KeychainAuthencation" */;
+			buildPhases = (
+				CEFB731419E4E2AA00C5FFD5 /* Sources */,
+				CEFB731519E4E2AA00C5FFD5 /* Frameworks */,
+				CEFB731619E4E2AA00C5FFD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeychainAuthencation;
+			productName = KeychainAuthencation;
+			productReference = CEFB731819E4E2AA00C5FFD5 /* KeychainAuthencation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEFB732C19E4E2AA00C5FFD5 /* KeychainAuthencationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEFB733A19E4E2AA00C5FFD5 /* Build configuration list for PBXNativeTarget "KeychainAuthencationTests" */;
+			buildPhases = (
+				CEFB732919E4E2AA00C5FFD5 /* Sources */,
+				CEFB732A19E4E2AA00C5FFD5 /* Frameworks */,
+				CEFB732B19E4E2AA00C5FFD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEFB732F19E4E2AA00C5FFD5 /* PBXTargetDependency */,
+			);
+			name = KeychainAuthencationTests;
+			productName = KeychainAuthencationTests;
+			productReference = CEFB732D19E4E2AA00C5FFD5 /* KeychainAuthencationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEFB731019E4E2AA00C5FFD5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = cn.com.modernmedia;
+				TargetAttributes = {
+					CEFB731719E4E2AA00C5FFD5 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					CEFB732C19E4E2AA00C5FFD5 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = CEFB731719E4E2AA00C5FFD5;
+					};
+				};
+			};
+			buildConfigurationList = CEFB731319E4E2AA00C5FFD5 /* Build configuration list for PBXProject "KeychainAuthencation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEFB730F19E4E2AA00C5FFD5;
+			productRefGroup = CEFB731919E4E2AA00C5FFD5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEFB731719E4E2AA00C5FFD5 /* KeychainAuthencation */,
+				CEFB732C19E4E2AA00C5FFD5 /* KeychainAuthencationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEFB731619E4E2AA00C5FFD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEFB732319E4E2AA00C5FFD5 /* Main.storyboard in Resources */,
+				CEFB732819E4E2AA00C5FFD5 /* LaunchScreen.xib in Resources */,
+				CEFB732519E4E2AA00C5FFD5 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFB732B19E4E2AA00C5FFD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEFB731419E4E2AA00C5FFD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEFB732019E4E2AA00C5FFD5 /* ViewController.swift in Sources */,
+				CEFB733E19E4E76900C5FFD5 /* KeychainManager.swift in Sources */,
+				CEFB731E19E4E2AA00C5FFD5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFB732919E4E2AA00C5FFD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEFB733419E4E2AA00C5FFD5 /* KeychainAuthencationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEFB732F19E4E2AA00C5FFD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEFB731719E4E2AA00C5FFD5 /* KeychainAuthencation */;
+			targetProxy = CEFB732E19E4E2AA00C5FFD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CEFB732119E4E2AA00C5FFD5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEFB732219E4E2AA00C5FFD5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEFB732619E4E2AA00C5FFD5 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEFB732719E4E2AA00C5FFD5 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEFB733519E4E2AA00C5FFD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEFB733619E4E2AA00C5FFD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEFB733819E4E2AA00C5FFD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KeychainAuthencation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CEFB733919E4E2AA00C5FFD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KeychainAuthencation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CEFB733B19E4E2AA00C5FFD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KeychainAuthencationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeychainAuthencation.app/KeychainAuthencation";
+			};
+			name = Debug;
+		};
+		CEFB733C19E4E2AA00C5FFD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KeychainAuthencationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeychainAuthencation.app/KeychainAuthencation";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEFB731319E4E2AA00C5FFD5 /* Build configuration list for PBXProject "KeychainAuthencation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEFB733519E4E2AA00C5FFD5 /* Debug */,
+				CEFB733619E4E2AA00C5FFD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEFB733719E4E2AA00C5FFD5 /* Build configuration list for PBXNativeTarget "KeychainAuthencation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEFB733819E4E2AA00C5FFD5 /* Debug */,
+				CEFB733919E4E2AA00C5FFD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CEFB733A19E4E2AA00C5FFD5 /* Build configuration list for PBXNativeTarget "KeychainAuthencationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEFB733B19E4E2AA00C5FFD5 /* Debug */,
+				CEFB733C19E4E2AA00C5FFD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEFB731019E4E2AA00C5FFD5 /* Project object */;
+}
