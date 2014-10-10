@@ -48,7 +48,7 @@ public class Timer: NSObject {
     public func stop()
     {
         isRunning = false
-        if timer
+        if (timer != nil)
         {
             timer!.invalidate()
             timer = nil

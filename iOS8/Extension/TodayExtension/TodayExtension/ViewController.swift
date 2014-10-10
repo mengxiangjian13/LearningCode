@@ -35,7 +35,7 @@ class ViewController: UIViewController, TimerDelegate {
         label!.font = UIFont.systemFontOfSize(30)
         label!.textColor = UIColor.blackColor()
         label!.textAlignment = NSTextAlignment.Center
-        self.view.addSubview(label)
+        self.view.addSubview(label!)
         label!.text = "\(totalTime)"
         
         
@@ -143,7 +143,7 @@ class ViewController: UIViewController, TimerDelegate {
     func saveSharedData()
     {
         let userDefault = NSUserDefaults(suiteName: "group.develop")
-        if timer
+        if(timer != nil)
         {
             userDefault.setInteger(leftTime, forKey: "LeftTime")
             userDefault.setInteger(Int(NSDate().timeIntervalSince1970), forKey: "ThisTime")

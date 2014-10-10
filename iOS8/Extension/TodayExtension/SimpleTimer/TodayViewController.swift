@@ -48,7 +48,7 @@ class TodayViewController: UIViewController, TimerDelegate{
     
     func timerDidStop()
     {
-        if todayLabel
+        if (todayLabel != nil)
         {
             todayLabel.text = "\(timer!.leftTime)"
         }
@@ -75,12 +75,12 @@ class TodayViewController: UIViewController, TimerDelegate{
     func backToApp()
     {
         // URL Scheme 的方式返回containing app
-        self.extensionContext.openURL(NSURL(string: "TodayExtension://finished"), completionHandler: nil)
+        self.extensionContext!.openURL(NSURL(string: "TodayExtension://finished"), completionHandler: nil)
     }
     
     func timerDidUpdate(remainTime:NSInteger)
     {
-        if todayLabel
+        if (todayLabel != nil)
         {
             todayLabel.text = "\(remainTime)"
         }

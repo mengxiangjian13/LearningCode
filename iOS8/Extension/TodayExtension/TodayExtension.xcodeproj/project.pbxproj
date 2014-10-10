@@ -22,6 +22,7 @@
 		CEAE37FF198F9D7700258648 /* SimpleTimerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEAE37EA198F9D7700258648 /* SimpleTimerKit.framework */; };
 		CEAE3800198F9D7700258648 /* SimpleTimerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEAE37EA198F9D7700258648 /* SimpleTimerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CEAE380E198F9DAF00258648 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE37E3198F7D7200258648 /* Timer.swift */; };
+		CEFE371419E77F6000E75683 /* SimpleTimerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEAE37EA198F9D7700258648 /* SimpleTimerKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,13 @@
 			remoteInfo = SimpleTimerKit;
 		};
 		CEAE380C198F9D7900258648 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEAE379B198F700C00258648 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEAE37E9198F9D7700258648;
+			remoteInfo = SimpleTimerKit;
+		};
+		CEFE371519E77F6600E75683 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CEAE379B198F700C00258648 /* Project object */;
 			proxyType = 1;
@@ -152,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEFE371419E77F6000E75683 /* SimpleTimerKit.framework in Frameworks */,
 				CEAE37CC198F738A00258648 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +372,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				CEFE371619E77F6600E75683 /* PBXTargetDependency */,
 			);
 			name = SimpleTimer;
 			productName = SimpleTimer;
@@ -582,6 +592,11 @@
 			isa = PBXTargetDependency;
 			target = CEAE37E9198F9D7700258648 /* SimpleTimerKit */;
 			targetProxy = CEAE380C198F9D7900258648 /* PBXContainerItemProxy */;
+		};
+		CEFE371619E77F6600E75683 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEAE37E9198F9D7700258648 /* SimpleTimerKit */;
+			targetProxy = CEFE371519E77F6600E75683 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
