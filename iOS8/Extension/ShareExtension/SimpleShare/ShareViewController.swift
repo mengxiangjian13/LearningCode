@@ -37,7 +37,7 @@ class ShareViewController: SLComposeServiceViewController {
         // 此方法会在分享编辑界面动画完成的时候调用
         // 在这个方法里面实现比较heavy的任务，比如检查是否有image
         
-        let extensionItem = self.extensionContext.inputItems[0] as NSExtensionItem
+        let extensionItem = self.extensionContext!.inputItems[0] as NSExtensionItem
         fetchSharingImage(extensionItem)
         {
             image in self.sharingImage = image
@@ -85,7 +85,7 @@ class ShareViewController: SLComposeServiceViewController {
         // 点击发送，就可以post文字和图片到设定好的地方
     
         // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
-        self.extensionContext.completeRequestReturningItems(nil, completionHandler: nil)
+        self.extensionContext!.completeRequestReturningItems(nil, completionHandler: nil)
     }
 
 }
