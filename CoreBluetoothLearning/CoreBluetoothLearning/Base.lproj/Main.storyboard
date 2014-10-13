@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="N6y-3e-fti">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Peripherial-->
         <scene sceneID="53b-Je-105">
             <objects>
-                <viewController id="k6x-CG-F6N" customClass="PeripheralViewController" sceneMemberID="viewController">
+                <viewController title="Peripherial" id="k6x-CG-F6N" customClass="PeripheralViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xzk-sb-pty"/>
                         <viewControllerLayoutGuide type="bottom" id="5jI-at-uuX"/>
@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="veD-II-PMC"/>
+                    <tabBarItem key="tabBarItem" title="Peripherial" id="veD-II-PMC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="neH-37-q6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="83" y="144"/>
         </scene>
-        <!--Item 1-->
+        <!--Central-->
         <scene sceneID="Ppf-E5-w5b">
             <objects>
-                <viewController id="Uxz-fP-bTi" customClass="CentralViewController" sceneMemberID="viewController">
+                <viewController title="Central" id="Uxz-fP-bTi" customClass="CentralViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aYb-UG-fEC"/>
                         <viewControllerLayoutGuide type="bottom" id="QFI-Dl-LA0"/>
@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="nLH-qe-suA"/>
+                    <tabBarItem key="tabBarItem" title="Central" id="nLH-qe-suA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bse-AV-qB0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

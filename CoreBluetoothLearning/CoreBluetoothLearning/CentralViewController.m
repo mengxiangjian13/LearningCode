@@ -30,9 +30,7 @@
     centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
     
     CGFloat viewWidth = self.view.bounds.size.width;
-    
-    self.title = @"Central";
-    
+        
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     button.frame = CGRectMake(0, 0, 200, 100);
     button.center = CGPointMake(viewWidth / 2.0, 100);
