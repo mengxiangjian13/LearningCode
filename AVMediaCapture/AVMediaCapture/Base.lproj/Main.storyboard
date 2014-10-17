@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,26 +18,73 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKY-yK-7H2">
-                                <rect key="frame" x="270" y="285" width="60" height="30"/>
-                                <state key="normal" title="停止扫描">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="stopScan:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yVO-YV-7wx"/>
                                 </connections>
                             </button>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oka-c3-zd2">
-                                <rect key="frame" x="10" y="50" width="300" height="180"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oka-c3-zd2">
+                                <rect key="frame" x="150" y="70" width="300" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="B2Z-ta-oGO"/>
+                                    <constraint firstAttribute="width" constant="300" id="SY4-Rg-xJw"/>
+                                </constraints>
                             </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KE-ym-gEs" userLabel="urlButon">
+                                <rect key="frame" x="150" y="500" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="LJy-l7-zgX"/>
+                                    <constraint firstAttribute="height" constant="50" id="cNU-wE-HT3"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openURL:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Jtl-1g-yrw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0KE-ym-gEs" secondAttribute="bottom" constant="30" id="O8l-ua-VgL"/>
                             <constraint firstAttribute="centerX" secondItem="tKY-yK-7H2" secondAttribute="centerX" id="OQm-Fa-RLG"/>
+                            <constraint firstItem="Oka-c3-zd2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="UZ7-8O-WqS"/>
+                            <constraint firstAttribute="centerY" secondItem="Oka-c3-zd2" secondAttribute="centerY" id="WZB-eK-ugt"/>
                             <constraint firstAttribute="centerY" secondItem="tKY-yK-7H2" secondAttribute="centerY" id="Yuk-xF-645"/>
+                            <constraint firstAttribute="centerX" secondItem="Oka-c3-zd2" secondAttribute="centerX" id="aY0-VE-rei"/>
+                            <constraint firstItem="Oka-c3-zd2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="gd3-aq-8UZ"/>
+                            <constraint firstAttribute="centerX" secondItem="0KE-ym-gEs" secondAttribute="centerX" id="jXJ-HO-ydw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tKY-yK-7H2" secondAttribute="trailing" constant="100" id="wLy-TN-Zfh"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0KE-ym-gEs" secondAttribute="bottom" constant="50" id="wMb-AC-oOg"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UZ7-8O-WqS"/>
+                                <exclude reference="WZB-eK-ugt"/>
+                                <exclude reference="O8l-ua-VgL"/>
+                                <exclude reference="wLy-TN-Zfh"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="UZ7-8O-WqS"/>
+                                <include reference="WZB-eK-ugt"/>
+                                <exclude reference="aY0-VE-rei"/>
+                                <exclude reference="gd3-aq-8UZ"/>
+                                <include reference="O8l-ua-VgL"/>
+                                <exclude reference="wMb-AC-oOg"/>
+                                <exclude reference="OQm-Fa-RLG"/>
+                                <include reference="Yuk-xF-645"/>
+                                <include reference="wLy-TN-Zfh"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="openURLButton" destination="0KE-ym-gEs" id="Wzr-ir-Rw9"/>
                         <outlet property="scanButton" destination="tKY-yK-7H2" id="AQl-Ks-vwC"/>
                         <outlet property="scanView" destination="Oka-c3-zd2" id="lcJ-yR-dY5"/>
                     </connections>

@@ -28,6 +28,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    button.frame = CGRectMake(0, 0, 100, 50);
+    button.center = self.view.center;
+    [button setTitle:@"走你！" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(nextView:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
     //baseAnimation 基本动画
     UIView *square = [[UIView alloc] initWithFrame:CGRectMake(0, 30, 50, 50)];
     square.backgroundColor = [UIColor redColor];
@@ -105,6 +112,11 @@
     rect.layer.position = CGPointMake(295, 530);
 }
 
+- (void)nextView:(id)sender
+{
+    UIViewController *vc = [[UIViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 
 - (void)didReceiveMemoryWarning

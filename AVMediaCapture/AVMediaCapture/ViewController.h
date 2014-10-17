@@ -12,8 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
 @property (weak, nonatomic) IBOutlet UIView *scanView;
+@property (weak, nonatomic) IBOutlet UIButton *openURLButton;
 
 - (IBAction)stopScan:(id)sender;
+- (IBAction)openURL:(id)sender;
 
 @end
 
