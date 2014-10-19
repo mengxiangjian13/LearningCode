@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE38466519F3B54700E7E789 /* ActionRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CE38466419F3B54700E7E789 /* ActionRequestHandler.m */; };
+		CE38466719F3B54700E7E789 /* Action.js in Resources */ = {isa = PBXBuildFile; fileRef = CE38466619F3B54700E7E789 /* Action.js */; };
+		CE38466A19F3B54700E7E789 /* QRCodeReader.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE38465F19F3B54700E7E789 /* QRCodeReader.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CEEBD52819F0BD3800B58151 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEBD52719F0BD3800B58151 /* main.m */; };
 		CEEBD52B19F0BD3800B58151 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEBD52A19F0BD3800B58151 /* AppDelegate.m */; };
 		CEEBD52E19F0BD3800B58151 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEBD52D19F0BD3800B58151 /* ViewController.m */; };
@@ -17,6 +20,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CE38466819F3B54700E7E789 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEEBD51A19F0BD3800B58151 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE38465E19F3B54700E7E789;
+			remoteInfo = QRCodeReader;
+		};
+		CE38466B19F3B54700E7E789 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEEBD51A19F0BD3800B58151 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE38465E19F3B54700E7E789;
+			remoteInfo = QRCodeReader;
+		};
 		CEEBD53C19F0BD3800B58151 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CEEBD51A19F0BD3800B58151 /* Project object */;
@@ -26,7 +43,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CE38465819F3B3B900E7E789 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CE38466A19F3B54700E7E789 /* QRCodeReader.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CE38465F19F3B54700E7E789 /* QRCodeReader.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QRCodeReader.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE38466219F3B54700E7E789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE38466319F3B54700E7E789 /* ActionRequestHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionRequestHandler.h; sourceTree = "<group>"; };
+		CE38466419F3B54700E7E789 /* ActionRequestHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionRequestHandler.m; sourceTree = "<group>"; };
+		CE38466619F3B54700E7E789 /* Action.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Action.js; sourceTree = "<group>"; };
 		CEEBD52219F0BD3800B58151 /* AVMediaCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVMediaCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEBD52619F0BD3800B58151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEEBD52719F0BD3800B58151 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -43,6 +79,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CE38465C19F3B54700E7E789 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEEBD51F19F0BD3800B58151 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -60,11 +103,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE38466019F3B54700E7E789 /* QRCodeReader */ = {
+			isa = PBXGroup;
+			children = (
+				CE38466319F3B54700E7E789 /* ActionRequestHandler.h */,
+				CE38466419F3B54700E7E789 /* ActionRequestHandler.m */,
+				CE38466619F3B54700E7E789 /* Action.js */,
+				CE38466119F3B54700E7E789 /* Supporting Files */,
+			);
+			path = QRCodeReader;
+			sourceTree = "<group>";
+		};
+		CE38466119F3B54700E7E789 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE38466219F3B54700E7E789 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		CEEBD51919F0BD3800B58151 = {
 			isa = PBXGroup;
 			children = (
 				CEEBD52419F0BD3800B58151 /* AVMediaCapture */,
 				CEEBD53E19F0BD3800B58151 /* AVMediaCaptureTests */,
+				CE38466019F3B54700E7E789 /* QRCodeReader */,
 				CEEBD52319F0BD3800B58151 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +137,7 @@
 			children = (
 				CEEBD52219F0BD3800B58151 /* AVMediaCapture.app */,
 				CEEBD53B19F0BD3800B58151 /* AVMediaCaptureTests.xctest */,
+				CE38465F19F3B54700E7E789 /* QRCodeReader.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +186,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CE38465E19F3B54700E7E789 /* QRCodeReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE38466D19F3B54800E7E789 /* Build configuration list for PBXNativeTarget "QRCodeReader" */;
+			buildPhases = (
+				CE38465B19F3B54700E7E789 /* Sources */,
+				CE38465C19F3B54700E7E789 /* Frameworks */,
+				CE38465D19F3B54700E7E789 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QRCodeReader;
+			productName = QRCodeReader;
+			productReference = CE38465F19F3B54700E7E789 /* QRCodeReader.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		CEEBD52119F0BD3800B58151 /* AVMediaCapture */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEEBD54519F0BD3800B58151 /* Build configuration list for PBXNativeTarget "AVMediaCapture" */;
@@ -129,10 +210,13 @@
 				CEEBD51E19F0BD3800B58151 /* Sources */,
 				CEEBD51F19F0BD3800B58151 /* Frameworks */,
 				CEEBD52019F0BD3800B58151 /* Resources */,
+				CE38465819F3B3B900E7E789 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CE38466919F3B54700E7E789 /* PBXTargetDependency */,
+				CE38466C19F3B54700E7E789 /* PBXTargetDependency */,
 			);
 			name = AVMediaCapture;
 			productName = AVMediaCapture;
@@ -166,6 +250,9 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = cn.com.modernmedia;
 				TargetAttributes = {
+					CE38465E19F3B54700E7E789 = {
+						CreatedOnToolsVersion = 6.0;
+					};
 					CEEBD52119F0BD3800B58151 = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
@@ -190,11 +277,20 @@
 			targets = (
 				CEEBD52119F0BD3800B58151 /* AVMediaCapture */,
 				CEEBD53A19F0BD3800B58151 /* AVMediaCaptureTests */,
+				CE38465E19F3B54700E7E789 /* QRCodeReader */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CE38465D19F3B54700E7E789 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE38466719F3B54700E7E789 /* Action.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEEBD52019F0BD3800B58151 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,6 +311,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CE38465B19F3B54700E7E789 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE38466519F3B54700E7E789 /* ActionRequestHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEEBD51E19F0BD3800B58151 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,6 +340,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CE38466919F3B54700E7E789 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE38465E19F3B54700E7E789 /* QRCodeReader */;
+			targetProxy = CE38466819F3B54700E7E789 /* PBXContainerItemProxy */;
+		};
+		CE38466C19F3B54700E7E789 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE38465E19F3B54700E7E789 /* QRCodeReader */;
+			targetProxy = CE38466B19F3B54700E7E789 /* PBXContainerItemProxy */;
+		};
 		CEEBD53D19F0BD3800B58151 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CEEBD52119F0BD3800B58151 /* AVMediaCapture */;
@@ -263,6 +377,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CE38466E19F3B54800E7E789 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QRCodeReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CE38466F19F3B54800E7E789 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QRCodeReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		CEEBD54319F0BD3800B58151 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -346,7 +484,7 @@
 				INFOPLIST_FILE = AVMediaCapture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "66FA758F-86FC-43DA-B627-EA8646C94A27";
+				PROVISIONING_PROFILE = "9B1838F0-A8D1-45FF-BDD7-5CE8696DC505";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -358,7 +496,7 @@
 				INFOPLIST_FILE = AVMediaCapture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "66FA758F-86FC-43DA-B627-EA8646C94A27";
+				PROVISIONING_PROFILE = "9B1838F0-A8D1-45FF-BDD7-5CE8696DC505";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -400,6 +538,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CE38466D19F3B54800E7E789 /* Build configuration list for PBXNativeTarget "QRCodeReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE38466E19F3B54800E7E789 /* Debug */,
+				CE38466F19F3B54800E7E789 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CEEBD51D19F0BD3800B58151 /* Build configuration list for PBXProject "AVMediaCapture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
