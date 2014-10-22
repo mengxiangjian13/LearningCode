@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
     
     func cancel()
     {
-        self.navigationController.dismissViewControllerAnimated(true, completion: {println("关闭登录框")})
+        self.navigationController!.dismissViewControllerAnimated(true, completion: {println("关闭登录框")})
     }
     
     func login()

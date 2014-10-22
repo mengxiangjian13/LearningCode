@@ -39,19 +39,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         println("登录")
         let loginVC = LoginViewController()
         let loginNVC = UINavigationController(rootViewController: loginVC)
-        self.navigationController.presentViewController(loginNVC, animated: true, completion: {println("弹出登录框")})
+        self.navigationController!.presentViewController(loginNVC, animated: true, completion: {println("弹出登录框")})
     }
     
     var titleArray = ["1","2","3","4","5"]
     
     
     //MARK:-
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return titleArray.count
     }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let identifier = "cell"
         var cell = tableView.dequeueReusableCellWithIdentifier(identifier) as? UITableViewCell
@@ -62,14 +62,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell!.textLabel.text = titleArray[indexPath.row]
         
-        return cell
+        return cell!
     }
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
     {
         let articleViewController = ArticleViewController()
         articleViewController.title = titleArray[indexPath.row]
-        self.navigationController.pushViewController(articleViewController, animated: true)
+        self.navigationController!.pushViewController(articleViewController, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
