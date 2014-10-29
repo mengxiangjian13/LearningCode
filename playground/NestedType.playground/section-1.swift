@@ -32,7 +32,7 @@ struct BlackjackCard {
                 case .Jack,.Queen,.King:
                     return Values(first: 10, second: nil)
                 default:
-                    return Values(first: self.toRaw(), second: nil)
+                    return Values(first: self.rawValue, second: nil)
             }
         }
     }
@@ -40,7 +40,7 @@ struct BlackjackCard {
     // BlackjackCard 属性
     let rank:Rank, suit : Suit
     var description : String {
-        var output = "suit is \(suit.toRaw())"
+        var output = "suit is \(suit.rawValue)"
         output += " value is \(rank.value.first)"
         if let second = rank.value.second
         {
