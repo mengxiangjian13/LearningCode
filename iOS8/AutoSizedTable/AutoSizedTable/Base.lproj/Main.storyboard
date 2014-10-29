@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EV0-bP-s70">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EV0-bP-s70">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
-        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Table View Controller-->
@@ -20,16 +19,15 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amQ-nU-ygP">
-                                            <rect key="frame" x="8" y="11" width="300" height="21"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="amQ-nU-ygP" firstAttribute="top" secondItem="Ee3-O8-2gd" secondAttribute="topMargin" constant="11" id="0ZC-kV-wCH"/>
+                                        <constraint firstAttribute="bottom" secondItem="amQ-nU-ygP" secondAttribute="bottom" constant="11" id="Kk6-Qa-9wA"/>
+                                        <constraint firstItem="amQ-nU-ygP" firstAttribute="top" secondItem="Ee3-O8-2gd" secondAttribute="top" constant="11" id="OxG-pD-qQW"/>
                                         <constraint firstAttribute="centerX" secondItem="amQ-nU-ygP" secondAttribute="centerX" id="P60-Io-j4S"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="amQ-nU-ygP" secondAttribute="bottom" constant="11" id="yHD-wM-MDG"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
