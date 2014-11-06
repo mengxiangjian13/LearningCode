@@ -34,7 +34,7 @@ logIfTrueNew(2>1)
 
 // ?? 操作符 用法如下。
 
-let a = nil;
+let a = 1;
 let b = 2;
 let c = a ?? b; // ??前面不为nil的时候，取前面的。在??前面的为nil的时候，取后面的。
 
@@ -62,8 +62,8 @@ func && (pre:Bool,suf:@autoclosure ()->Bool) -> Bool
 }
 
 let t = true;
-let f = true;
-let u = a&&b;
+let f = false;
+let u = t&&f;
 
 
 
