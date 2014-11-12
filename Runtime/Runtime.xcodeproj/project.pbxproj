@@ -10,6 +10,7 @@
 		CE08A9541A0B54A500AA6F49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE08A9531A0B54A500AA6F49 /* main.m */; };
 		CE08A95C1A0B583700AA6F49 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = CE08A95B1A0B583700AA6F49 /* Car.m */; };
 		CE08A95F1A0B67BD00AA6F49 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = CE08A95E1A0B67BD00AA6F49 /* Animal.m */; };
+		CE9206A31A13417600884ADC /* MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9206A21A13417600884ADC /* MethodSwizzling.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		CE08A95B1A0B583700AA6F49 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		CE08A95D1A0B67BD00AA6F49 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
 		CE08A95E1A0B67BD00AA6F49 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
+		CE9206A11A13417600884ADC /* MethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodSwizzling.h; sourceTree = "<group>"; };
+		CE9206A21A13417600884ADC /* MethodSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzling.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				CE08A95B1A0B583700AA6F49 /* Car.m */,
 				CE08A95D1A0B67BD00AA6F49 /* Animal.h */,
 				CE08A95E1A0B67BD00AA6F49 /* Animal.m */,
+				CE9206A11A13417600884ADC /* MethodSwizzling.h */,
+				CE9206A21A13417600884ADC /* MethodSwizzling.m */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 			files = (
 				CE08A95F1A0B67BD00AA6F49 /* Animal.m in Sources */,
 				CE08A95C1A0B583700AA6F49 /* Car.m in Sources */,
+				CE9206A31A13417600884ADC /* MethodSwizzling.m in Sources */,
 				CE08A9541A0B54A500AA6F49 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +250,7 @@
 				CE08A9591A0B54A500AA6F49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

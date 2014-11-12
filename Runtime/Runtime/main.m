@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Car.h"
 #include <objc/runtime.h>
+#import "MethodSwizzling.h"
 
 void ShowMe(id self,SEL _cmd)
 {
@@ -34,7 +35,9 @@ int main(int argc, const char * argv[]) {
         [error performSelector:@selector(showMe)];
         
         
-        
+        // method swizzling
+        MethodSwizzling *ms = [[MethodSwizzling alloc] init];
+        [ms start];
     }
     return 0;
 }
