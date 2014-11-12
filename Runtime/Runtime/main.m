@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "Car.h"
+#include <objc/runtime.h>
+
+void ShowMe(id self,SEL _cmd)
+{
+    NSLog(@"SHOW ME THE ERROR!");
+}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -18,6 +24,17 @@ int main(int argc, const char * argv[]) {
         [car resolveThisMethodDynamically];
         [car fafafa];
         [car cacaca];
+        
+        // 动态生成类
+        Class MyClass = objc_allocateClassPair([NSError class], "MyError", 0);
+        class_addMethod(MyClass, @selector(showMe), (IMP) ShowMe, "v@:");
+        objc_registerClassPair(MyClass);
+        
+        id error = [[MyClass alloc] init];
+        [error performSelector:@selector(showMe)];
+        
+        
+        
     }
     return 0;
 }
