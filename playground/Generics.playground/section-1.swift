@@ -26,7 +26,7 @@ struct Stack<T> {
     var items = [T]()
     mutating func push(item:T)
     {
-        items += item
+        items.append(item)
     }
     
     mutating func pop() -> T
