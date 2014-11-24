@@ -11,6 +11,8 @@
 
 @interface InterfaceController : WKInterfaceController
 
-@property (weak, nonatomic) IBOutlet WKInterfaceLabel *label;
+@property (weak, nonatomic) IBOutlet WKInterfaceTable *table;
+
+- (IBAction)pushNewController:(id)sender;
 
 @end

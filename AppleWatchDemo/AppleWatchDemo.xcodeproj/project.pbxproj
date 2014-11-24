@@ -22,6 +22,7 @@
 		CE06CE6D1A21FFDD00A22FBB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE06CE6C1A21FFDD00A22FBB /* Interface.storyboard */; };
 		CE06CE6F1A21FFDD00A22FBB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE06CE6E1A21FFDD00A22FBB /* Images.xcassets */; };
 		CE06CE721A21FFDD00A22FBB /* AppleWatchDemo WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE06CE531A21FFDD00A22FBB /* AppleWatchDemo WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE1411471A22F341009F8B1A /* SecondController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1411461A22F341009F8B1A /* SecondController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		CE06CE6B1A21FFDD00A22FBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE06CE6C1A21FFDD00A22FBB /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		CE06CE6E1A21FFDD00A22FBB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CE1411451A22F341009F8B1A /* SecondController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondController.h; sourceTree = "<group>"; };
+		CE1411461A22F341009F8B1A /* SecondController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +197,8 @@
 			children = (
 				CE06CE5B1A21FFDD00A22FBB /* InterfaceController.h */,
 				CE06CE5C1A21FFDD00A22FBB /* InterfaceController.m */,
+				CE1411451A22F341009F8B1A /* SecondController.h */,
+				CE1411461A22F341009F8B1A /* SecondController.m */,
 				CE06CE5E1A21FFDD00A22FBB /* NotificationController.h */,
 				CE06CE5F1A21FFDD00A22FBB /* NotificationController.m */,
 				CE06CE611A21FFDD00A22FBB /* Images.xcassets */,
@@ -408,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1411471A22F341009F8B1A /* SecondController.m in Sources */,
 				CE06CE601A21FFDD00A22FBB /* NotificationController.m in Sources */,
 				CE06CE5D1A21FFDD00A22FBB /* InterfaceController.m in Sources */,
 			);
@@ -676,6 +682,7 @@
 				CE06CE761A21FFDE00A22FBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE06CE781A21FFDE00A22FBB /* Build configuration list for PBXNativeTarget "AppleWatchDemo WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -684,6 +691,7 @@
 				CE06CE741A21FFDE00A22FBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,7 +10,6 @@
 
 
 @interface InterfaceController()
-
 @end
 
 
@@ -22,16 +21,29 @@
         // Initialize variables here.
         // Configure interface objects here.
         NSLog(@"%@ initWithContext", self);
-        
+        [self.table setNumberOfRows:10 withRowType:@"myRowControllerType"];
+        NSLog(@"row number:%ld",[self.table numberOfRows]);
     }
     return self;
+}
+
+- (IBAction)pushNewController:(id)sender
+{
+    ;
+}
+
+- (id)contextForSegueWithIdentifier:(NSString *)segueIdentifier inTable:(WKInterfaceTable *)table rowIndex:(NSInteger)rowIndex
+{
+    id rowController = [table rowControllerAtIndex:rowIndex];
+    NSLog(@"%@",rowController);
+    return [NSString stringWithFormat:@"row %ld",(long)rowIndex];
 }
 
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     NSLog(@"%@ will activate", self);
+
     
-    [self.label setTextColor:[UIColor redColor]];
 }
 
 - (void)didDeactivate {

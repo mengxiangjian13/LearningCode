@@ -10,14 +10,46 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <label width="136" alignment="center" verticalAlignment="center" text="apple watch demo" id="AHl-7c-QST"/>
+                        <table alignment="left" layout="vertical" id="ame-bT-RuA">
+                            <items>
+                                <tableRow identifier="myRowControllerType" id="DCk-pq-oCr">
+                                    <group key="rootItem" width="1" alignment="left" id="opr-6X-uzs">
+                                        <items>
+                                            <label alignment="left" text="Label" id="FWQ-Jw-duZ"/>
+                                            <button width="68" height="19" alignment="right" title="Button" id="nee-qc-O2n">
+                                                <connections>
+                                                    <action selector="pushNewController:" destination="AgC-eL-Hgc" id="Shl-RQ-JtT"/>
+                                                </connections>
+                                            </button>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <segue destination="rKZ-l9-zuW" kind="push" id="NHU-di-hlJ"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
                     <connections>
-                        <outlet property="label" destination="AHl-7c-QST" id="Ura-lB-FOu"/>
+                        <outlet property="table" destination="ame-bT-RuA" id="uAW-Ac-TeZ"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="357" y="293"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="cwi-mG-1C9">
+            <objects>
+                <controller identifier="Second" id="rKZ-l9-zuW" customClass="SecondController">
+                    <items>
+                        <label width="136" alignment="center" textAlignment="center" id="1XF-Zm-lF6"/>
+                    </items>
+                    <connections>
+                        <outlet property="label" destination="1XF-Zm-lF6" id="1dC-3n-U8F"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="557" y="294"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="F9Z-Yo-ikX">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7T5-Vj-hF5">
+            <objects>
+                <tabBarController id="F9Z-Yo-ikX" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="djL-AS-ggd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="AcX-cl-8zd" kind="relationship" relationship="viewControllers" id="VSd-2c-2X5"/>
+                        <segue destination="bpW-36-70H" kind="relationship" relationship="viewControllers" id="OdE-LE-sVY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3tF-aM-W7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-440" y="719"/>
+        </scene>
+        <!--Cards-->
+        <scene sceneID="9uD-Qn-qQI">
+            <objects>
+                <collectionViewController title="Cards" id="AcX-cl-8zd" customClass="RainforestViewController" customModule="Layers" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fyX-Sc-SKf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dx5-Zn-3iB" customClass="RainforestCollectionViewLayout" customModule="Layers" customModuleProvider="target">
+                            <size key="itemSize" width="320" height="500"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="8" minY="40" maxX="8" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Hr3-LT-gAd" customClass="RainforestCardCell" customModule="Layers" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="AcX-cl-8zd" id="fee-KY-FcF"/>
+                            <outlet property="delegate" destination="AcX-cl-8zd" id="CU4-wq-2jB"/>
+                        </connections>
+                    </collectionView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <tabBarItem key="tabBarItem" title="Cards" id="1zK-BK-9Fb"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ea-PI-rgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="395"/>
+        </scene>
+        <!--Attributions-->
+        <scene sceneID="C3g-Sd-oqo">
+            <objects>
+                <tableViewController title="Attributions" id="bpW-36-70H" customClass="AttributionTableViewController" customModule="Layers" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="277" sectionHeaderHeight="22" sectionFooterHeight="22" id="Nsy-LG-av8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="277" id="bLP-lg-184" customClass="AttributionTableViewCell" customModule="Layers" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bLP-lg-184" id="PR4-bf-I3M">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monkey" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPW-Nb-d59">
+                                            <rect key="frame" x="31" y="21" width="87" height="31"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5a-cw-NOn">
+                                            <rect key="frame" x="31" y="59" width="60" height="28"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veS-wg-CWO">
+                                            <rect key="frame" x="31" y="152" width="59" height="28"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wml-Vv-Qou">
+                                            <rect key="frame" x="31" y="113" width="240" height="26"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="26" id="JgM-Yp-hS8"/>
+                                                <constraint firstAttribute="width" constant="240" id="PWK-f3-VV8"/>
+                                            </constraints>
+                                            <attributedString key="attributedText">
+                                                <fragment content="CC-BY-SA">
+                                                    <attributes>
+                                                        <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="bLP-lg-184" id="pFv-aA-2Kt"/>
+                                            </connections>
+                                        </textView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bO7-wn-uc9">
+                                            <rect key="frame" x="31" y="180" width="240" height="26"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="26" id="mFg-QL-ECH"/>
+                                                <constraint firstAttribute="width" constant="240" id="toa-c5-IgW"/>
+                                            </constraints>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Kevin Pluck - Flickr: The King.">
+                                                    <attributes>
+                                                        <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="bLP-lg-184" id="EIQ-mD-ag8"/>
+                                            </connections>
+                                        </textView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2t8-zi-QqO">
+                                            <rect key="frame" x="31" y="206" width="240" height="26"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="240" id="AYW-kK-vky"/>
+                                                <constraint firstAttribute="height" constant="26" id="Z5f-Uw-SOU"/>
+                                            </constraints>
+                                            <attributedString key="attributedText">
+                                                <fragment content="CC-BY-SA">
+                                                    <attributes>
+                                                        <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="bLP-lg-184" id="mO2-Ee-LG0"/>
+                                            </connections>
+                                        </textView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnh-MP-jbV">
+                                            <rect key="frame" x="31" y="87" width="300" height="26"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="300" id="6hL-vo-jQ4"/>
+                                                <constraint firstAttribute="height" constant="26" id="8hh-kA-19b"/>
+                                            </constraints>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Abbrieviated from Wikipedia">
+                                                    <attributes>
+                                                        <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="bLP-lg-184" id="tQG-PS-jLE"/>
+                                            </connections>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bO7-wn-uc9" firstAttribute="leading" secondItem="2t8-zi-QqO" secondAttribute="leading" id="9l8-R9-h7i"/>
+                                        <constraint firstItem="b5a-cw-NOn" firstAttribute="top" secondItem="lPW-Nb-d59" secondAttribute="bottom" constant="7" id="AWQ-XZ-MB0"/>
+                                        <constraint firstItem="Wml-Vv-Qou" firstAttribute="leading" secondItem="veS-wg-CWO" secondAttribute="leading" id="Bnp-FY-3iq"/>
+                                        <constraint firstItem="veS-wg-CWO" firstAttribute="top" secondItem="Wml-Vv-Qou" secondAttribute="bottom" constant="13" id="Cpa-lF-y5T"/>
+                                        <constraint firstItem="bO7-wn-uc9" firstAttribute="top" secondItem="veS-wg-CWO" secondAttribute="bottom" id="RJg-1y-gSf"/>
+                                        <constraint firstItem="gnh-MP-jbV" firstAttribute="leading" secondItem="Wml-Vv-Qou" secondAttribute="leading" id="VWp-q0-zB9"/>
+                                        <constraint firstItem="lPW-Nb-d59" firstAttribute="leading" secondItem="PR4-bf-I3M" secondAttribute="leadingMargin" constant="23" id="eV3-8V-5g6"/>
+                                        <constraint firstItem="b5a-cw-NOn" firstAttribute="leading" secondItem="gnh-MP-jbV" secondAttribute="leading" id="gq5-Xe-zqn"/>
+                                        <constraint firstItem="gnh-MP-jbV" firstAttribute="top" secondItem="b5a-cw-NOn" secondAttribute="bottom" id="hYA-2Y-3ao"/>
+                                        <constraint firstItem="Wml-Vv-Qou" firstAttribute="top" secondItem="gnh-MP-jbV" secondAttribute="bottom" id="kdn-jA-MRu"/>
+                                        <constraint firstItem="lPW-Nb-d59" firstAttribute="leading" secondItem="b5a-cw-NOn" secondAttribute="leading" id="rdw-EH-uOn"/>
+                                        <constraint firstItem="2t8-zi-QqO" firstAttribute="top" secondItem="bO7-wn-uc9" secondAttribute="bottom" id="uVQ-LD-D2R"/>
+                                        <constraint firstItem="veS-wg-CWO" firstAttribute="leading" secondItem="bO7-wn-uc9" secondAttribute="leading" id="yOz-DE-oit"/>
+                                        <constraint firstItem="lPW-Nb-d59" firstAttribute="top" secondItem="PR4-bf-I3M" secondAttribute="topMargin" constant="13" id="ywa-bo-CPf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="articleAttributionTextView" destination="gnh-MP-jbV" id="tRG-Pb-lKF"/>
+                                    <outlet property="articleLicenseTextView" destination="Wml-Vv-Qou" id="gS0-bI-pIt"/>
+                                    <outlet property="imageAttributionTextView" destination="bO7-wn-uc9" id="6Qx-Xn-ZDE"/>
+                                    <outlet property="imageLicenseTextView" destination="2t8-zi-QqO" id="wp2-nF-jfU"/>
+                                    <outlet property="titleLabel" destination="lPW-Nb-d59" id="ZvA-42-wRh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bpW-36-70H" id="D9E-bB-XXR"/>
+                            <outlet property="delegate" destination="bpW-36-70H" id="pyj-vF-AQX"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Attributions" id="vNK-DQ-bVN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OR4-wT-xyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="1138"/>
+        </scene>
+    </scenes>
+</document>
