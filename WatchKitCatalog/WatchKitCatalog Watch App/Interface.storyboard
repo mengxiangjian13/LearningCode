@@ -81,6 +81,47 @@
             </objects>
             <point key="canvasLocation" x="456" y="347"/>
         </scene>
+        <!--Button-->
+        <scene sceneID="rfF-9e-HSY">
+            <objects>
+                <controller identifier="Button" title="Button" id="wdv-FG-SlK" customClass="ButtonDetailController">
+                    <items>
+                        <button width="1" alignment="left" title="Text" id="RRb-Td-zzr"/>
+                        <button alignment="left" id="vtx-NS-S52">
+                            <group key="contentGroup" width="1" alignment="left" id="F8h-JZ-8Mm">
+                                <items>
+                                    <imageView alignment="left" image="LocationMarker" id="dXC-kp-1zX"/>
+                                    <label alignment="center" verticalAlignment="center" text="Group" id="Zkc-AY-eYL"/>
+                                </items>
+                                <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                            </group>
+                        </button>
+                        <group width="1" height="38" alignment="left" hasDetent="YES" id="ozj-FN-3kP">
+                            <items>
+                                <button width="0.33000000000000002" alignment="left" title="1" id="N5B-Xx-3jE">
+                                    <connections>
+                                        <action selector="alphaChange:" destination="wdv-FG-SlK" id="dSq-lK-e2a"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="2" id="1Pz-Gr-uyu"/>
+                                <button width="0.33000000000000002" alignment="left" title="3" id="lnB-r9-RrV">
+                                    <connections>
+                                        <action selector="hiddenChange:" destination="wdv-FG-SlK" id="YNS-C7-mia"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Disable" enabled="NO" id="Ld6-z2-Et2"/>
+                    </items>
+                    <connections>
+                        <outlet property="alphaChangeButton" destination="N5B-Xx-3jE" id="yLu-0N-eFE"/>
+                        <outlet property="button" destination="1Pz-Gr-uyu" id="beS-FG-RQa"/>
+                        <outlet property="hiddenButton" destination="lnB-r9-RrV" id="xMV-Kr-e4Y"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="661" y="347"/>
+        </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>

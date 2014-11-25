@@ -25,6 +25,7 @@
 		CE5954F11A247754008A8FAC /* WatchKitCatalog WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE5954CF1A247754008A8FAC /* WatchKitCatalog WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CE5954FC1A247981008A8FAC /* InterfaceRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5954FB1A247981008A8FAC /* InterfaceRowController.m */; };
 		CE5955011A247F77008A8FAC /* LabelDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5955001A247F77008A8FAC /* LabelDetailController.m */; };
+		CECC3C081A24C3CC009D7DDD /* ButtonDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECC3C071A24C3CC009D7DDD /* ButtonDetailController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,8 @@
 		CE5954FB1A247981008A8FAC /* InterfaceRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceRowController.m; sourceTree = "<group>"; };
 		CE5954FF1A247F77008A8FAC /* LabelDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelDetailController.h; sourceTree = "<group>"; };
 		CE5955001A247F77008A8FAC /* LabelDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelDetailController.m; sourceTree = "<group>"; };
+		CECC3C061A24C3CC009D7DDD /* ButtonDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonDetailController.h; sourceTree = "<group>"; };
+		CECC3C071A24C3CC009D7DDD /* ButtonDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonDetailController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +211,8 @@
 				CE5954D41A247754008A8FAC /* Supporting Files */,
 				CE5954FF1A247F77008A8FAC /* LabelDetailController.h */,
 				CE5955001A247F77008A8FAC /* LabelDetailController.m */,
+				CECC3C061A24C3CC009D7DDD /* ButtonDetailController.h */,
+				CECC3C071A24C3CC009D7DDD /* ButtonDetailController.m */,
 			);
 			path = "WatchKitCatalog WatchKit Extension";
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 				CE5955011A247F77008A8FAC /* LabelDetailController.m in Sources */,
 				CE5954DC1A247754008A8FAC /* NotificationController.m in Sources */,
 				CE5954D91A247754008A8FAC /* InterfaceController.m in Sources */,
+				CECC3C081A24C3CC009D7DDD /* ButtonDetailController.m in Sources */,
 				CE5954DF1A247754008A8FAC /* GlanceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -700,6 +706,7 @@
 				CE5954C71A247739008A8FAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE5954C81A247739008A8FAC /* Build configuration list for PBXNativeTarget "WatchKitCatalogTests" */ = {
 			isa = XCConfigurationList;
@@ -708,6 +715,7 @@
 				CE5954CA1A247739008A8FAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE5954F21A247754008A8FAC /* Build configuration list for PBXNativeTarget "WatchKitCatalog Watch App" */ = {
 			isa = XCConfigurationList;
@@ -716,6 +724,7 @@
 				CE5954F41A247754008A8FAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE5954F51A247754008A8FAC /* Build configuration list for PBXNativeTarget "WatchKitCatalog WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -724,6 +733,7 @@
 				CE5954F71A247754008A8FAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
