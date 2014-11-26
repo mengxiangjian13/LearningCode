@@ -165,6 +165,34 @@
             </objects>
             <point key="canvasLocation" x="953" y="519"/>
         </scene>
+        <!--Controller-->
+        <scene sceneID="WOV-3v-47Z">
+            <objects>
+                <controller identifier="Controller" title="Controller" id="B9j-3H-BBa" customClass="ControllerInterfaceController">
+                    <items>
+                        <button width="1" alignment="left" title="Present Pages" id="N9j-Y4-gTK">
+                            <connections>
+                                <action selector="presentNewController" destination="B9j-3H-BBa" id="wdI-Zr-DX0"/>
+                            </connections>
+                        </button>
+                        <label alignment="left" text="Click-and-hold on this controller, in the iOS Simulator, to perform a Force Touch gesture and display a menu." numberOfLines="0" id="GFd-eD-MN0"/>
+                    </items>
+                    <menu key="menu" id="rry-m1-jjq">
+                        <items>
+                            <menuItem title="Yes" icon="accept" id="b33-tb-v7o"/>
+                            <menuItem title="No" icon="decline" id="I9C-Z3-JjR"/>
+                            <menuItem title="Whale" image="Whale.png" id="unG-5A-1UN">
+                                <connections>
+                                    <action selector="touchWhale" destination="B9j-3H-BBa" id="rYa-XW-Dcn"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Location" image="LocationMarker.png" id="GWB-Xo-yt8"/>
+                        </items>
+                    </menu>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1119" y="519"/>
+        </scene>
         <!--Image-->
         <scene sceneID="zg1-L8-lEb">
             <objects>
@@ -194,6 +222,33 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="953" y="269.5"/>
+        </scene>
+        <!--Device-->
+        <scene sceneID="VSQ-ve-ikc">
+            <objects>
+                <controller identifier="Device" title="Device" id="fJ1-FP-Q6y" customClass="DeviceInterfaceController">
+                    <items>
+                        <label alignment="left" text="Bounds" id="TQG-hb-o4o"/>
+                        <label alignment="left" text="Label" id="lqn-wF-hFs"/>
+                        <separator alignment="left" id="lQn-iI-Dxu"/>
+                        <label alignment="left" text="Scale" id="vLv-D4-CUu"/>
+                        <label alignment="left" text="Label" id="qcb-cg-kxK"/>
+                        <separator alignment="left" id="JLM-Oq-UBF"/>
+                        <label alignment="left" text="Locale" id="VKv-ej-E7i"/>
+                        <label alignment="left" text="Label" id="Z7N-yx-gig"/>
+                        <separator alignment="left" id="Wkr-Lv-q6T"/>
+                        <label alignment="left" text="ContentSize" id="Xpq-1p-owa"/>
+                        <label alignment="left" text="Label" numberOfLines="0" id="ghL-w8-fm4"/>
+                    </items>
+                    <connections>
+                        <outlet property="boundsLabel" destination="lqn-wF-hFs" id="aVg-O4-oYy"/>
+                        <outlet property="contentSizeLabel" destination="ghL-w8-fm4" id="hcs-T0-Nd6"/>
+                        <outlet property="localeLabel" destination="Z7N-yx-gig" id="BWh-Vt-2PL"/>
+                        <outlet property="scaleLabel" destination="qcb-cg-kxK" id="IrT-wn-w51"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1119" y="270"/>
         </scene>
         <!--Switch-->
         <scene sceneID="9Du-YH-R6x">
@@ -277,6 +332,92 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="800" y="758.5"/>
+        </scene>
+        <!--Table-->
+        <scene sceneID="91W-8i-ASj">
+            <objects>
+                <controller identifier="Table" title="Table" id="3SB-1t-n8R" customClass="TableInterfaceController">
+                    <items>
+                        <table alignment="left" layout="vertical" id="tRG-eZ-BKp">
+                            <items>
+                                <tableRow identifier="RowController" id="Crf-2H-7pa" customClass="TableInterfaceRowController">
+                                    <group key="rootItem" width="1" alignment="left" id="c0a-sb-Nss">
+                                        <items>
+                                            <imageView alignment="left" image="LocationMarker" id="x0p-nw-v9R"/>
+                                            <label alignment="center" verticalAlignment="center" text="Location" id="uV0-St-cFE"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="locationLabel" destination="uV0-St-cFE" id="ARJ-0w-SRn"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="tRG-eZ-BKp" id="2M0-0x-MMp"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="952" y="745"/>
+        </scene>
+        <!--Dismiss-->
+        <scene sceneID="V9x-es-BTR">
+            <objects>
+                <controller identifier="Presented" title="Dismiss" id="vkt-AF-Ewo" customClass="PresentedInterfaceController">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Label" id="OjG-hP-8cY"/>
+                    </items>
+                    <connections>
+                        <outlet property="centerLabel" destination="OjG-hP-8cY" id="sFr-HD-3xT"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1119" y="752"/>
+        </scene>
+        <!--Group-->
+        <scene sceneID="HPL-WN-YQg">
+            <objects>
+                <controller identifier="Group" title="Group" id="JIU-Ht-NU2" customClass="GroupInterfaceController">
+                    <items>
+                        <label alignment="left" text="Horizontal" id="exI-FR-l8O"/>
+                        <group width="1" alignment="left" hasDetent="YES" id="W9z-I8-rD2">
+                            <items>
+                                <button width="0.5" alignment="left" verticalAlignment="center" title="Button" id="xpJ-JI-cmq"/>
+                                <button width="0.5" alignment="left" verticalAlignment="center" title="Button" id="1KB-WT-xzO"/>
+                            </items>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <edgeInsets key="margins" left="4" right="4" top="4" bottom="4"/>
+                        </group>
+                        <label alignment="left" text="Vertical" id="iv9-E4-OjT"/>
+                        <group width="1" alignment="left" layout="vertical" hasDetent="YES" id="Aw1-DH-h0a">
+                            <items>
+                                <button width="1" alignment="left" title="Button" id="eTc-Ot-2O2"/>
+                                <button width="1" alignment="left" title="Button" id="eTk-Tz-nxm"/>
+                            </items>
+                            <edgeInsets key="margins" left="4" right="4" top="4" bottom="4"/>
+                        </group>
+                        <label alignment="left" text="Mixed" id="ePz-Ch-hPu"/>
+                        <group width="1" alignment="left" hasDetent="YES" id="ZgH-4A-07T">
+                            <items>
+                                <group width="0.5" alignment="left" layout="vertical" id="GmY-yI-10Z">
+                                    <items>
+                                        <imageView alignment="center" image="Laugh" id="ZBs-PG-4Zd"/>
+                                        <label alignment="center" text="Laugh" id="4N4-8r-nc2"/>
+                                    </items>
+                                </group>
+                                <group width="0.5" alignment="left" layout="vertical" id="FNW-Ko-xlD">
+                                    <items>
+                                        <imageView alignment="center" image="Worry" id="M5s-W6-sQU"/>
+                                        <label alignment="center" text="Worry" id="PIQ-hP-MiO"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="630" y="735"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

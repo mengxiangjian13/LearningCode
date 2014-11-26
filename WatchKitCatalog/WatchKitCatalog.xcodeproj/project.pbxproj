@@ -30,6 +30,12 @@
 		CE59550A1A258508008A8FAC /* ImageInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5955091A258508008A8FAC /* ImageInterfaceController.m */; };
 		CE59550D1A258C35008A8FAC /* SeparatorInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE59550C1A258C35008A8FAC /* SeparatorInterfaceController.m */; };
 		CE5955101A258CA0008A8FAC /* MapInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE59550F1A258CA0008A8FAC /* MapInterfaceController.m */; };
+		CEC79C5B1A25BD200093ECEF /* GroupInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC79C5A1A25BD200093ECEF /* GroupInterfaceController.m */; };
+		CEC79C5F1A25C4BB0093ECEF /* TableInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC79C5E1A25C4BB0093ECEF /* TableInterfaceController.m */; };
+		CEC79C621A25C5050093ECEF /* TableInterfaceRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC79C611A25C5050093ECEF /* TableInterfaceRowController.m */; };
+		CEC79C651A25CD5D0093ECEF /* DeviceInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC79C641A25CD5D0093ECEF /* DeviceInterfaceController.m */; };
+		CEC79C691A25D1B40093ECEF /* ControllerInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC79C681A25D1B40093ECEF /* ControllerInterfaceController.m */; };
+		CEC79C6C1A25D7EC0093ECEF /* PresentedInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC79C6B1A25D7EC0093ECEF /* PresentedInterfaceController.m */; };
 		CECC3C081A24C3CC009D7DDD /* ButtonDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECC3C071A24C3CC009D7DDD /* ButtonDetailController.m */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +120,18 @@
 		CE59550C1A258C35008A8FAC /* SeparatorInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeparatorInterfaceController.m; sourceTree = "<group>"; };
 		CE59550E1A258CA0008A8FAC /* MapInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapInterfaceController.h; sourceTree = "<group>"; };
 		CE59550F1A258CA0008A8FAC /* MapInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapInterfaceController.m; sourceTree = "<group>"; };
+		CEC79C591A25BD200093ECEF /* GroupInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupInterfaceController.h; sourceTree = "<group>"; };
+		CEC79C5A1A25BD200093ECEF /* GroupInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupInterfaceController.m; sourceTree = "<group>"; };
+		CEC79C5D1A25C4BB0093ECEF /* TableInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableInterfaceController.h; sourceTree = "<group>"; };
+		CEC79C5E1A25C4BB0093ECEF /* TableInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableInterfaceController.m; sourceTree = "<group>"; };
+		CEC79C601A25C5050093ECEF /* TableInterfaceRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableInterfaceRowController.h; sourceTree = "<group>"; };
+		CEC79C611A25C5050093ECEF /* TableInterfaceRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableInterfaceRowController.m; sourceTree = "<group>"; };
+		CEC79C631A25CD5D0093ECEF /* DeviceInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInterfaceController.h; sourceTree = "<group>"; };
+		CEC79C641A25CD5D0093ECEF /* DeviceInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInterfaceController.m; sourceTree = "<group>"; };
+		CEC79C671A25D1B40093ECEF /* ControllerInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerInterfaceController.h; sourceTree = "<group>"; };
+		CEC79C681A25D1B40093ECEF /* ControllerInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerInterfaceController.m; sourceTree = "<group>"; };
+		CEC79C6A1A25D7EC0093ECEF /* PresentedInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentedInterfaceController.h; sourceTree = "<group>"; };
+		CEC79C6B1A25D7EC0093ECEF /* PresentedInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentedInterfaceController.m; sourceTree = "<group>"; };
 		CECC3C061A24C3CC009D7DDD /* ButtonDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonDetailController.h; sourceTree = "<group>"; };
 		CECC3C071A24C3CC009D7DDD /* ButtonDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonDetailController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +256,15 @@
 				CE59550C1A258C35008A8FAC /* SeparatorInterfaceController.m */,
 				CE59550E1A258CA0008A8FAC /* MapInterfaceController.h */,
 				CE59550F1A258CA0008A8FAC /* MapInterfaceController.m */,
+				CEC79C591A25BD200093ECEF /* GroupInterfaceController.h */,
+				CEC79C5A1A25BD200093ECEF /* GroupInterfaceController.m */,
+				CEC79C631A25CD5D0093ECEF /* DeviceInterfaceController.h */,
+				CEC79C641A25CD5D0093ECEF /* DeviceInterfaceController.m */,
+				CEC79C671A25D1B40093ECEF /* ControllerInterfaceController.h */,
+				CEC79C681A25D1B40093ECEF /* ControllerInterfaceController.m */,
+				CEC79C6A1A25D7EC0093ECEF /* PresentedInterfaceController.h */,
+				CEC79C6B1A25D7EC0093ECEF /* PresentedInterfaceController.m */,
+				CEC79C5C1A25C4A00093ECEF /* TableInterface */,
 			);
 			path = "WatchKitCatalog WatchKit Extension";
 			sourceTree = "<group>";
@@ -296,6 +323,17 @@
 				CE5954DE1A247754008A8FAC /* GlanceController.m */,
 			);
 			name = Glance;
+			sourceTree = "<group>";
+		};
+		CEC79C5C1A25C4A00093ECEF /* TableInterface */ = {
+			isa = PBXGroup;
+			children = (
+				CEC79C5D1A25C4BB0093ECEF /* TableInterfaceController.h */,
+				CEC79C5E1A25C4BB0093ECEF /* TableInterfaceController.m */,
+				CEC79C601A25C5050093ECEF /* TableInterfaceRowController.h */,
+				CEC79C611A25C5050093ECEF /* TableInterfaceRowController.m */,
+			);
+			name = TableInterface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,14 +518,20 @@
 				CE5954FC1A247981008A8FAC /* InterfaceRowController.m in Sources */,
 				CE5955011A247F77008A8FAC /* LabelDetailController.m in Sources */,
 				CE5955041A257EED008A8FAC /* SwitchInterfaceController.m in Sources */,
+				CEC79C691A25D1B40093ECEF /* ControllerInterfaceController.m in Sources */,
 				CE59550D1A258C35008A8FAC /* SeparatorInterfaceController.m in Sources */,
 				CE5954DC1A247754008A8FAC /* NotificationController.m in Sources */,
+				CEC79C621A25C5050093ECEF /* TableInterfaceRowController.m in Sources */,
 				CE5954D91A247754008A8FAC /* InterfaceController.m in Sources */,
 				CE59550A1A258508008A8FAC /* ImageInterfaceController.m in Sources */,
+				CEC79C5B1A25BD200093ECEF /* GroupInterfaceController.m in Sources */,
+				CEC79C6C1A25D7EC0093ECEF /* PresentedInterfaceController.m in Sources */,
 				CECC3C081A24C3CC009D7DDD /* ButtonDetailController.m in Sources */,
+				CEC79C651A25CD5D0093ECEF /* DeviceInterfaceController.m in Sources */,
 				CE5955071A258210008A8FAC /* SliderInterfaceController.m in Sources */,
 				CE5954DF1A247754008A8FAC /* GlanceController.m in Sources */,
 				CE5955101A258CA0008A8FAC /* MapInterfaceController.m in Sources */,
+				CEC79C5F1A25C4BB0093ECEF /* TableInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

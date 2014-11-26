@@ -29,7 +29,7 @@
         NSLog(@"%@ initWithContext", self);
         
         contentArray = [NSArray arrayWithObjects:@"Label",@"Button",@"Switch",@"Slider",
-                                 @"Image",@"Separator",@"Map",@"Table",@"Device",@"Controller",nil];
+                                 @"Image",@"Separator",@"Map",@"Group",@"Table",@"Device",@"Controller",nil];
         
         [self.table setNumberOfRows:[contentArray count]
                         withRowType:@"RowController"];
