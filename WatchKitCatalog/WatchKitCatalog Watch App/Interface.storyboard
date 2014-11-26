@@ -79,7 +79,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="456" y="347"/>
+            <point key="canvasLocation" x="451" y="291.5"/>
         </scene>
         <!--Button-->
         <scene sceneID="rfF-9e-HSY">
@@ -120,7 +120,163 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="661" y="347"/>
+            <point key="canvasLocation" x="638" y="261.5"/>
+        </scene>
+        <!--Slider-->
+        <scene sceneID="Ng5-Vn-r0Y">
+            <objects>
+                <controller identifier="Slider" title="Slider" id="fQO-eg-4P9" customClass="SliderInterfaceController">
+                    <items>
+                        <label alignment="left" text="Default" id="3lJ-ab-FPT"/>
+                        <slider width="1" alignment="left" value="0.5" steps="3" id="sKU-Wb-EJe"/>
+                        <label alignment="left" text="Continuous with Action" numberOfLines="2" minimumScaleFactor="0.0" id="VAn-5T-vag"/>
+                        <slider width="1" alignment="left" continuous="YES" value="0.5" steps="3" id="fQp-m9-nHN"/>
+                        <label alignment="left" text="Colored with 5 Segments" numberOfLines="0" id="ylR-qL-Lwc"/>
+                        <slider width="1" alignment="left" value="0.5" steps="5" id="MCS-eF-laE"/>
+                        <label alignment="left" text="Min and max images" numberOfLines="0" id="Tb9-ra-BKa"/>
+                        <slider width="1" alignment="left" value="0.5" steps="3" minimumImage="Worry" maximumImage="Laugh" id="Cfp-48-Gl2"/>
+                        <label alignment="left" text="Disabled" id="8wO-KA-1D4"/>
+                        <slider width="1" alignment="left" enabled="NO" value="0.5" steps="3" id="Bk1-5S-urh"/>
+                    </items>
+                    <connections>
+                        <outlet property="coloredSlider" destination="MCS-eF-laE" id="xJq-ns-06H"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="800" y="371.75"/>
+        </scene>
+        <!--Separator-->
+        <scene sceneID="z8w-Pk-Ag6">
+            <objects>
+                <controller identifier="Separator" title="Separator" id="5dw-0O-GSG" customClass="SeparatorInterfaceController">
+                    <items>
+                        <label alignment="left" text="A default white separator." numberOfLines="0" id="QUs-dU-Iyo"/>
+                        <separator alignment="left" id="KKT-mh-9WT"/>
+                        <label alignment="left" text="A relative width blue separator." numberOfLines="0" id="ojL-vk-KZk"/>
+                        <separator width="0.5" alignment="center" id="hvN-Qm-R1i">
+                            <color key="color" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <label alignment="left" text="A fixed width green separator." numberOfLines="0" id="Gil-JD-C63"/>
+                        <separator width="100" alignment="center" id="nMe-Ny-hky">
+                            <color key="color" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="953" y="519"/>
+        </scene>
+        <!--Image-->
+        <scene sceneID="zg1-L8-lEb">
+            <objects>
+                <controller identifier="Image" title="Image" id="rD8-W5-Yuz" customClass="ImageInterfaceController">
+                    <items>
+                        <imageView width="1" alignment="left" id="Z9G-PC-OuW"/>
+                        <imageView alignment="left" image="Bus0" animationDuration="2" id="TFj-dU-n6X"/>
+                        <group width="1" alignment="left" hasDetent="YES" id="IPf-KU-Y18">
+                            <items>
+                                <button width="0.5" alignment="left" title="Play" id="JQ3-Ou-Bjo">
+                                    <connections>
+                                        <action selector="play:" destination="rD8-W5-Yuz" id="Iit-rR-vkT"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="left" title="Stop" id="AvL-eg-FaA">
+                                    <connections>
+                                        <action selector="stop:" destination="rD8-W5-Yuz" id="QY1-wy-vxr"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="animationImage" destination="TFj-dU-n6X" id="NFy-bY-IdC"/>
+                        <outlet property="staticImage" destination="Z9G-PC-OuW" id="vqO-k8-mhv"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="953" y="269.5"/>
+        </scene>
+        <!--Switch-->
+        <scene sceneID="9Du-YH-R6x">
+            <objects>
+                <controller identifier="Switch" title="Switch" id="gzO-9i-XxR" customClass="SwitchInterfaceController">
+                    <items>
+                        <switch width="1" alignment="left" value="YES" title="On" id="S0n-Uh-Lzj"/>
+                        <switch width="1" alignment="left" value="YES" title="Off (API)" id="Y8k-g9-tyn"/>
+                        <switch width="1" alignment="left" value="YES" title="Switch w/Action" id="sIa-LG-ffy">
+                            <connections>
+                                <action selector="switchAction:" destination="gzO-9i-XxR" id="AEa-Ae-2IU"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" value="YES" enabled="NO" title="Disabled" id="ubn-Rm-Dbx"/>
+                    </items>
+                    <connections>
+                        <outlet property="actionSwitch" destination="sIa-LG-ffy" id="I7m-mb-0Ul"/>
+                        <outlet property="offSwitch" destination="Y8k-g9-tyn" id="Bc4-jp-nSB"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="630" y="502.5"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="RnF-K1-m7Z">
+            <objects>
+                <controller identifier="Map" title="Map" id="7kp-ez-StD" customClass="MapInterfaceController">
+                    <items>
+                        <group width="1" alignment="left" hasDetent="YES" id="8xM-Bv-y3r">
+                            <items>
+                                <button width="0.5" alignment="left" title="Apple" id="g4c-s1-SsL">
+                                    <connections>
+                                        <action selector="locateInApple" destination="7kp-ez-StD" id="I35-eY-Wb3"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="left" title="Beijing" id="KeG-aB-bXP">
+                                    <connections>
+                                        <action selector="locateInBeijing" destination="7kp-ez-StD" id="v0q-4Z-sGK"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" hasDetent="YES" id="IOM-4Y-wZM">
+                            <items>
+                                <button width="0.5" alignment="left" title="In" id="F55-NL-EXK">
+                                    <connections>
+                                        <action selector="zoomIn" destination="7kp-ez-StD" id="Ydk-0K-9q3"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="left" title="Out" id="dJw-gF-rqc">
+                                    <connections>
+                                        <action selector="zoomOut" destination="7kp-ez-StD" id="RLR-oe-Fr4"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <map alignment="left" id="lEo-fq-DF1"/>
+                        <group width="1" alignment="left" hasDetent="YES" id="z8S-rZ-Jf2">
+                            <items>
+                                <button width="0.5" alignment="left" title="Pins" id="OgX-85-OQa">
+                                    <connections>
+                                        <action selector="pins" destination="7kp-ez-StD" id="EMW-Yd-oaO"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="left" title="Images" id="3fu-V8-HGm">
+                                    <connections>
+                                        <action selector="imagePins" destination="7kp-ez-StD" id="rMk-nb-fnP"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Remove All" id="w9t-gE-Ddg">
+                            <connections>
+                                <action selector="removePins" destination="7kp-ez-StD" id="zMa-2U-5va"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="map" destination="lEo-fq-DF1" id="Lkz-Ng-Nkf"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="800" y="758.5"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
@@ -133,7 +289,7 @@
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>
             </objects>
-            <point key="canvasLocation" x="235" y="672"/>
+            <point key="canvasLocation" x="235" y="727"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -149,14 +305,14 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="235" y="1001"/>
+            <point key="canvasLocation" x="235" y="1052"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
                 <controller id="gdX-wl-uQE" customClass="NotificationController"/>
             </objects>
-            <point key="canvasLocation" x="553" y="1001"/>
+            <point key="canvasLocation" x="552" y="1052"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.80000001192092896" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>

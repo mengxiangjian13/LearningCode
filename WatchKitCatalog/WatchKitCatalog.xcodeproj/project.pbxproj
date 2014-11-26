@@ -25,6 +25,11 @@
 		CE5954F11A247754008A8FAC /* WatchKitCatalog WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE5954CF1A247754008A8FAC /* WatchKitCatalog WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CE5954FC1A247981008A8FAC /* InterfaceRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5954FB1A247981008A8FAC /* InterfaceRowController.m */; };
 		CE5955011A247F77008A8FAC /* LabelDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5955001A247F77008A8FAC /* LabelDetailController.m */; };
+		CE5955041A257EED008A8FAC /* SwitchInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5955031A257EED008A8FAC /* SwitchInterfaceController.m */; };
+		CE5955071A258210008A8FAC /* SliderInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5955061A258210008A8FAC /* SliderInterfaceController.m */; };
+		CE59550A1A258508008A8FAC /* ImageInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5955091A258508008A8FAC /* ImageInterfaceController.m */; };
+		CE59550D1A258C35008A8FAC /* SeparatorInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE59550C1A258C35008A8FAC /* SeparatorInterfaceController.m */; };
+		CE5955101A258CA0008A8FAC /* MapInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE59550F1A258CA0008A8FAC /* MapInterfaceController.m */; };
 		CECC3C081A24C3CC009D7DDD /* ButtonDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECC3C071A24C3CC009D7DDD /* ButtonDetailController.m */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +104,16 @@
 		CE5954FB1A247981008A8FAC /* InterfaceRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceRowController.m; sourceTree = "<group>"; };
 		CE5954FF1A247F77008A8FAC /* LabelDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelDetailController.h; sourceTree = "<group>"; };
 		CE5955001A247F77008A8FAC /* LabelDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelDetailController.m; sourceTree = "<group>"; };
+		CE5955021A257EED008A8FAC /* SwitchInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchInterfaceController.h; sourceTree = "<group>"; };
+		CE5955031A257EED008A8FAC /* SwitchInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchInterfaceController.m; sourceTree = "<group>"; };
+		CE5955051A258210008A8FAC /* SliderInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderInterfaceController.h; sourceTree = "<group>"; };
+		CE5955061A258210008A8FAC /* SliderInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderInterfaceController.m; sourceTree = "<group>"; };
+		CE5955081A258508008A8FAC /* ImageInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageInterfaceController.h; sourceTree = "<group>"; };
+		CE5955091A258508008A8FAC /* ImageInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageInterfaceController.m; sourceTree = "<group>"; };
+		CE59550B1A258C35008A8FAC /* SeparatorInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeparatorInterfaceController.h; sourceTree = "<group>"; };
+		CE59550C1A258C35008A8FAC /* SeparatorInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeparatorInterfaceController.m; sourceTree = "<group>"; };
+		CE59550E1A258CA0008A8FAC /* MapInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapInterfaceController.h; sourceTree = "<group>"; };
+		CE59550F1A258CA0008A8FAC /* MapInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapInterfaceController.m; sourceTree = "<group>"; };
 		CECC3C061A24C3CC009D7DDD /* ButtonDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonDetailController.h; sourceTree = "<group>"; };
 		CECC3C071A24C3CC009D7DDD /* ButtonDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonDetailController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +228,16 @@
 				CE5955001A247F77008A8FAC /* LabelDetailController.m */,
 				CECC3C061A24C3CC009D7DDD /* ButtonDetailController.h */,
 				CECC3C071A24C3CC009D7DDD /* ButtonDetailController.m */,
+				CE5955021A257EED008A8FAC /* SwitchInterfaceController.h */,
+				CE5955031A257EED008A8FAC /* SwitchInterfaceController.m */,
+				CE5955051A258210008A8FAC /* SliderInterfaceController.h */,
+				CE5955061A258210008A8FAC /* SliderInterfaceController.m */,
+				CE5955081A258508008A8FAC /* ImageInterfaceController.h */,
+				CE5955091A258508008A8FAC /* ImageInterfaceController.m */,
+				CE59550B1A258C35008A8FAC /* SeparatorInterfaceController.h */,
+				CE59550C1A258C35008A8FAC /* SeparatorInterfaceController.m */,
+				CE59550E1A258CA0008A8FAC /* MapInterfaceController.h */,
+				CE59550F1A258CA0008A8FAC /* MapInterfaceController.m */,
 			);
 			path = "WatchKitCatalog WatchKit Extension";
 			sourceTree = "<group>";
@@ -454,10 +479,15 @@
 			files = (
 				CE5954FC1A247981008A8FAC /* InterfaceRowController.m in Sources */,
 				CE5955011A247F77008A8FAC /* LabelDetailController.m in Sources */,
+				CE5955041A257EED008A8FAC /* SwitchInterfaceController.m in Sources */,
+				CE59550D1A258C35008A8FAC /* SeparatorInterfaceController.m in Sources */,
 				CE5954DC1A247754008A8FAC /* NotificationController.m in Sources */,
 				CE5954D91A247754008A8FAC /* InterfaceController.m in Sources */,
+				CE59550A1A258508008A8FAC /* ImageInterfaceController.m in Sources */,
 				CECC3C081A24C3CC009D7DDD /* ButtonDetailController.m in Sources */,
+				CE5955071A258210008A8FAC /* SliderInterfaceController.m in Sources */,
 				CE5954DF1A247754008A8FAC /* GlanceController.m in Sources */,
+				CE5955101A258CA0008A8FAC /* MapInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
