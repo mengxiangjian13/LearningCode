@@ -333,6 +333,24 @@
             </objects>
             <point key="canvasLocation" x="800" y="758.5"/>
         </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="b5i-SL-HNf">
+            <objects>
+                <notificationController id="VHJ-JX-ied">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="DZ2-1t-Q1L"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" offsetNotificationContent="NO" id="LIR-jg-KzO">
+                        <color key="sashColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </notificationCategory>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="DZ2-1t-Q1L" id="IiV-p6-FMm"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="5a7-5M-llT"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1274"/>
+        </scene>
         <!--Table-->
         <scene sceneID="91W-8i-ASj">
             <objects>
@@ -462,10 +480,20 @@
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController"/>
+                <controller id="gdX-wl-uQE" customClass="NotificationController">
+                    <items>
+                        <label alignment="left" text="Label" numberOfLines="0" id="cYY-te-Kya"/>
+                    </items>
+                    <connections>
+                        <outlet property="contentlabel" destination="cYY-te-Kya" id="srr-Wd-NCb"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="552" y="1052"/>
+            <point key="canvasLocation" x="518" y="1052"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5a7-5M-llT"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.80000001192092896" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

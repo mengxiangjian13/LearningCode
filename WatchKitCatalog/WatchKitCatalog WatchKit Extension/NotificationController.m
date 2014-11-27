@@ -11,6 +11,8 @@
 
 @interface NotificationController()
 
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *contentlabel;
+
 @end
 
 
@@ -48,16 +50,21 @@
 }
 */
 
-/*
+
 - (void)didReceiveRemoteNotification:(NSDictionary *)remoteNotification withCompletion:(void (^)(WKUserNotificationInterfaceType))completionHandler {
     // This method is called when a remote notification needs to be presented.
     // Implement it if you use a dynamic notification interface.
     // Populate your dynamic notification inteface as quickly as possible.
     //
     // After populating your dynamic notification interface call the completion block.
+    
+    NSString *customString = remoteNotification[@"customKey"];
+    [self.contentlabel setText:customString];
+    
     completionHandler(WKUserNotificationInterfaceTypeCustom);
 }
-*/
+
+
 
 @end
 

@@ -56,6 +56,17 @@
     return userActivity[@"interfaceIdentifier"];
 }
 
+// 处理远程通知
+- (void)handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)remoteNotification
+{
+    // identifier是action的identifier
+    // remoteNotification 是整个payload
+    if ([identifier isEqualToString:@"OpenMap"])
+    {
+        [self pushControllerWithName:@"Map" context:nil];
+    }
+}
+
 - (void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex
 {
     if (rowIndex >= 0 && rowIndex < [contentArray count])
