@@ -49,6 +49,12 @@
     return self;
 }
 
+- (NSString *)actionForUserActivity:(NSDictionary *)userActivity context:(__autoreleasing id *)context
+{
+    // glance 进入后调用。
+    // 返回值为页面的interfaceController的identifier,此identifier对应的页面将自动打开。
+    return userActivity[@"interfaceIdentifier"];
+}
 
 - (void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex
 {

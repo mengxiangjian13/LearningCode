@@ -424,10 +424,21 @@
             <objects>
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
-                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                        <group alignment="left" layout="vertical" id="t8f-Gd-c4y">
+                            <items>
+                                <label alignment="left" text="WatchKit Catalog" numberOfLines="0" id="8We-p3-HnB"/>
+                            </items>
+                        </group>
+                        <group alignment="left" id="uCw-4Q-Ouw">
+                            <items>
+                                <imageView alignment="left" id="KG5-nA-YSi"/>
+                            </items>
+                        </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="image" destination="KG5-nA-YSi" id="iYf-uB-MZ8"/>
+                    </connections>
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="235" y="727"/>
