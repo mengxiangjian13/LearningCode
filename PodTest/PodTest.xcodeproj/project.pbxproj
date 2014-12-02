@@ -20,6 +20,7 @@
 		CE6F5034196A81E6001E3E20 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6F501C196A81E6001E3E20 /* UIKit.framework */; };
 		CE6F503C196A81E6001E3E20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE6F503A196A81E6001E3E20 /* InfoPlist.strings */; };
 		CE6F503E196A81E6001E3E20 /* PodTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F503D196A81E6001E3E20 /* PodTestTests.m */; };
+		CEB9A9E71A2DB28800C6CCE1 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB9A9E61A2DB28800C6CCE1 /* CustomViewController.m */; };
 		CEC9E59C196AAFE700A90510 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9E59B196AAFE700A90510 /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,8 @@
 		CE6F5039196A81E6001E3E20 /* PodTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PodTestTests-Info.plist"; sourceTree = "<group>"; };
 		CE6F503B196A81E6001E3E20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE6F503D196A81E6001E3E20 /* PodTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PodTestTests.m; sourceTree = "<group>"; };
+		CEB9A9E51A2DB28800C6CCE1 /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		CEB9A9E61A2DB28800C6CCE1 /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 		CEC9E59A196AAFE700A90510 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		CEC9E59B196AAFE700A90510 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +125,8 @@
 				CE6F501F196A81E6001E3E20 /* Supporting Files */,
 				CEC9E59A196AAFE700A90510 /* RootViewController.h */,
 				CEC9E59B196AAFE700A90510 /* RootViewController.m */,
+				CEB9A9E51A2DB28800C6CCE1 /* CustomViewController.h */,
+				CEB9A9E61A2DB28800C6CCE1 /* CustomViewController.m */,
 			);
 			path = PodTest;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				CE6F5029196A81E6001E3E20 /* AppDelegate.m in Sources */,
 				CE6F5025196A81E6001E3E20 /* main.m in Sources */,
 				CEC9E59C196AAFE700A90510 /* RootViewController.m in Sources */,
+				CEB9A9E71A2DB28800C6CCE1 /* CustomViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

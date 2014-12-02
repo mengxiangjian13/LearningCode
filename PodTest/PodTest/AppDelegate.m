@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "CustomViewController.h"
 
 @implementation AppDelegate
 
@@ -17,7 +18,12 @@
     // Override point for customization after application launch.
     
     RootViewController *rootVC = [[RootViewController alloc] init];
-    self.window.rootViewController = rootVC;
+    CustomViewController *customVC = [[CustomViewController alloc] init];
+    
+    UITabBarController *tbController = [[UITabBarController alloc] init];
+    tbController.viewControllers = @[rootVC,customVC];
+    
+    self.window.rootViewController = tbController;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

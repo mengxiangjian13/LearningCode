@@ -30,6 +30,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"usage";
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     button.frame = CGRectMake(0, 0, 100, 50);
@@ -73,7 +74,6 @@
     
     [circle.layer pop_addAnimation:spring forKey:@"scale"];
     [circle.layer pop_addAnimation:alpha forKey:@"alpha"];
-    
 }
 
 - (void)pan:(UIPanGestureRecognizer *)pan
