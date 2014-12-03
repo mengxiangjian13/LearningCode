@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4FAD696E3B4281524FD3A896 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D10AE0DE5ABE35385F1007 /* libPods.a */; };
+		CE9D01181A2F068F00097F9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9D01171A2F068F00097F9A /* main.m */; };
+		CE9D011B1A2F068F00097F9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9D011A1A2F068F00097F9A /* AppDelegate.m */; };
+		CE9D011E1A2F068F00097F9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9D011D1A2F068F00097F9A /* ViewController.m */; };
+		CE9D01211A2F068F00097F9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9D011F1A2F068F00097F9A /* Main.storyboard */; };
+		CE9D01231A2F068F00097F9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9D01221A2F068F00097F9A /* Images.xcassets */; };
+		CE9D01261A2F068F00097F9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9D01241A2F068F00097F9A /* LaunchScreen.xib */; };
+		CE9D01321A2F068F00097F9A /* MentleTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9D01311A2F068F00097F9A /* MentleTestTests.m */; };
+		CE9D01431A2F227700097F9A /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9D01421A2F227700097F9A /* WeatherModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE9D012C1A2F068F00097F9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE9D010A1A2F068F00097F9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE9D01111A2F068F00097F9A;
+			remoteInfo = MentleTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		62522FF385CB8A604DBD499B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A8D10AE0DE5ABE35385F1007 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9D01121A2F068F00097F9A /* MentleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9D01161A2F068F00097F9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE9D01171A2F068F00097F9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE9D01191A2F068F00097F9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CE9D011A1A2F068F00097F9A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CE9D011C1A2F068F00097F9A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CE9D011D1A2F068F00097F9A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CE9D01201A2F068F00097F9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE9D01221A2F068F00097F9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CE9D01251A2F068F00097F9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CE9D012B1A2F068F00097F9A /* MentleTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentleTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9D01301A2F068F00097F9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE9D01311A2F068F00097F9A /* MentleTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MentleTestTests.m; sourceTree = "<group>"; };
+		CE9D01411A2F227700097F9A /* WeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
+		CE9D01421A2F227700097F9A /* WeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
+		DDC9BD1946134E4B1E8A023A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE9D010F1A2F068F00097F9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FAD696E3B4281524FD3A896 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE9D01281A2F068F00097F9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F7DB4BEA540696A9171E003 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8D10AE0DE5ABE35385F1007 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C913194AB3E8E9F815B08580 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDC9BD1946134E4B1E8A023A /* Pods.debug.xcconfig */,
+				62522FF385CB8A604DBD499B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE9D01091A2F068F00097F9A = {
+			isa = PBXGroup;
+			children = (
+				CE9D01141A2F068F00097F9A /* MentleTest */,
+				CE9D012E1A2F068F00097F9A /* MentleTestTests */,
+				CE9D01131A2F068F00097F9A /* Products */,
+				C913194AB3E8E9F815B08580 /* Pods */,
+				1F7DB4BEA540696A9171E003 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CE9D01131A2F068F00097F9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE9D01121A2F068F00097F9A /* MentleTest.app */,
+				CE9D012B1A2F068F00097F9A /* MentleTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE9D01141A2F068F00097F9A /* MentleTest */ = {
+			isa = PBXGroup;
+			children = (
+				CE9D01191A2F068F00097F9A /* AppDelegate.h */,
+				CE9D011A1A2F068F00097F9A /* AppDelegate.m */,
+				CE9D011C1A2F068F00097F9A /* ViewController.h */,
+				CE9D011D1A2F068F00097F9A /* ViewController.m */,
+				CE9D011F1A2F068F00097F9A /* Main.storyboard */,
+				CE9D01221A2F068F00097F9A /* Images.xcassets */,
+				CE9D01241A2F068F00097F9A /* LaunchScreen.xib */,
+				CE9D01151A2F068F00097F9A /* Supporting Files */,
+				CE9D01411A2F227700097F9A /* WeatherModel.h */,
+				CE9D01421A2F227700097F9A /* WeatherModel.m */,
+			);
+			path = MentleTest;
+			sourceTree = "<group>";
+		};
+		CE9D01151A2F068F00097F9A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE9D01161A2F068F00097F9A /* Info.plist */,
+				CE9D01171A2F068F00097F9A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE9D012E1A2F068F00097F9A /* MentleTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE9D01311A2F068F00097F9A /* MentleTestTests.m */,
+				CE9D012F1A2F068F00097F9A /* Supporting Files */,
+			);
+			path = MentleTestTests;
+			sourceTree = "<group>";
+		};
+		CE9D012F1A2F068F00097F9A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE9D01301A2F068F00097F9A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE9D01111A2F068F00097F9A /* MentleTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE9D01351A2F068F00097F9A /* Build configuration list for PBXNativeTarget "MentleTest" */;
+			buildPhases = (
+				C92E24192D2ACEDC7F8131AB /* Check Pods Manifest.lock */,
+				CE9D010E1A2F068F00097F9A /* Sources */,
+				CE9D010F1A2F068F00097F9A /* Frameworks */,
+				CE9D01101A2F068F00097F9A /* Resources */,
+				5888008D43018548B63D0F22 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MentleTest;
+			productName = MentleTest;
+			productReference = CE9D01121A2F068F00097F9A /* MentleTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE9D012A1A2F068F00097F9A /* MentleTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE9D01381A2F068F00097F9A /* Build configuration list for PBXNativeTarget "MentleTestTests" */;
+			buildPhases = (
+				CE9D01271A2F068F00097F9A /* Sources */,
+				CE9D01281A2F068F00097F9A /* Frameworks */,
+				CE9D01291A2F068F00097F9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE9D012D1A2F068F00097F9A /* PBXTargetDependency */,
+			);
+			name = MentleTestTests;
+			productName = MentleTestTests;
+			productReference = CE9D012B1A2F068F00097F9A /* MentleTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE9D010A1A2F068F00097F9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = cn.com.modernmedia;
+				TargetAttributes = {
+					CE9D01111A2F068F00097F9A = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					CE9D012A1A2F068F00097F9A = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = CE9D01111A2F068F00097F9A;
+					};
+				};
+			};
+			buildConfigurationList = CE9D010D1A2F068F00097F9A /* Build configuration list for PBXProject "MentleTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE9D01091A2F068F00097F9A;
+			productRefGroup = CE9D01131A2F068F00097F9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE9D01111A2F068F00097F9A /* MentleTest */,
+				CE9D012A1A2F068F00097F9A /* MentleTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE9D01101A2F068F00097F9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9D01211A2F068F00097F9A /* Main.storyboard in Resources */,
+				CE9D01261A2F068F00097F9A /* LaunchScreen.xib in Resources */,
+				CE9D01231A2F068F00097F9A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE9D01291A2F068F00097F9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5888008D43018548B63D0F22 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C92E24192D2ACEDC7F8131AB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE9D010E1A2F068F00097F9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9D011E1A2F068F00097F9A /* ViewController.m in Sources */,
+				CE9D011B1A2F068F00097F9A /* AppDelegate.m in Sources */,
+				CE9D01431A2F227700097F9A /* WeatherModel.m in Sources */,
+				CE9D01181A2F068F00097F9A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE9D01271A2F068F00097F9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9D01321A2F068F00097F9A /* MentleTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE9D012D1A2F068F00097F9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE9D01111A2F068F00097F9A /* MentleTest */;
+			targetProxy = CE9D012C1A2F068F00097F9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE9D011F1A2F068F00097F9A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE9D01201A2F068F00097F9A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE9D01241A2F068F00097F9A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE9D01251A2F068F00097F9A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE9D01331A2F068F00097F9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CE9D01341A2F068F00097F9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE9D01361A2F068F00097F9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDC9BD1946134E4B1E8A023A /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MentleTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CE9D01371A2F068F00097F9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62522FF385CB8A604DBD499B /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MentleTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CE9D01391A2F068F00097F9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MentleTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MentleTest.app/MentleTest";
+			};
+			name = Debug;
+		};
+		CE9D013A1A2F068F00097F9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MentleTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MentleTest.app/MentleTest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE9D010D1A2F068F00097F9A /* Build configuration list for PBXProject "MentleTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE9D01331A2F068F00097F9A /* Debug */,
+				CE9D01341A2F068F00097F9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE9D01351A2F068F00097F9A /* Build configuration list for PBXNativeTarget "MentleTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE9D01361A2F068F00097F9A /* Debug */,
+				CE9D01371A2F068F00097F9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE9D01381A2F068F00097F9A /* Build configuration list for PBXNativeTarget "MentleTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE9D01391A2F068F00097F9A /* Debug */,
+				CE9D013A1A2F068F00097F9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE9D010A1A2F068F00097F9A /* Project object */;
+}
