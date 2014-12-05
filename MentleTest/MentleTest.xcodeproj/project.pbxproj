@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4FAD696E3B4281524FD3A896 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D10AE0DE5ABE35385F1007 /* libPods.a */; };
+		CE3335D11A31A0DB00EFB5F7 /* WeatherDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3335D01A31A0DB00EFB5F7 /* WeatherDetailModel.m */; };
 		CE9D01181A2F068F00097F9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9D01171A2F068F00097F9A /* main.m */; };
 		CE9D011B1A2F068F00097F9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9D011A1A2F068F00097F9A /* AppDelegate.m */; };
 		CE9D011E1A2F068F00097F9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9D011D1A2F068F00097F9A /* ViewController.m */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		62522FF385CB8A604DBD499B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A8D10AE0DE5ABE35385F1007 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3335CF1A31A0DB00EFB5F7 /* WeatherDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherDetailModel.h; sourceTree = "<group>"; };
+		CE3335D01A31A0DB00EFB5F7 /* WeatherDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherDetailModel.m; sourceTree = "<group>"; };
 		CE9D01121A2F068F00097F9A /* MentleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9D01161A2F068F00097F9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE9D01171A2F068F00097F9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				CE9D01151A2F068F00097F9A /* Supporting Files */,
 				CE9D01411A2F227700097F9A /* WeatherModel.h */,
 				CE9D01421A2F227700097F9A /* WeatherModel.m */,
+				CE3335CF1A31A0DB00EFB5F7 /* WeatherDetailModel.h */,
+				CE3335D01A31A0DB00EFB5F7 /* WeatherDetailModel.m */,
 			);
 			path = MentleTest;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9D011E1A2F068F00097F9A /* ViewController.m in Sources */,
+				CE3335D11A31A0DB00EFB5F7 /* WeatherDetailModel.m in Sources */,
 				CE9D011B1A2F068F00097F9A /* AppDelegate.m in Sources */,
 				CE9D01431A2F227700097F9A /* WeatherModel.m in Sources */,
 				CE9D01181A2F068F00097F9A /* main.m in Sources */,

@@ -12,5 +12,7 @@
 @interface WeatherModel : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic,strong) NSNumber *temperature;
+@property (nonatomic,strong) NSString *sunrise;
+@property (nonatomic,strong) NSArray *detail;
 
 @end

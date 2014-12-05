@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "WeatherModel.h"
+#import "WeatherDetailModel.h"
 
 #define Beijing_Weather_API @"http://api.openweathermap.org/data/2.5/weather?lat=40&lon=116&units=imperial"
 
@@ -60,7 +61,8 @@
     if (currentData)
     {
         WeatherModel *model = [MTLJSONAdapter modelOfClass:[WeatherModel class] fromJSONDictionary:currentData error:nil];
-        self.textView.text = [NSString stringWithFormat:@"当前温度：%.2f",model.temperature.floatValue];
+        WeatherDetailModel *detail = (model.detail.count > 0)?[model.detail objectAtIndex:0] : nil;
+        self.textView.text = [NSString stringWithFormat:@"当前温度：%.2f\n日出时间：%@\n天气描述：%@",model.temperature.floatValue,model.sunrise, detail.desc];
     }
 }
 
