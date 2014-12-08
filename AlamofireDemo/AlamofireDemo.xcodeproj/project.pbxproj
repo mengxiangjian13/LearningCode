@@ -486,6 +486,7 @@
 				CE27F4FC1A30160A00A276B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE27F4FD1A30160A00A276B6 /* Build configuration list for PBXNativeTarget "AlamofireDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +495,7 @@
 				CE27F4FF1A30160A00A276B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
