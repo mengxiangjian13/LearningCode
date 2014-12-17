@@ -37,7 +37,7 @@
                                                                                       error:&error];
 
         NSArray *matchStringArray = [expression matchesInString:self.sourceWordsField.text
-                                                        options:NSMatchingReportProgress // 只要有一个匹配就停止
+                                                        options:NSMatchingReportCompletion // 只要有一个匹配就停止
                                                           range:NSMakeRange(0, self.sourceWordsField.text.length)];
         if ([matchStringArray count] > 0)
         {
