@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE5DDB0E1A9EDB25003BA599 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5DDB0D1A9EDB25003BA599 /* main.m */; };
+		CE5DDB111A9EDB25003BA599 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5DDB101A9EDB25003BA599 /* AppDelegate.m */; };
+		CE5DDB141A9EDB25003BA599 /* DrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5DDB131A9EDB25003BA599 /* DrawerViewController.m */; };
+		CE5DDB171A9EDB25003BA599 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5DDB151A9EDB25003BA599 /* Main.storyboard */; };
+		CE5DDB191A9EDB25003BA599 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5DDB181A9EDB25003BA599 /* Images.xcassets */; };
+		CE5DDB1C1A9EDB25003BA599 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5DDB1A1A9EDB25003BA599 /* LaunchScreen.xib */; };
+		CE5DDB281A9EDB25003BA599 /* QQDrawerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5DDB271A9EDB25003BA599 /* QQDrawerTests.m */; };
+		CE5DDB641A9F1FC3003BA599 /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5DDB631A9F1FC3003BA599 /* CenterViewController.m */; };
+		CE5DDB671A9F2267003BA599 /* DrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5DDB661A9F2267003BA599 /* DrawerView.m */; };
+		CE5DDB6D1A9F2770003BA599 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5DDB6C1A9F2770003BA599 /* LeftViewController.m */; };
+		CE5DDB6F1A9F2C55003BA599 /* sky@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE5DDB6E1A9F2C55003BA599 /* sky@2x.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE5DDB221A9EDB25003BA599 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE5DDB001A9EDB25003BA599 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE5DDB071A9EDB25003BA599;
+			remoteInfo = QQDrawer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE5DDB081A9EDB25003BA599 /* QQDrawer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQDrawer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5DDB0C1A9EDB25003BA599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE5DDB0D1A9EDB25003BA599 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE5DDB0F1A9EDB25003BA599 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CE5DDB101A9EDB25003BA599 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CE5DDB121A9EDB25003BA599 /* DrawerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawerViewController.h; sourceTree = "<group>"; };
+		CE5DDB131A9EDB25003BA599 /* DrawerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawerViewController.m; sourceTree = "<group>"; };
+		CE5DDB161A9EDB25003BA599 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE5DDB181A9EDB25003BA599 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CE5DDB1B1A9EDB25003BA599 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CE5DDB211A9EDB25003BA599 /* QQDrawerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QQDrawerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5DDB261A9EDB25003BA599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE5DDB271A9EDB25003BA599 /* QQDrawerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQDrawerTests.m; sourceTree = "<group>"; };
+		CE5DDB621A9F1FC3003BA599 /* CenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterViewController.h; sourceTree = "<group>"; };
+		CE5DDB631A9F1FC3003BA599 /* CenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterViewController.m; sourceTree = "<group>"; };
+		CE5DDB651A9F2267003BA599 /* DrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerView.h; sourceTree = "<group>"; };
+		CE5DDB661A9F2267003BA599 /* DrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerView.m; sourceTree = "<group>"; };
+		CE5DDB6B1A9F2770003BA599 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		CE5DDB6C1A9F2770003BA599 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		CE5DDB6E1A9F2C55003BA599 /* sky@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sky@2x.jpg"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE5DDB051A9EDB25003BA599 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5DDB1E1A9EDB25003BA599 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE5DDAFF1A9EDB25003BA599 = {
+			isa = PBXGroup;
+			children = (
+				CE5DDB0A1A9EDB25003BA599 /* QQDrawer */,
+				CE5DDB241A9EDB25003BA599 /* QQDrawerTests */,
+				CE5DDB091A9EDB25003BA599 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE5DDB091A9EDB25003BA599 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE5DDB081A9EDB25003BA599 /* QQDrawer.app */,
+				CE5DDB211A9EDB25003BA599 /* QQDrawerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE5DDB0A1A9EDB25003BA599 /* QQDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				CE5DDB6E1A9F2C55003BA599 /* sky@2x.jpg */,
+				CE5DDB0F1A9EDB25003BA599 /* AppDelegate.h */,
+				CE5DDB101A9EDB25003BA599 /* AppDelegate.m */,
+				CE5DDB121A9EDB25003BA599 /* DrawerViewController.h */,
+				CE5DDB131A9EDB25003BA599 /* DrawerViewController.m */,
+				CE5DDB651A9F2267003BA599 /* DrawerView.h */,
+				CE5DDB661A9F2267003BA599 /* DrawerView.m */,
+				CE5DDB621A9F1FC3003BA599 /* CenterViewController.h */,
+				CE5DDB631A9F1FC3003BA599 /* CenterViewController.m */,
+				CE5DDB6B1A9F2770003BA599 /* LeftViewController.h */,
+				CE5DDB6C1A9F2770003BA599 /* LeftViewController.m */,
+				CE5DDB151A9EDB25003BA599 /* Main.storyboard */,
+				CE5DDB181A9EDB25003BA599 /* Images.xcassets */,
+				CE5DDB1A1A9EDB25003BA599 /* LaunchScreen.xib */,
+				CE5DDB0B1A9EDB25003BA599 /* Supporting Files */,
+			);
+			path = QQDrawer;
+			sourceTree = "<group>";
+		};
+		CE5DDB0B1A9EDB25003BA599 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE5DDB0C1A9EDB25003BA599 /* Info.plist */,
+				CE5DDB0D1A9EDB25003BA599 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE5DDB241A9EDB25003BA599 /* QQDrawerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE5DDB271A9EDB25003BA599 /* QQDrawerTests.m */,
+				CE5DDB251A9EDB25003BA599 /* Supporting Files */,
+			);
+			path = QQDrawerTests;
+			sourceTree = "<group>";
+		};
+		CE5DDB251A9EDB25003BA599 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE5DDB261A9EDB25003BA599 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE5DDB071A9EDB25003BA599 /* QQDrawer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE5DDB2B1A9EDB25003BA599 /* Build configuration list for PBXNativeTarget "QQDrawer" */;
+			buildPhases = (
+				CE5DDB041A9EDB25003BA599 /* Sources */,
+				CE5DDB051A9EDB25003BA599 /* Frameworks */,
+				CE5DDB061A9EDB25003BA599 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QQDrawer;
+			productName = QQDrawer;
+			productReference = CE5DDB081A9EDB25003BA599 /* QQDrawer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE5DDB201A9EDB25003BA599 /* QQDrawerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE5DDB2E1A9EDB25003BA599 /* Build configuration list for PBXNativeTarget "QQDrawerTests" */;
+			buildPhases = (
+				CE5DDB1D1A9EDB25003BA599 /* Sources */,
+				CE5DDB1E1A9EDB25003BA599 /* Frameworks */,
+				CE5DDB1F1A9EDB25003BA599 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE5DDB231A9EDB25003BA599 /* PBXTargetDependency */,
+			);
+			name = QQDrawerTests;
+			productName = QQDrawerTests;
+			productReference = CE5DDB211A9EDB25003BA599 /* QQDrawerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE5DDB001A9EDB25003BA599 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = com.mengxiangjian;
+				TargetAttributes = {
+					CE5DDB071A9EDB25003BA599 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					CE5DDB201A9EDB25003BA599 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = CE5DDB071A9EDB25003BA599;
+					};
+				};
+			};
+			buildConfigurationList = CE5DDB031A9EDB25003BA599 /* Build configuration list for PBXProject "QQDrawer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE5DDAFF1A9EDB25003BA599;
+			productRefGroup = CE5DDB091A9EDB25003BA599 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE5DDB071A9EDB25003BA599 /* QQDrawer */,
+				CE5DDB201A9EDB25003BA599 /* QQDrawerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE5DDB061A9EDB25003BA599 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE5DDB171A9EDB25003BA599 /* Main.storyboard in Resources */,
+				CE5DDB1C1A9EDB25003BA599 /* LaunchScreen.xib in Resources */,
+				CE5DDB6F1A9F2C55003BA599 /* sky@2x.jpg in Resources */,
+				CE5DDB191A9EDB25003BA599 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5DDB1F1A9EDB25003BA599 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE5DDB041A9EDB25003BA599 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE5DDB141A9EDB25003BA599 /* DrawerViewController.m in Sources */,
+				CE5DDB671A9F2267003BA599 /* DrawerView.m in Sources */,
+				CE5DDB641A9F1FC3003BA599 /* CenterViewController.m in Sources */,
+				CE5DDB6D1A9F2770003BA599 /* LeftViewController.m in Sources */,
+				CE5DDB111A9EDB25003BA599 /* AppDelegate.m in Sources */,
+				CE5DDB0E1A9EDB25003BA599 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5DDB1D1A9EDB25003BA599 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE5DDB281A9EDB25003BA599 /* QQDrawerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE5DDB231A9EDB25003BA599 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE5DDB071A9EDB25003BA599 /* QQDrawer */;
+			targetProxy = CE5DDB221A9EDB25003BA599 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE5DDB151A9EDB25003BA599 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE5DDB161A9EDB25003BA599 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE5DDB1A1A9EDB25003BA599 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE5DDB1B1A9EDB25003BA599 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE5DDB291A9EDB25003BA599 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CE5DDB2A1A9EDB25003BA599 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE5DDB2C1A9EDB25003BA599 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = QQDrawer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CE5DDB2D1A9EDB25003BA599 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = QQDrawer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CE5DDB2F1A9EDB25003BA599 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QQDrawerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QQDrawer.app/QQDrawer";
+			};
+			name = Debug;
+		};
+		CE5DDB301A9EDB25003BA599 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QQDrawerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QQDrawer.app/QQDrawer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE5DDB031A9EDB25003BA599 /* Build configuration list for PBXProject "QQDrawer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE5DDB291A9EDB25003BA599 /* Debug */,
+				CE5DDB2A1A9EDB25003BA599 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE5DDB2B1A9EDB25003BA599 /* Build configuration list for PBXNativeTarget "QQDrawer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE5DDB2C1A9EDB25003BA599 /* Debug */,
+				CE5DDB2D1A9EDB25003BA599 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE5DDB2E1A9EDB25003BA599 /* Build configuration list for PBXNativeTarget "QQDrawerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE5DDB2F1A9EDB25003BA599 /* Debug */,
+				CE5DDB301A9EDB25003BA599 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE5DDB001A9EDB25003BA599 /* Project object */;
+}
