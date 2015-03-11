@@ -25,9 +25,9 @@
 
 @implementation ButtonDetailController
 
-- (instancetype)initWithContext:(id)context
+- (instancetype)init
 {
-    self = [super initWithContext:context];
+    self = [super init];
     
     if (self)
     {

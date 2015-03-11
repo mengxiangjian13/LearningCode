@@ -18,8 +18,8 @@
 
 @implementation GlanceController
 
-- (instancetype)initWithContext:(id)context {
-    self = [super initWithContext:context];
+- (instancetype)init {
+    self = [super init];
     if (self){
         // Initialize variables here.
         // Configure interface objects here.
@@ -35,7 +35,7 @@
         // glance不可以交互，点击任何地方都会进入watch app。
         // 但可以携带一些信息进入watch app，用如下方法。
         [self updateUserActivity:@"cn.com.modernmedia.WatchKitCatalog"
-                        userInfo:@{@"interfaceIdentifier":@"Image"}];
+                        userInfo:@{@"interfaceIdentifier":@"Image"} webpageURL:nil];
         
     }
     return self;

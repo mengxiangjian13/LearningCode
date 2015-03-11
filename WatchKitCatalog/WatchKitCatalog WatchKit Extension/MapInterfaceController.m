@@ -20,9 +20,9 @@
 
 @implementation MapInterfaceController
 
--(instancetype)initWithContext:(id)context
+-(instancetype)init
 {
-    self = [super initWithContext:context];
+    self = [super init];
     if (self)
     {
         currentSpan = MKCoordinateSpanMake(1.0, 1.0);
@@ -37,7 +37,7 @@
 {
     CLLocationCoordinate2D apple = CLLocationCoordinate2DMake(37.331793f, -122.029584f);
     MKCoordinateRegion appleRegion = MKCoordinateRegionMake(apple, currentSpan);
-    [self.map setCoordinateRegion:appleRegion];
+    [self.map setRegion:appleRegion];
     currentRegion = appleRegion;
 }
 
@@ -45,7 +45,7 @@
 {
     CLLocationCoordinate2D beijing = CLLocationCoordinate2DMake(40, 116);
     MKCoordinateRegion beijingRegion = MKCoordinateRegionMake(beijing, currentSpan);
-    [self.map setCoordinateRegion:beijingRegion];
+    [self.map setRegion:beijingRegion];
     currentRegion = beijingRegion;
 }
 
@@ -54,7 +54,7 @@
     MKCoordinateSpan span = MKCoordinateSpanMake(currentSpan.latitudeDelta * 0.5, currentSpan.longitudeDelta * 0.5);
     currentSpan = span;
     currentRegion = MKCoordinateRegionMake(currentRegion.center, span);
-    [self.map setCoordinateRegion:currentRegion];
+    [self.map setRegion:currentRegion];
 }
 
 - (IBAction)zoomOut
@@ -62,7 +62,7 @@
     MKCoordinateSpan span = MKCoordinateSpanMake(currentSpan.latitudeDelta * 2.0, currentSpan.longitudeDelta * 2.0);
     currentSpan = span;
     currentRegion = MKCoordinateRegionMake(currentRegion.center, span);
-    [self.map setCoordinateRegion:currentRegion];
+    [self.map setRegion:currentRegion];
 }
 
 - (IBAction)pins
@@ -74,8 +74,8 @@
 
 - (IBAction)imagePins
 {
-    [self.map addAnnotation:CLLocationCoordinate2DMake(currentRegion.center.latitude, currentRegion.center.longitude - 0.3) withImageNamed:@"Whale"];
-    [self.map addAnnotation:CLLocationCoordinate2DMake(currentRegion.center.latitude, currentRegion.center.longitude + 0.3) withImage:[UIImage imageNamed:@"Bumblebee"]];
+    [self.map addAnnotation:CLLocationCoordinate2DMake(currentRegion.center.latitude, currentRegion.center.longitude - 0.3) withImageNamed:@"Whale" centerOffset:CGPointZero];
+    [self.map addAnnotation:CLLocationCoordinate2DMake(currentRegion.center.latitude, currentRegion.center.longitude + 0.3) withImage:[UIImage imageNamed:@"Bumblebee"]centerOffset:CGPointZero];
 }
 
 - (IBAction)removePins

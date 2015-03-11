@@ -16,9 +16,9 @@
 
 @implementation SliderInterfaceController
 
-- (instancetype)initWithContext:(id)context
+- (instancetype)init
 {
-    self = [super initWithContext:context];
+    self = [super init];
     if (self)
     {
         [self.coloredSlider setColor:[UIColor redColor]];

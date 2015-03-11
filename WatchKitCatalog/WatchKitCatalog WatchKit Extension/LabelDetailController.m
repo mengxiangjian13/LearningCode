@@ -17,9 +17,9 @@
 
 @implementation LabelDetailController
 
-- (instancetype)initWithContext:(id)context
+- (instancetype)init
 {
-    self = [super initWithContext:context];
+    self = [super init];
     if (self)
     {
         NSAttributedString *string = [[NSAttributedString alloc] initWithString:@"Custom Text" attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica-Light" size:12.0]}];

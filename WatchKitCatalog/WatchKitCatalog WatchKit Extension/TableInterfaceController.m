@@ -20,9 +20,9 @@
 
 @implementation TableInterfaceController
 
-- (instancetype)initWithContext:(id)context
+- (instancetype)init
 {
-    self = [super initWithContext:context];
+    self = [super init];
     if (self)
     {
         locations = [[NSMutableArray alloc] initWithObjects:@"Beijing",@"Handan",@"Tianjin",@"Harbin", nil];

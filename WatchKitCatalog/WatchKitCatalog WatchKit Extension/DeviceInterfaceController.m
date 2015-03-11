@@ -19,15 +19,15 @@
 
 @implementation DeviceInterfaceController
 
-- (instancetype)initWithContext:(id)context
+- (instancetype)init
 {
-    self = [super initWithContext:context];
+    self = [super init];
     if (self)
     {
         WKInterfaceDevice *device = [WKInterfaceDevice currentDevice];
         [self.boundsLabel setText:NSStringFromCGRect(device.screenBounds)];
         [self.scaleLabel setText:[NSString stringWithFormat:@"%.2f",device.screenScale]];
-        [self.localeLabel setText:[device.currentLocale localeIdentifier]];
+//        [self.localeLabel setText:[device.currentLocale localeIdentifier]];
         [self.contentSizeLabel setText:device.preferredContentSizeCategory];
     }
     return self;

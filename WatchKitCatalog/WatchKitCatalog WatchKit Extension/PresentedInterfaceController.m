@@ -16,14 +16,19 @@
 
 @implementation PresentedInterfaceController
 
-- (instancetype)initWithContext:(id)context
+- (instancetype)init
 {
-    self = [super initWithContext:context];
+    self = [super init];
     if (self)
     {
-        [self.centerLabel setText:[NSString stringWithFormat:@"%@ page",context]];
+//        [self.centerLabel setText:[NSString stringWithFormat:@"%@ page",context]];
     }
     return self;
+}
+
+- (void)awakeWithContext:(id)context
+{
+    [self.centerLabel setText:[NSString stringWithFormat:@"%@ page",context]];
 }
 
 - (void)willActivate

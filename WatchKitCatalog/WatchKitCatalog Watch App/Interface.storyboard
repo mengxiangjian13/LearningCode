@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
         <!--Catalog-->
@@ -10,10 +10,10 @@
             <objects>
                 <controller title="Catalog" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <table alignment="left" layout="vertical" id="maA-tU-dRi">
+                        <table alignment="left" id="maA-tU-dRi">
                             <items>
                                 <tableRow identifier="RowController" id="NTY-eT-zhZ" customClass="InterfaceRowController">
-                                    <group key="rootItem" width="1" height="40" alignment="center" id="8sT-nO-Jgp">
+                                    <group key="rootItem" width="1" height="40" alignment="left" id="8sT-nO-Jgp">
                                         <items>
                                             <label width="1" alignment="left" verticalAlignment="center" text="label" textAlignment="center" id="Vfb-R9-TRq"/>
                                         </items>
@@ -96,7 +96,7 @@
                                 <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                             </group>
                         </button>
-                        <group width="1" height="38" alignment="left" hasDetent="YES" id="ozj-FN-3kP">
+                        <group width="1" height="38" alignment="left" id="ozj-FN-3kP">
                             <items>
                                 <button width="0.33000000000000002" alignment="left" title="1" id="N5B-Xx-3jE">
                                     <connections>
@@ -200,7 +200,7 @@
                     <items>
                         <imageView width="1" alignment="left" id="Z9G-PC-OuW"/>
                         <imageView alignment="left" image="Bus0" animationDuration="2" id="TFj-dU-n6X"/>
-                        <group width="1" alignment="left" hasDetent="YES" id="IPf-KU-Y18">
+                        <group width="1" alignment="left" id="IPf-KU-Y18">
                             <items>
                                 <button width="0.5" alignment="left" title="Play" id="JQ3-Ou-Bjo">
                                     <connections>
@@ -277,7 +277,7 @@
             <objects>
                 <controller identifier="Map" title="Map" id="7kp-ez-StD" customClass="MapInterfaceController">
                     <items>
-                        <group width="1" alignment="left" hasDetent="YES" id="8xM-Bv-y3r">
+                        <group width="1" alignment="left" id="8xM-Bv-y3r">
                             <items>
                                 <button width="0.5" alignment="left" title="Apple" id="g4c-s1-SsL">
                                     <connections>
@@ -291,7 +291,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" hasDetent="YES" id="IOM-4Y-wZM">
+                        <group width="1" alignment="left" id="IOM-4Y-wZM">
                             <items>
                                 <button width="0.5" alignment="left" title="In" id="F55-NL-EXK">
                                     <connections>
@@ -306,7 +306,7 @@
                             </items>
                         </group>
                         <map alignment="left" id="lEo-fq-DF1"/>
-                        <group width="1" alignment="left" hasDetent="YES" id="z8S-rZ-Jf2">
+                        <group width="1" alignment="left" id="z8S-rZ-Jf2">
                             <items>
                                 <button width="0.5" alignment="left" title="Pins" id="OgX-85-OQa">
                                     <connections>
@@ -340,7 +340,7 @@
                     <items>
                         <label alignment="left" text="Alert Label" id="DZ2-1t-Q1L"/>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" offsetNotificationContent="NO" id="LIR-jg-KzO">
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="LIR-jg-KzO">
                         <color key="sashColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </notificationCategory>
                     <connections>
@@ -356,7 +356,7 @@
             <objects>
                 <controller identifier="Table" title="Table" id="3SB-1t-n8R" customClass="TableInterfaceController">
                     <items>
-                        <table alignment="left" layout="vertical" id="tRG-eZ-BKp">
+                        <table alignment="left" id="tRG-eZ-BKp">
                             <items>
                                 <tableRow identifier="RowController" id="Crf-2H-7pa" customClass="TableInterfaceRowController">
                                     <group key="rootItem" width="1" alignment="left" id="c0a-sb-Nss">
@@ -399,7 +399,7 @@
                 <controller identifier="Group" title="Group" id="JIU-Ht-NU2" customClass="GroupInterfaceController">
                     <items>
                         <label alignment="left" text="Horizontal" id="exI-FR-l8O"/>
-                        <group width="1" alignment="left" hasDetent="YES" id="W9z-I8-rD2">
+                        <group width="1" alignment="left" id="W9z-I8-rD2">
                             <items>
                                 <button width="0.5" alignment="left" verticalAlignment="center" title="Button" id="xpJ-JI-cmq"/>
                                 <button width="0.5" alignment="left" verticalAlignment="center" title="Button" id="1KB-WT-xzO"/>
@@ -408,7 +408,7 @@
                             <edgeInsets key="margins" left="4" right="4" top="4" bottom="4"/>
                         </group>
                         <label alignment="left" text="Vertical" id="iv9-E4-OjT"/>
-                        <group width="1" alignment="left" layout="vertical" hasDetent="YES" id="Aw1-DH-h0a">
+                        <group width="1" alignment="left" layout="vertical" id="Aw1-DH-h0a">
                             <items>
                                 <button width="1" alignment="left" title="Button" id="eTc-Ot-2O2"/>
                                 <button width="1" alignment="left" title="Button" id="eTk-Tz-nxm"/>
@@ -416,7 +416,7 @@
                             <edgeInsets key="margins" left="4" right="4" top="4" bottom="4"/>
                         </group>
                         <label alignment="left" text="Mixed" id="ePz-Ch-hPu"/>
-                        <group width="1" alignment="left" hasDetent="YES" id="ZgH-4A-07T">
+                        <group width="1" alignment="left" id="ZgH-4A-07T">
                             <items>
                                 <group width="0.5" alignment="left" layout="vertical" id="GmY-yI-10Z">
                                     <items>
@@ -435,7 +435,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="630" y="735"/>
+            <point key="canvasLocation" x="606" y="780"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

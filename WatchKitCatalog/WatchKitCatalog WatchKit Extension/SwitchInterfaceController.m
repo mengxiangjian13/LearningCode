@@ -18,9 +18,9 @@
 
 @implementation SwitchInterfaceController
 
-- (instancetype)initWithContext:(id)context
+- (instancetype)init
 {
-    self = [super initWithContext:context];
+    self = [super init];
     if (self)
     {
         [self.offSwitch setOn:NO];
