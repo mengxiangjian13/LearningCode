@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ConfigureViewController.h"
+#import "AttachmentViewController.h"
 
 @implementation AppDelegate
 
@@ -21,7 +22,11 @@
     
     ConfigureViewController *configureVC = [[ConfigureViewController alloc] init];
     configureVC.title = @"configure";
-    tab.viewControllers = @[configureVC];
+    
+    AttachmentViewController *attachVC = [AttachmentViewController new];
+    attachVC.title = @"attach";
+    
+    tab.viewControllers = @[configureVC,attachVC];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

@@ -21,6 +21,8 @@
 		CE523C7C1935DF3E0032EB40 /* TextKitLearningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE523C7B1935DF3E0032EB40 /* TextKitLearningTests.m */; };
 		CE523C861935E0570032EB40 /* lorem.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE523C851935E0570032EB40 /* lorem.txt */; };
 		CE523C8A1935E08C0032EB40 /* ConfigureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE523C891935E08C0032EB40 /* ConfigureViewController.m */; };
+		CEAFF0B51AB833E200EF1286 /* AttachmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAFF0B41AB833E200EF1286 /* AttachmentViewController.m */; };
+		CEAFF0DA1AB83D2400EF1286 /* da@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEAFF0D91AB83D2400EF1286 /* da@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		CE523C851935E0570032EB40 /* lorem.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lorem.txt; sourceTree = "<group>"; };
 		CE523C881935E08C0032EB40 /* ConfigureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigureViewController.h; sourceTree = "<group>"; };
 		CE523C891935E08C0032EB40 /* ConfigureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigureViewController.m; sourceTree = "<group>"; };
+		CEAFF0B31AB833E200EF1286 /* AttachmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttachmentViewController.h; sourceTree = "<group>"; };
+		CEAFF0B41AB833E200EF1286 /* AttachmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttachmentViewController.m; sourceTree = "<group>"; };
+		CEAFF0D91AB83D2400EF1286 /* da@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "da@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,7 @@
 		CE523C5C1935DF3D0032EB40 /* TextKitLearning */ = {
 			isa = PBXGroup;
 			children = (
+				CEAFF0D91AB83D2400EF1286 /* da@2x.png */,
 				CE523C651935DF3D0032EB40 /* AppDelegate.h */,
 				CE523C661935DF3D0032EB40 /* AppDelegate.m */,
 				CE523C681935DF3E0032EB40 /* Images.xcassets */,
@@ -156,6 +162,8 @@
 			children = (
 				CE523C881935E08C0032EB40 /* ConfigureViewController.h */,
 				CE523C891935E08C0032EB40 /* ConfigureViewController.m */,
+				CEAFF0B31AB833E200EF1286 /* AttachmentViewController.h */,
+				CEAFF0B41AB833E200EF1286 /* AttachmentViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -238,6 +246,7 @@
 				CE523C611935DF3D0032EB40 /* InfoPlist.strings in Resources */,
 				CE523C861935E0570032EB40 /* lorem.txt in Resources */,
 				CE523C691935DF3E0032EB40 /* Images.xcassets in Resources */,
+				CEAFF0DA1AB83D2400EF1286 /* da@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE523C671935DF3D0032EB40 /* AppDelegate.m in Sources */,
+				CEAFF0B51AB833E200EF1286 /* AttachmentViewController.m in Sources */,
 				CE523C631935DF3D0032EB40 /* main.m in Sources */,
 				CE523C8A1935E08C0032EB40 /* ConfigureViewController.m in Sources */,
 			);
@@ -455,6 +465,7 @@
 				CE523C811935DF3E0032EB40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE523C821935DF3E0032EB40 /* Build configuration list for PBXNativeTarget "TextKitLearningTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +474,7 @@
 				CE523C841935DF3E0032EB40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
