@@ -79,7 +79,7 @@
     layer.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     if (layer.connection.supportsVideoOrientation)
     {
-        layer.connection.videoOrientation = [ViewController videoOrientationWithInterfaceOrientation:self.interfaceOrientation];
+        layer.connection.videoOrientation = (AVCaptureVideoOrientation)[UIDevice currentDevice].orientation;
     }
     
     
@@ -162,7 +162,7 @@
 {
     if (layer)
     {
-        layer.connection.videoOrientation = [ViewController videoOrientationWithInterfaceOrientation:self.interfaceOrientation];
+        layer.connection.videoOrientation = (AVCaptureVideoOrientation)[UIDevice currentDevice].orientation;
     }
 }
 

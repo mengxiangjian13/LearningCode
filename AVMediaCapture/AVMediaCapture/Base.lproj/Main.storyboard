@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -65,8 +65,8 @@
                             <mask key="constraints">
                                 <exclude reference="UZ7-8O-WqS"/>
                                 <exclude reference="WZB-eK-ugt"/>
-                                <exclude reference="O8l-ua-VgL"/>
                                 <exclude reference="wLy-TN-Zfh"/>
+                                <exclude reference="O8l-ua-VgL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -75,11 +75,11 @@
                                 <include reference="WZB-eK-ugt"/>
                                 <exclude reference="aY0-VE-rei"/>
                                 <exclude reference="gd3-aq-8UZ"/>
-                                <include reference="O8l-ua-VgL"/>
-                                <exclude reference="wMb-AC-oOg"/>
                                 <exclude reference="OQm-Fa-RLG"/>
                                 <include reference="Yuk-xF-645"/>
                                 <include reference="wLy-TN-Zfh"/>
+                                <include reference="O8l-ua-VgL"/>
+                                <exclude reference="wMb-AC-oOg"/>
                             </mask>
                         </variation>
                     </view>
