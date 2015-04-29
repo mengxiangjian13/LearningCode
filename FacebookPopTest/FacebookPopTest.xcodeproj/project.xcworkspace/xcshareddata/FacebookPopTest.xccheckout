@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6C76C4C7-B61F-4FCE-9B7C-4084BE292338</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FacebookPopTest</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2B7338EB-2321-4A54-811F-8987A89F5B83</key>
+		<string>https://github.com/mengxiangjian13/LearningCode.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FacebookPopTest/FacebookPopTest.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2B7338EB-2321-4A54-811F-8987A89F5B83</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mengxiangjian13/LearningCode.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2B7338EB-2321-4A54-811F-8987A89F5B83</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2B7338EB-2321-4A54-811F-8987A89F5B83</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LearningCode</string>
+		</dict>
+	</array>
+</dict>
+</plist>

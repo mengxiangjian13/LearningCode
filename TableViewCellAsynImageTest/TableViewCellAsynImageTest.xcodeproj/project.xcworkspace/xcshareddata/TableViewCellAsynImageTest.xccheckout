@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7FE977B2-607B-4A06-A9C4-18DDF0B7F727</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TableViewCellAsynImageTest</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3392D7EC-116F-40EF-A4B7-24CBFBE8A3DB</key>
+		<string>https://github.com/mengxiangjian13/LearningCode.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TableViewCellAsynImageTest/TableViewCellAsynImageTest.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3392D7EC-116F-40EF-A4B7-24CBFBE8A3DB</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mengxiangjian13/LearningCode.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3392D7EC-116F-40EF-A4B7-24CBFBE8A3DB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3392D7EC-116F-40EF-A4B7-24CBFBE8A3DB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LearningCode</string>
+		</dict>
+	</array>
+</dict>
+</plist>
