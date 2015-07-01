@@ -86,9 +86,10 @@
 
 - (void)playerItemDidReachEnd:(id)sender
 {
-    // 播放完毕了。默认播放下一首。
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification
-                                                  object:[_player currentItem]];
+                                                  object:nil];
+    
+    // 播放完毕了。默认播放下一首。
     [self next];
 }
 
@@ -111,11 +112,6 @@
     }
     
     [_player play];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(playerItemDidReachEnd:)
-                                                 name:AVPlayerItemDidPlayToEndTimeNotification
-                                               object:[_player currentItem]];
 }
 
 -(void) clear
@@ -191,6 +187,11 @@
             [_player insertItem:item afterItem:nil];
             
             [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = @{MPMediaItemPropertyTitle: music.name, MPMediaItemPropertyArtist: music.singer};
+            
+            [[NSNotificationCenter defaultCenter] addObserver:self
+                                                     selector:@selector(playerItemDidReachEnd:)
+                                                         name:AVPlayerItemDidPlayToEndTimeNotification
+                                                       object:[_player currentItem]];
             
             [self play];
         }
