@@ -23,6 +23,11 @@
 
 @implementation MyMusicPlayer
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (instancetype)initWithMusics:(NSArray *)musics
 {
     self = [super init];
@@ -31,6 +36,7 @@
         [self initSession];
         
         _player = [[AVQueuePlayer alloc] init];
+        _player.actionAtItemEnd = AVPlayerActionAtItemEndAdvance;
         
         musicArray = musics;
         
@@ -81,6 +87,8 @@
 - (void)playerItemDidReachEnd:(id)sender
 {
     // 播放完毕了。默认播放下一首。
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification
+                                                  object:[_player currentItem]];
     [self next];
 }
 
@@ -171,6 +179,9 @@
 {
     if (index >= 0 && index < [musicArray count])
     {
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification
+                                                      object:[_player currentItem]];
+        
         MusicModel *music = musicArray[index];
         AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:[NSURL URLWithString:music.url]];
         if (item)

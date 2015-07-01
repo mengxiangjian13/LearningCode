@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>954D0BCA-DBC6-403F-9614-529EFBF20051</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>MusicPlayer</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9A574F9AF0957FE1FA5658413A67E7101C67272A</key>
 		<string>https://github.com/mengxiangjian13/LearningCode.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MusicPlayer/MusicPlayer.xcodeproj/project.xcworkspace</string>
+	<string>MusicPlayer/MusicPlayer.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9A574F9AF0957FE1FA5658413A67E7101C67272A</key>
