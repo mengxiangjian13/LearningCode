@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         
         category.setActions([enterAction,rejectAction], forContext: UIUserNotificationActionContext.Minimal);
         
-        let settings = UIUserNotificationSettings(forTypes: (.Alert | .Badge | .Sound), categories: NSSet(object: category));
+        let settings = UIUserNotificationSettings(forTypes: (.Alert | .Badge | .Sound), categories: NSSet(object: category) as Set<NSObject>);
         UIApplication.sharedApplication().registerUserNotificationSettings(settings);
         
         

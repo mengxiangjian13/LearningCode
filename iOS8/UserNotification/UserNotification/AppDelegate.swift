@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void)
     {
         let window = UIApplication.sharedApplication().keyWindow;
-        let viewController = window.rootViewController;
+        let viewController = window!.rootViewController;
         if let vc = viewController as? ViewController
         {
             vc.showEnterAlert();

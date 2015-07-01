@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>5164BEFE-54C4-451A-B6D3-4404980EE6AF</string>
+	<string>954D0BCA-DBC6-403F-9614-529EFBF20051</string>
 	<key>IDESourceControlProjectName</key>
-	<string>ShareExtension</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9A574F9AF0957FE1FA5658413A67E7101C67272A</key>
 		<string>https://github.com/mengxiangjian13/LearningCode.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>iOS8/Extension/ShareExtension/ShareExtension.xcodeproj</string>
+	<string>MusicPlayer/MusicPlayer.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9A574F9AF0957FE1FA5658413A67E7101C67272A</key>
-		<string>../../../../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/mengxiangjian13/LearningCode.git</string>
