@@ -17,9 +17,13 @@
 // 播放控制。
 -(void) pause;
 -(void) play;
--(void) clear;
+-(void) clear; // 清理播放列表。
+- (void)stop; // 停止。music停在当前歌曲。
 - (void)previous;
 - (void)next;
 -(void) remoteControlReceivedWithEvent:(UIEvent *)receivedEvent;
+
+// 切换歌曲
+- (void)changeCurrentMusicToMusicWithIndex:(NSInteger)index;
 
 @end

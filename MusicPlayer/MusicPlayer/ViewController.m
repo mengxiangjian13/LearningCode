@@ -80,7 +80,7 @@
 
 - (IBAction)stop:(id)sender
 {
-    [player clear];
+    [player stop];
 }
 
 - (void) remoteControlReceivedWithEvent: (UIEvent *) receivedEvent
