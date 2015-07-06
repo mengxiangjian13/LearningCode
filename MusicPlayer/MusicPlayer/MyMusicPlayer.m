@@ -16,6 +16,7 @@
     NSArray *musicArray;
     BOOL started;
     id progressObserver;
+    BOOL stopped;
 }
 
 @property (nonatomic, strong) AVQueuePlayer *player;
@@ -43,7 +44,8 @@
         
         currentIndex = 0; //默认从第一首曲子播放
         
-        started = 0; // 默认不自动播放，第一次调用播放方法播放。
+        started = NO; // 默认不自动播放，第一次调用播放方法播放。
+        stopped = NO; // 是否为停止状态
     }
     return self;
 }
@@ -111,13 +113,21 @@
             [self playMusicAtIndex:0];
         }
     }
+    else if (stopped)
+    {
+        stopped = NO;
+        [self changeCurrentMusicToMusicWithIndex:currentIndex];
+    }
     
     [_player play];
 }
 
 -(void) clear
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification
+                                                  object:nil];
     started = NO;
+    stopped = NO;
     currentIndex = 0;
     [_player removeAllItems];
     
@@ -139,6 +149,20 @@
     [self playMusicAtIndex:currentIndex];
 }
 
+- (void)stop
+{
+    stopped = YES;
+    [_player removeAllItems];
+}
+
+- (void)changeCurrentMusicToMusicWithIndex:(NSInteger)index
+{
+    if (index >= 0 && index < [musicArray count])
+    {
+        [self playMusicAtIndex:index];
+    }
+}
+
 -(void) remoteControlReceivedWithEvent:(UIEvent *)receivedEvent
 {
     if (receivedEvent.type == UIEventTypeRemoteControl) {
@@ -153,11 +177,11 @@
                 break;
             }
             case UIEventSubtypeRemoteControlPlay: {
-                [_player play];
+                [self play];
                 break;
             }
             case UIEventSubtypeRemoteControlPause: {
-                [_player pause];
+                [self pause];
                 break;
             }
             case UIEventSubtypeRemoteControlNextTrack:
@@ -182,7 +206,7 @@
     if (index >= 0 && index < [musicArray count])
     {
         [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification
-                                                      object:[_player currentItem]];
+                                                      object:nil];
         
         MusicModel *music = musicArray[index];
         AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:[NSURL URLWithString:music.url]];
