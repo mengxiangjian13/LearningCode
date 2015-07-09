@@ -15,6 +15,7 @@
     NSInteger currentIndex;
     NSArray *musicArray;
     BOOL started;
+    id progressObserver;
     BOOL stopped;
 }
 
@@ -137,6 +138,11 @@
     stopped = NO;
     currentIndex = 0;
     [_player removeAllItems];
+    
+    if (progressObserver)
+    {
+        [_player removeTimeObserver:progressObserver];
+    }
 }
 
 - (void)previous
@@ -224,6 +230,21 @@
                                                      selector:@selector(playerItemDidReachEnd:)
                                                          name:AVPlayerItemDidPlayToEndTimeNotification
                                                        object:[_player currentItem]];
+            
+            if (progressObserver)
+            {
+                [_player removeTimeObserver:progressObserver];
+            }
+            
+            __weak AVQueuePlayer *player = _player;
+            progressObserver = [_player addPeriodicTimeObserverForInterval:CMTimeMake(1, 1) queue:NULL usingBlock:^(CMTime time)
+            {
+                AVPlayerItem *item = [player currentItem];
+                CGFloat currentTime = CMTimeGetSeconds(time);
+                CGFloat duration = CMTimeGetSeconds(item.duration);
+                NSLog(@"progress : %.2f",currentTime/duration);
+            }];
+            
             
             [self play];
             
