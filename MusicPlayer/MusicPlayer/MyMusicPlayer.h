@@ -10,9 +10,19 @@
 #import <UIKit/UIKit.h>
 #import "MusicModel.h"
 
+@protocol MyMusicPlayerDelegate <NSObject>
+
+- (void)musicPlayerIsPlayingMusicAtIndex:(NSInteger)index;
+
+@end
+
 @interface MyMusicPlayer : NSObject
 
-- (instancetype)initWithMusics:(NSArray *)musics;
+//- (instancetype)initWithMusics:(NSArray *)musics;
+
+@property(nonatomic, weak) id <MyMusicPlayerDelegate> delegate;
+
+- (void)playMusicWithMusics:(NSArray *)musics index:(NSInteger)index;
 
 // 播放控制。
 -(void) pause;

@@ -29,7 +29,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (instancetype)initWithMusics:(NSArray *)musics
+- (instancetype)init
 {
     self = [super init];
     if (self)
@@ -38,8 +38,6 @@
         
         _player = [[AVQueuePlayer alloc] init];
         _player.actionAtItemEnd = AVPlayerActionAtItemEndAdvance;
-        
-        musicArray = musics;
         
         currentIndex = 0; //默认从第一首曲子播放
         
@@ -95,6 +93,16 @@
     [self next];
 }
 
+- (void)playMusicWithMusics:(NSArray *)musics index:(NSInteger)index;
+{
+    [self clear];
+    
+    musicArray = musics;
+    currentIndex = index;
+    
+    [self play];
+}
+
 #pragma mark - 播放控制
 -(void) pause
 {
@@ -107,9 +115,9 @@
     {
         started = YES;
         
-        if ([musicArray count] > 0)
+        if ([musicArray count] > 0 && currentIndex < [musicArray count])
         {
-            [self playMusicAtIndex:0];
+            [self playMusicAtIndex:currentIndex];
         }
     }
     else if (stopped)
@@ -218,6 +226,11 @@
                                                        object:[_player currentItem]];
             
             [self play];
+            
+            if ([self.delegate respondsToSelector:@selector(musicPlayerIsPlayingMusicAtIndex:)])
+            {
+                [self.delegate musicPlayerIsPlayingMusicAtIndex:index];
+            }
         }
     }
     else if (index < 0)
