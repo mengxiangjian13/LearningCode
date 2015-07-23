@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="O6s-tD-So0">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="6yo-Hb-cu0">
+            <objects>
+                <tableViewController id="Ky7-If-aSX" customClass="DownloadListVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pFN-aL-UTT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="10l-23-5X6" customClass="ItemCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="10l-23-5X6" id="qcw-pt-9D2">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Eac-Ru-fCE">
+                                            <rect key="frame" x="32" y="21" width="269" height="2"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="269" id="KIn-oo-Rf0"/>
+                                            </constraints>
+                                        </progressView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bv-GS-0Gs">
+                                            <rect key="frame" x="440" y="5" width="30" height="30"/>
+                                            <state key="normal" title="暂停">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="pause:" destination="10l-23-5X6" eventType="touchUpInside" id="bgm-3I-pxj"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="0bv-GS-0Gs" secondAttribute="trailing" constant="122" id="B0n-U1-vHm"/>
+                                        <constraint firstItem="Eac-Ru-fCE" firstAttribute="leading" secondItem="qcw-pt-9D2" secondAttribute="leadingMargin" constant="24" id="CWU-1x-9lp"/>
+                                        <constraint firstAttribute="centerY" secondItem="0bv-GS-0Gs" secondAttribute="centerY" constant="1.5" id="ECw-Hi-7b9"/>
+                                        <constraint firstAttribute="centerY" secondItem="Eac-Ru-fCE" secondAttribute="centerY" constant="-0.5" id="J3x-nK-haO"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="progressView" destination="Eac-Ru-fCE" id="AFC-Cy-Sym"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ky7-If-aSX" id="9US-1d-j4Z"/>
+                            <outlet property="delegate" destination="Ky7-If-aSX" id="eaH-aq-Nxj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="kGx-Lc-apf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K3i-PO-IZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="470" y="517"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pk9-Qj-DO0">
+            <objects>
+                <navigationController id="O6s-tD-So0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rpj-F8-LWq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ky7-If-aSX" kind="relationship" relationship="rootViewController" id="mL1-Qq-zRX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBv-9v-dOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-350" y="517"/>
+        </scene>
+    </scenes>
+</document>

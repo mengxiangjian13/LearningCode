@@ -13,6 +13,8 @@
 @protocol MyMusicPlayerDelegate <NSObject>
 
 - (void)musicPlayerIsPlayingMusicAtIndex:(NSInteger)index;
+- (void)musicPlayerIsPlayingWithProgress:(CGFloat)progress; // 0到1
+- (void)musicPlayerIsPlayingAtSecond:(NSInteger)second;
 
 @end
 

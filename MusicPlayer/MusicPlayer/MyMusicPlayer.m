@@ -237,12 +237,22 @@
             }
             
             __weak AVQueuePlayer *player = _player;
+            __weak typeof(self) weakSelf = self;
             progressObserver = [_player addPeriodicTimeObserverForInterval:CMTimeMake(1, 1) queue:NULL usingBlock:^(CMTime time)
             {
                 AVPlayerItem *item = [player currentItem];
                 CGFloat currentTime = CMTimeGetSeconds(time);
                 CGFloat duration = CMTimeGetSeconds(item.duration);
                 NSLog(@"progress : %.2f",currentTime/duration);
+                
+                if ([weakSelf.delegate respondsToSelector:@selector(musicPlayerIsPlayingWithProgress:)])
+                {
+                    [weakSelf.delegate musicPlayerIsPlayingWithProgress:(currentTime/duration)];
+                }
+                if ([weakSelf.delegate respondsToSelector:@selector(musicPlayerIsPlayingAtSecond:)])
+                {
+                    [weakSelf.delegate musicPlayerIsPlayingAtSecond:currentTime];
+                }
             }];
             
             
