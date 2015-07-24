@@ -9,13 +9,20 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 
+typedef enum{
+    DownloadItemStateNotStart = 0,
+    DownloadItemStateDownloading,
+    DownloadItemStatePause,
+    DownloadItemStateDownloaded,
+}DownloadItemState;
+
 @interface DownloadItem : NSObject
 
 - (instancetype)initWithUrl:(NSString *)url;
 
 @property (nonatomic, assign) NSUInteger sessionId;
 @property (nonatomic, strong, readonly) NSString *url;
-@property (nonatomic, assign) BOOL downloaded;
+@property (nonatomic, assign) DownloadItemState state;
 @property (nonatomic, strong) NSString *savedName;
 @property (nonatomic, assign) CGFloat progress;
 

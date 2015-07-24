@@ -10,10 +10,9 @@
 #import "DownloadHandler.h"
 #import "ItemCell.h"
 
-@interface DownloadListVC ()
+@interface DownloadListVC () <ItemCellDelegate>
 {
     NSArray *dataArray;
-    NSMutableDictionary *sessionIdDict;
 }
 
 @end
@@ -28,30 +27,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    sessionIdDict = [NSMutableDictionary new];
-    
     [[DownloadHandler sharedHandler] start];
     
     dataArray = [[DownloadHandler sharedHandler] downloadItemList];
     
-    [dataArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        DownloadItem *item = (DownloadItem *)obj;
-        if (item)
-        {
-            if (item.sessionId != 0)
-            {
-                [sessionIdDict setObject:@(idx) forKey:@(item.sessionId)];
-            }
-        }
-    }];
-    
-    [[DownloadHandler sharedHandler] setDownloadingBlock:^(NSUInteger sId, CGFloat progress) {
+    [[DownloadHandler sharedHandler] setDownloadingBlock:^(DownloadItem *item) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSInteger index = [[sessionIdDict objectForKey:@(sId)] integerValue];
-            ItemCell *cell = (ItemCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
-            if (cell)
+            NSInteger index = [dataArray indexOfObject:item];
+            if (index != NSNotFound)
             {
-                cell.progressView.progress = progress;
+                ItemCell *cell = (ItemCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
+                if (cell)
+                {
+                    cell.progressView.progress = item.progress;
+                }
             }
         });
     }];
@@ -64,12 +53,9 @@
 
 - (void)addDownload
 {
-    NSInteger count = [dataArray count];
     DownloadItem *item = [[DownloadItem alloc] initWithUrl:@"http://v.cdn.bbwc.cn/audio/bloomberg/2014/0325/20140325033418591.mp3"];
-    NSUInteger sessionId = 0;
-    [[DownloadHandler sharedHandler] addDownloadTaskWithItem:item sessionId:&sessionId];
+    [[DownloadHandler sharedHandler] addDownloadTaskWithItem:item];
     
-    [sessionIdDict setObject:@(count) forKey:@(sessionId)];
     [self.tableView reloadData];
 }
 
@@ -90,13 +76,61 @@
     ItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"
                                                      forIndexPath:indexPath];
     
+    cell.delegate = self;
     // Configure the cell...
     DownloadItem *item = dataArray[indexPath.row];
     cell.progressView.progress = item.progress;
     
+    [self setButtonTitleForCell:cell state:item.state];
+    
     return cell;
 }
 
+
+- (void)itemCellDidTouchPauseButtonWithCell:(ItemCell *)cell
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    
+    if (indexPath)
+    {
+        if (indexPath.row >= 0 && indexPath.row < [dataArray count])
+        {
+            DownloadItem *item = [dataArray objectAtIndex:indexPath.row];
+            DownloadItemState state = item.state;
+            if (state == DownloadItemStateDownloading)
+            {
+                [[DownloadHandler sharedHandler] pauseDownloadTaskWithSessionId:item.sessionId];
+                [self setButtonTitleForCell:cell state:DownloadItemStatePause];
+            }
+            else if (state == DownloadItemStateNotStart)
+            {
+                [[DownloadHandler sharedHandler] startDownloadTaskWithItem:item];
+                [self setButtonTitleForCell:cell state:DownloadItemStateDownloading];
+            }
+            else if (state == DownloadItemStatePause)
+            {
+                [[DownloadHandler sharedHandler] resumeDownloadTaskWithSessionId:item.sessionId];
+                [self setButtonTitleForCell:cell state:DownloadItemStateDownloading];
+            }
+        }
+    }
+}
+
+- (void)setButtonTitleForCell:(ItemCell *)cell state:(DownloadItemState)state
+{
+    if (state == DownloadItemStateDownloading)
+    {
+        [cell setButtonTitle:@"暂停"];
+    }
+    else if (state == DownloadItemStateNotStart)
+    {
+        [cell setButtonTitle:@"下载"];
+    }
+    else if (state == DownloadItemStatePause)
+    {
+        [cell setButtonTitle:@"继续"];
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.

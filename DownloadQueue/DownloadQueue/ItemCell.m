@@ -8,6 +8,12 @@
 
 #import "ItemCell.h"
 
+@interface ItemCell ()
+
+@property (weak, nonatomic) IBOutlet UIButton *button;
+
+@end
+
 @implementation ItemCell
 
 - (void)awakeFromNib {
@@ -16,7 +22,15 @@
 
 - (IBAction)pause:(id)sender
 {
-    
+    if ([self.delegate respondsToSelector:@selector(itemCellDidTouchPauseButtonWithCell:)])
+    {
+        [self.delegate itemCellDidTouchPauseButtonWithCell:self];
+    }
+}
+
+- (void)setButtonTitle:(NSString *)title
+{
+    [self.button setTitle:title forState:UIControlStateNormal];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -12,8 +12,8 @@
 
 @interface DownloadHandler : NSObject
 
-@property (nonatomic, copy) void (^downloadingBlock)(NSUInteger sessionId, CGFloat progress);
-@property (nonatomic, copy) void (^downloadedBlock)(NSUInteger sessionId);
+@property (nonatomic, copy) void (^downloadingBlock)(DownloadItem *item);
+@property (nonatomic, copy) void (^downloadedBlock)(DownloadItem *item);
 
 + (instancetype)sharedHandler;
 
@@ -21,8 +21,8 @@
 
 - (NSArray *)downloadItemList;
 
-- (void)addDownloadTaskWithItem:(DownloadItem *)item sessionId:(NSUInteger *)sessionId;
-- (void)startDownloadTaskWithItem:(DownloadItem *)item sessionId:(NSUInteger *)sessionId;
+- (void)addDownloadTaskWithItem:(DownloadItem *)item;
+- (void)startDownloadTaskWithItem:(DownloadItem *)item;
 
 - (void)resumeDownloadTaskWithSessionId:(NSUInteger)sessionId;
 - (void)pauseDownloadTaskWithSessionId:(NSUInteger)sessionId;

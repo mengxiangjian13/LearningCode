@@ -72,24 +72,22 @@
     return itemArray;
 }
 
-- (void)addDownloadTaskWithItem:(DownloadItem *)item sessionId:(NSUInteger *)sessionId
+- (void)addDownloadTaskWithItem:(DownloadItem *)item
 {
 //    [itemArray addObject:item];
     NSURLSessionDownloadTask *task = [session downloadTaskWithURL:[NSURL URLWithString:item.url]];
     item.sessionId = task.taskIdentifier;
-    item.downloaded = NO;
+    item.state = DownloadItemStateDownloading;
     [itemArray addObject:item];
-    
-    *sessionId = task.taskIdentifier;
     
     [task resume];
 }
 
-- (void)startDownloadTaskWithItem:(DownloadItem *)item sessionId:(NSUInteger *)sessionId
+- (void)startDownloadTaskWithItem:(DownloadItem *)item
 {
     NSURLSessionDownloadTask *task = [session downloadTaskWithURL:[NSURL URLWithString:item.url]];
     item.sessionId = task.taskIdentifier;
-    *sessionId = task.taskIdentifier;
+    item.state = DownloadItemStateDownloading;
     
     [task resume];
 }
@@ -102,6 +100,12 @@
             if (task.taskIdentifier == sessionId)
             {
                 [task resume];
+                DownloadItem *item = [self itemWithSessionId:sessionId];
+                if (item)
+                {
+                    item.state = DownloadItemStateDownloading;
+                }
+                break;
             }
         }
     }];
@@ -109,7 +113,21 @@
 
 - (void)pauseDownloadTaskWithSessionId:(NSUInteger)sessionId
 {
-    
+    [session getTasksWithCompletionHandler:^(NSArray *dataTasks, NSArray *uploadTasks, NSArray *downloadTasks) {
+        for (NSURLSessionDownloadTask *task in downloadTasks)
+        {
+            if (task.taskIdentifier == sessionId)
+            {
+                [task suspend];
+                DownloadItem *item = [self itemWithSessionId:sessionId];
+                if (item)
+                {
+                    item.state = DownloadItemStatePause;
+                }
+                break;
+            }
+        }
+    }];
 }
 
 - (void)synchronize
@@ -139,7 +157,7 @@
     {
         [dict setObject:item.url forKey:@"url"];
     }
-    [dict setObject:@(item.downloaded) forKey:@"state"];
+    [dict setObject:@((item.state == DownloadItemStateDownloaded)) forKey:@"state"];
     if (item.savedName)
     {
         [dict setObject:item.savedName forKey:@"name"];
@@ -160,7 +178,7 @@
     if (dict[@"state"])
     {
         NSNumber *num = dict[@"state"];
-        item.downloaded = [num boolValue];
+        item.state = ([num boolValue] == 0)?DownloadItemStateNotStart:DownloadItemStateDownloaded;
     }
     
     if (dict[@"name"])
@@ -191,7 +209,7 @@ didFinishDownloadingToURL:(NSURL *)location
     DownloadItem *item = [self itemWithSessionId:downloadTask.taskIdentifier];
     if (item)
     {
-        item.downloaded = YES;
+        item.state = DownloadItemStateDownloaded;
         NSString *name = [item.url lastPathComponent];
         NSString *path = [downloadDirectory stringByAppendingFormat:@"/%@",name];
         item.savedName = path;
@@ -200,7 +218,7 @@ didFinishDownloadingToURL:(NSURL *)location
     
     if (self.downloadedBlock)
     {
-        self.downloadedBlock(downloadTask.taskIdentifier);
+        self.downloadedBlock(item);
     }
 }
 
@@ -216,7 +234,7 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
     
     if (self.downloadingBlock)
     {
-        self.downloadingBlock(downloadTask.taskIdentifier, progress);
+        self.downloadingBlock(item);
     }
 }
 

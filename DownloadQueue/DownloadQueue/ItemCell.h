@@ -8,8 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ItemCellDelegate;
+
 @interface ItemCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
+@property (weak, nonatomic) id <ItemCellDelegate> delegate;
+
+- (void)setButtonTitle:(NSString *)title;
+
+@end
+
+@protocol ItemCellDelegate <NSObject>
+
+- (void)itemCellDidTouchPauseButtonWithCell:(ItemCell *)cell;
 
 @end
