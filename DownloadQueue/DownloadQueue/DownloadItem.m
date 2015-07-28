@@ -10,12 +10,13 @@
 
 @implementation DownloadItem
 
-- (instancetype)initWithUrl:(NSString *)url
+- (instancetype)initWithUrl:(NSString *)url userInfo:(id)userInfo
 {
     self = [super init];
     if (self)
     {
         _url = url;
+        _userInfo = userInfo;
     }
     return self;
 }

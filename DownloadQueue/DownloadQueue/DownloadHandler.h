@@ -26,6 +26,7 @@
 
 - (void)resumeDownloadTaskWithSessionId:(NSUInteger)sessionId;
 - (void)pauseDownloadTaskWithSessionId:(NSUInteger)sessionId;
+- (void)cancelDownloadTaskWithSessionId:(NSUInteger)sessionId;
 
 - (void)synchronize;
 

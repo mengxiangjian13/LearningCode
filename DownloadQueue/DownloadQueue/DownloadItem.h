@@ -18,10 +18,11 @@ typedef enum{
 
 @interface DownloadItem : NSObject
 
-- (instancetype)initWithUrl:(NSString *)url;
+- (instancetype)initWithUrl:(NSString *)url userInfo:(id)userInfo;
 
 @property (nonatomic, assign) NSUInteger sessionId;
 @property (nonatomic, strong, readonly) NSString *url;
+@property (nonatomic, strong, readonly) id userInfo;
 @property (nonatomic, assign) DownloadItemState state;
 @property (nonatomic, strong) NSString *savedName;
 @property (nonatomic, assign) CGFloat progress;

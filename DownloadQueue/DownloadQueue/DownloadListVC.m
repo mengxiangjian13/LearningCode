@@ -53,7 +53,7 @@
 
 - (void)addDownload
 {
-    DownloadItem *item = [[DownloadItem alloc] initWithUrl:@"http://v.cdn.bbwc.cn/audio/bloomberg/2014/0325/20140325033418591.mp3"];
+    DownloadItem *item = [[DownloadItem alloc] initWithUrl:@"http://v.cdn.bbwc.cn/audio/bloomberg/2014/0325/20140325033418591.mp3" userInfo:nil];
     [[DownloadHandler sharedHandler] addDownloadTaskWithItem:item];
     
     [self.tableView reloadData];

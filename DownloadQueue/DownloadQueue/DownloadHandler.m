@@ -130,6 +130,25 @@
     }];
 }
 
+- (void)cancelDownloadTaskWithSessionId:(NSUInteger)sessionId
+{
+    [session getTasksWithCompletionHandler:^(NSArray *dataTasks, NSArray *uploadTasks, NSArray *downloadTasks) {
+        for (NSURLSessionDownloadTask *task in downloadTasks)
+        {
+            if (task.taskIdentifier == sessionId)
+            {
+                [task cancel];
+                DownloadItem *item = [self itemWithSessionId:sessionId];
+                if (item)
+                {
+                    item.state = DownloadItemStateNotStart;
+                }
+                break;
+            }
+        }
+    }];
+}
+
 - (void)synchronize
 {
     NSMutableArray *arr = [NSMutableArray new];
@@ -163,6 +182,11 @@
         [dict setObject:item.savedName forKey:@"name"];
     }
     
+    if (item.userInfo)
+    {
+        [dict setObject:item.userInfo forKey:@"userInfo"];
+    }
+    
     return dict;
 }
 
@@ -173,7 +197,7 @@
         return nil;
     }
     
-    DownloadItem *item = [[DownloadItem alloc] initWithUrl:dict[@"url"]];
+    DownloadItem *item = [[DownloadItem alloc] initWithUrl:dict[@"url"] userInfo:dict[@"userInfo"]];
     
     if (dict[@"state"])
     {
@@ -214,6 +238,10 @@ didFinishDownloadingToURL:(NSURL *)location
         NSString *path = [downloadDirectory stringByAppendingFormat:@"/%@",name];
         item.savedName = path;
         item.sessionId = 0;
+        
+        [[NSFileManager defaultManager] copyItemAtURL:location
+                                                toURL:[NSURL fileURLWithPath:path]
+                                                error:nil];
     }
     
     if (self.downloadedBlock)
