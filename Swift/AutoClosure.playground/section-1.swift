@@ -13,7 +13,7 @@ func logIfTrue(closure:()->Bool)
 {
     if closure()
     {
-        println("true");
+        print("true");
     }
 }
 
@@ -22,11 +22,11 @@ logIfTrue(){
 }
 
 // 上面的参数样式的闭包可以用@closure简化
-func logIfTrueNew(closure: @autoclosure ()->Bool)
+func logIfTrueNew(@autoclosure closure: ()->Bool)
 {
     if closure()
     {
-        println("true");
+        print("true");
     }
 }
 
@@ -46,7 +46,7 @@ let c = a ?? b; // ??前面不为nil的时候，取前面的。在??前面的为
 */
 
 //// 练习。试着实现&& || 的实现
-func && (pre:Bool,suf:@autoclosure ()->Bool) -> Bool
+func && (pre:Bool,@autoclosure suf: ()->Bool) -> Bool
 {
     if pre == false
     {

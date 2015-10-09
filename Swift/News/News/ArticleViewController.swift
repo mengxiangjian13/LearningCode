@@ -22,8 +22,9 @@ class ArticleViewController: UIViewController {
         contentLabel.textAlignment = NSTextAlignment.Center
         contentLabel.numberOfLines = 0
         self.view.addSubview(contentLabel)
-        contentLabel.text = "这篇文章的内容是：“文章\(self.title)的内容”，标题是：\(self.title)"
-        
+        if let titleString = self.title {
+            contentLabel.text = "这篇文章的内容是：“文章\(titleString)的内容”，标题是：\(titleString)"
+        }
     }
 
     override func didReceiveMemoryWarning() {

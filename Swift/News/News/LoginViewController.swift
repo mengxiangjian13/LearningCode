@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
 //            self.view.addSubview(button)
 //        }
         
-        let loginButton: AnyObject! = UIButton.buttonWithType(.System)
+        let loginButton: AnyObject! = UIButton(type: .System)
         if let button = loginButton as? UIButton
         {
             button.frame = CGRectMake(130, 300, 50, 50);
@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
     
     func cancel()
     {
-        self.navigationController!.dismissViewControllerAnimated(true, completion: {println("关闭登录框")})
+        self.navigationController!.dismissViewControllerAnimated(true, completion: {print("关闭登录框")})
     }
     
     func login()

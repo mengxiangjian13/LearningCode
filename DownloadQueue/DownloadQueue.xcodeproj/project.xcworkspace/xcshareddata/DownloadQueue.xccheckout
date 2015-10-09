@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>B3391F58-6829-4F08-A6B3-7BBBBBED3176</string>
 	<key>IDESourceControlProjectName</key>
-	<string>DownloadQueue</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9A574F9AF0957FE1FA5658413A67E7101C67272A</key>
 		<string>https://github.com/mengxiangjian13/LearningCode.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>DownloadQueue/DownloadQueue.xcodeproj</string>
+	<string>DownloadQueue/DownloadQueue.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9A574F9AF0957FE1FA5658413A67E7101C67272A</key>

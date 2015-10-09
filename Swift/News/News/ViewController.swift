@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.title = "新闻"
         
         // 登录按钮
-        let loginButton: AnyObject! = UIButton.buttonWithType(.System)
+        let loginButton: AnyObject! = UIButton(type: .System)
         if let button = loginButton as? UIButton
         {
             button.frame = CGRectMake(0, 0, 44, 44)
@@ -36,10 +36,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func login()
     {
-        println("登录")
+        print("登录")
         let loginVC = LoginViewController()
         let loginNVC = UINavigationController(rootViewController: loginVC)
-        self.navigationController!.presentViewController(loginNVC, animated: true, completion: {println("弹出登录框")})
+        self.navigationController!.presentViewController(loginNVC, animated: true, completion: {print("弹出登录框")})
     }
     
     var titleArray = ["1","2","3","4","5"]
@@ -54,18 +54,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let identifier = "cell"
-        var cell = tableView.dequeueReusableCellWithIdentifier(identifier) as? UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier(identifier)
         if cell == nil
         {
             cell = UITableViewCell(style: .Default, reuseIdentifier: identifier)
         }
         
-        cell!.textLabel.text = titleArray[indexPath.row]
+        cell!.textLabel!.text = titleArray[indexPath.row]
         
         return cell!
     }
     
-    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         let articleViewController = ArticleViewController()
         articleViewController.title = titleArray[indexPath.row]

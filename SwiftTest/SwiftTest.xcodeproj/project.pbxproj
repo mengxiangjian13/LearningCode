@@ -153,6 +153,7 @@
 		CE36D3C5195178C900557472 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = cn.com.modernmedia;
 				TargetAttributes = {
@@ -385,6 +386,7 @@
 				CE36D3E6195178C900557472 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE36D3E7195178C900557472 /* Build configuration list for PBXNativeTarget "SwiftTestTests" */ = {
 			isa = XCConfigurationList;
@@ -393,6 +395,7 @@
 				CE36D3E9195178C900557472 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -51,5 +51,5 @@ var array = ["a","b","3","5","r"];
 
 for i in ReverseSequence(array: array)
 {
-    println(i); // 输出结果为 r,5,3,b,a
+    print(i); // 输出结果为 r,5,3,b,a
 }
