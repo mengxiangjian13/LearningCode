@@ -12,7 +12,7 @@ func addToOne(para:Int) -> Int{
     return para + 1
 }
 
-func addToOneWithOutPara(#para:Int) ->Int{
+func addToOneWithOutPara(para para:Int) ->Int{
     return para + 1
 }
 
@@ -28,8 +28,9 @@ b = addToOneWithOutPara(para: a)
 
 var c = addToOneAndDefaultTwo(b,two:5)
 
-func sum4(numbers:Int...) -> Int[]{
-    var i = Int[]()
+// ... 参数可以以逗号分隔
+func sum4(numbers:Int...) -> [Int]{
+    var i = [Int]()
     for number in numbers{
         i.append(number)
     }
@@ -58,7 +59,7 @@ c
 func fivePlus(fun : (Int) ->Int){
     let i = 5
     let j = fun(i)
-    println(j)
+    print(j)
 }
 
 fivePlus(addToOne)

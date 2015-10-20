@@ -35,7 +35,7 @@ let freezingPoint = Celsius(fromKelvin: 273.15)
 freezingPoint.temperatureInCelsius
 
 struct Color {
-    let red = 0.0, green = 0.0, blue = 0.0
+    var red = 0.0, green = 0.0, blue = 0.0
     init (red : Double, green : Double , blue : Double)
     {
         self.red = red
@@ -60,7 +60,7 @@ class SurveyQuestion
     
     func ask()
     {
-        println(text)
+        print(text)
     }
 }
 

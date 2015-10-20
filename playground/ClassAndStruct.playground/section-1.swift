@@ -2,6 +2,9 @@
 
 import Cocoa
 
+// class 实例为引用类型
+// struct 实例为值类型
+
 var str = "Hello, playground"
 
 struct Resolution {
@@ -34,7 +37,7 @@ aVideoMode.name = "3"
 videoMode.name
 
 if videoMode === aVideoMode {
-    println("vide0Mode equals to aVideoMode")
+    print("vide0Mode equals to aVideoMode")
 }
 
 var dict = ["a" : 1 ,"b" : 2, "c" : 3]
@@ -58,7 +61,7 @@ a
 b
 c
 
-b.unshare()
+//b.unshare()
 b[0] = -105
 
 a

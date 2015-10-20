@@ -3,27 +3,24 @@ import Cocoa
 
 var str = "Hello, playground"
 
-var names : String[] = ["Addd","Rddd","Eddd","Cddd","Gddd"]
+var names : [String] = ["Addd","Rddd","Eddd","Cddd","Gddd"]
 
-var sortedArr = sort(names)
+var sortedArr = names.sort()
 
 func sortPrinciple(a:String,b:String) ->Bool{
     return a>b
 }
 
-//var descArr = sort(names, sortPrinciple)
+var descArr = names.sort(){(a:String,b:String)->Bool in return a>b}
 
-var descArr = sort(names, {(a:String,b:String)->Bool in return a>b})
 descArr
 
-descArr = sort(names, {a,b in return a > b})
-descArr = sort(names, {a,b in a > b})
-descArr = sort(names, {$0 > $1})
-descArr = sort(names, >)
-
+descArr = names.sort(){a,b in return a > b}
+descArr = names.sort(){a,b in a > b}
+descArr = names.sort(){$0 > $1}
 
 //trailing closures
-descArr = sort(names){
+descArr = names.sort(){
     $0 > $1
 }
 
@@ -40,8 +37,8 @@ let strings = numbers.map{
     
     var output = String(number)
     var result = ""
-    for c in output{
-        result += c + "/"
+    for c in output.characters {
+        result += String(c) + "/"
     }
     
     return result
@@ -52,7 +49,7 @@ let oStrings = ["1","2","3","4"];
 let oNumber = oStrings.map(){
     string -> Int in
     
-    var a = string.toInt()!
+    var a = Int(string)!
     return a
 }
 
@@ -98,7 +95,8 @@ tenten()
 var myname = "hello,mengxiangjian,"
 let closure = {(name:String) -> String in
     myname += name
-    return myname}
+    return myname
+}
 
 closure("gzy")
 closure("gzy")

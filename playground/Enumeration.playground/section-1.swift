@@ -11,10 +11,10 @@ enum Direction :Int{
 }
 
 let direction = Direction.East;
-let raw = direction.toRaw()
+let raw = direction.rawValue
 
-let from = Direction.fromRaw(2)!
-let south = from.toRaw()
+let from = Direction(rawValue: 2)!
+let south = from.rawValue
 
 
 enum Transportation {

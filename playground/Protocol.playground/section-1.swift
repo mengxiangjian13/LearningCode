@@ -12,7 +12,7 @@ var str = "Hello, playground"
 protocol PropertyProtocol {
     var getProperty:Int{get} //计算属性，只读属性
     var settableProperty:Int{get set} // 存储属性 读写属性
-    class var classProperty:Int{get set} // 类属性
+    static var classProperty:Int{get set} // 类属性
     
 }
 
@@ -35,7 +35,7 @@ struct Person : FullName
     
     var fullName : String
     {
-        return (prefix ? prefix! + " " : " ") + name
+        return (prefix != nil ? prefix! + " " : " ") + name
     }
 }
 
@@ -215,7 +215,7 @@ class Counter {
         {
             count += amount
         }
-        else if let amount = dataSource?.fixedIncrement?
+        else if let amount = dataSource?.fixedIncrement
         {
             count += amount
         }
@@ -224,14 +224,14 @@ class Counter {
 
 class ThreeSource : CounterDataSource
 {
-    let fixedIncrement = 3
+    @objc let fixedIncrement = 3
 }
 
 class OneIncrementSource : CounterDataSource
 {
-    func incrementForCount(count: Int) -> Int
+    @objc func incrementForCount(count: Int) -> Int
     {
-        return 1
+        return 1 + count
     }
 }
 

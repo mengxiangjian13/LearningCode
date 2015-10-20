@@ -20,11 +20,11 @@ class Person {
 //
 //if let count = john.residence?.numberOfRooms
 //{
-//    println("john's room has \(count) rooms")
+//    print("john's room has \(count) rooms")
 //}
 //else
 //{
-//    println("unable to get the count")
+//    print("unable to get the count")
 //}
 
 class Residence {
@@ -40,7 +40,7 @@ class Residence {
     
     func printNumberOfRooms()
     {
-        println("The number of rooms is \(numberOfRooms)")
+        print("The number of rooms is \(numberOfRooms)")
     }
     
     var address : Address?
@@ -53,11 +53,11 @@ class Address
     var street : String?
     func buildingIdentifier() -> String?
     {
-        if buildingName
+        if buildingName != nil
         {
             return buildingName
         }
-        else if buildingNumber
+        else if buildingNumber != nil
         {
             return buildingNumber
         }
@@ -83,50 +83,50 @@ let john = Person()
 // 通过可选链调用属性
 if let roomCount = john.residence?.numberOfRooms
 {
-    println("john's residence has \(roomCount) rooms")
+    print("john's residence has \(roomCount) rooms")
 }
 else
 {
-    println("unable to get number of rooms")
+    print("unable to get number of rooms")
 }
 
 // 通过可选链调用方法
-if john.residence?.printNumberOfRooms()
+if (john.residence?.printNumberOfRooms() != nil)
 {
-    println("it can print room count")
+    print("it can print room count")
 }
 else
 {
-    println("unable to print room count")
+    print("unable to print room count")
 }
 
 // 通过可选链调用下标脚本
 john.residence = Residence()
-john.residence!.rooms += Room(name: "Bed Room")
-john.residence!.rooms += Room(name: "Living Room")
+john.residence!.rooms.append(Room(name: "Bed Room"))
+john.residence!.rooms.append(Room(name: "Living Room"))
 
 if let name = john.residence?[0].name
 {
-    println("room0's name is \(name)")
+    print("room0's name is \(name)")
 }
 else
 {
-    println("unable to get room0's name")
+    print("unable to get room0's name")
 }
 
 if let street = john.residence?.address?.street
 {
-    println("john's residence address is \(street)")
+    print("john's residence address is \(street)")
 }
 else
 {
-    println("unable to get address street")
+    print("unable to get address street")
 }
 
 // 链接可选返回值的方法
 if let buildingIdentifier = john.residence?.address?.buildingIdentifier()
 {
-    println("john's residence building identifier is \(buildingIdentifier)")
+    print("john's residence building identifier is \(buildingIdentifier)")
 }
 
 

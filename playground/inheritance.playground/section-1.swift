@@ -29,7 +29,7 @@ someVehicle.description()
 
 class Bicycle : Vehicle {
     
-    init() {
+    override init() {
         super.init()
         numberOfWheels = 2
     }
@@ -42,7 +42,7 @@ someBicycle.description()
 class Giant : Bicycle
 {
     
-    init()
+    override init()
     {
         super.init()
         maxPassengers = 2
@@ -62,7 +62,7 @@ someGiant.description()
 class Car : Vehicle
 {
     var speed : Double
-    init()
+    override init()
     {
         speed = 0
         super.init()

@@ -27,7 +27,7 @@ let a = "marathon total length is \(aMarathon)m"
 // function
 extension Int {
     func repetitions(task:()->()) {
-        for i in 0..<self
+        for _ in 0..<self
         {
             task()
         }
@@ -36,7 +36,7 @@ extension Int {
 
 // 利用尾随闭包
 4.repetitions{
-    println("task done!")
+    print("task done!")
 }
 
 //如果利用方法改变自己的值，为修改实例方法，必须加mutating标注
@@ -50,7 +50,7 @@ extension Int{
         let b = self
         if a > 0
         {
-            for i in 0..<a - 1
+            for _ in 0..<a - 1
             {
                 self *= b
             }
@@ -106,17 +106,17 @@ extension Character
 }
 
 func printLetterKinds(word:String){
-    println("'\(word)' is made up of the following kinds of letter:")
-    for character in word
+    print("'\(word)' is made up of the following kinds of letter:")
+    for character in word.characters
     {
         switch character.kind
         {
             case .Vowel:
-                println("wowel ")
+                print("wowel ")
             case .Consonant:
-                println("consonant ")
+                print("consonant ")
             case .Other:
-                println("other")
+                print("other")
         }
     }
 }

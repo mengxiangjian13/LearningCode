@@ -97,7 +97,7 @@ class HTMLElement {
     }
     
     deinit{
-        println("ffff")
+        print("ffff")
     }
 }
 

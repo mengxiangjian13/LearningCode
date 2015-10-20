@@ -27,6 +27,7 @@ class Counter {
 
 var count = Counter()
 count.incrementBy(5, times: 3)
+count.count
 
 struct Point {
     var x = 0.0
@@ -48,8 +49,8 @@ if somePoint.isToTheRightOfX(1.0) {
 
 let thePoint = somePoint
 somePoint.moveBy(2.0, deltaY: 3.0)
-somePoint
-thePoint
+somePoint.x
+thePoint.x
 
 enum TriStateSwitch : Int {
     case Off = 0,Low,High
@@ -67,10 +68,10 @@ enum TriStateSwitch : Int {
 
 var ovenLight = TriStateSwitch.Low
 ovenLight.next()
-ovenLight.toRaw()
+ovenLight.rawValue
 ovenLight.next()
-ovenLight.toRaw()
+ovenLight.rawValue
 ovenLight.next()
-ovenLight.toRaw()
+ovenLight.rawValue
 
 

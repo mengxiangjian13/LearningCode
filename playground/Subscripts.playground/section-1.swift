@@ -29,7 +29,7 @@ enum Day : Int
     subscript(index:Int) -> Day
     {
         get {
-            return Day.fromRaw(index)!
+            return Day(rawValue: index)!
         }
         set(newValue){
             self = newValue
@@ -37,20 +37,20 @@ enum Day : Int
     }
     
     static func chooseDay(index:Int) -> Day {
-        return Day.fromRaw(index)!
+        return Day(rawValue: index)!
     }
 }
 
 var day = Day.Monday
 
 let wednesday = day[3]
-wednesday.toRaw()
+wednesday.rawValue
 
 day[3] = Day.Sunday
-day.toRaw()
+day.rawValue
 
 let friday = Day.chooseDay(5)
-friday.toRaw()
+friday.rawValue
 
 
 //any count 
@@ -58,7 +58,7 @@ friday.toRaw()
 struct Matrix {
     let rows : Int
     let columns : Int
-    var grid : Double[]
+    var grid : [Double]
     init(rows:Int,columns:Int)
     {
         self.rows = rows

@@ -37,15 +37,16 @@ struct Rect {
     var point = Point()
     var size = Size()
     var center:Point {
-    get {
-        let centerX = point.x + size.width / 2.0
-        let centerY = point.y + size.height / 2.0
-        return Point(x: centerX, y: centerY)
-    }
-    set {
-        point.x = newValue.x - size.width / 2.0
-        point.y = newValue.y - size.height / 2.0
-    }
+        get {
+            let centerX = point.x + size.width / 2.0
+            let centerY = point.y + size.height / 2.0
+            return Point(x: centerX, y: centerY)
+        }
+        set {
+            // newValue 是设置的新值
+            point.x = newValue.x - size.width / 2.0
+            point.y = newValue.y - size.height / 2.0
+        }
     }
 }
 

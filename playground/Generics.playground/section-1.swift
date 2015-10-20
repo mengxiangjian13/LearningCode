@@ -40,7 +40,7 @@ struct Stack<T> {
 // T : 约束
 func findIndex<T:Equatable>(array:[T],valueToFind:T) -> Int?
 {
-    for (index, value:T) in enumerate(array)
+    for (index, value) in array.enumerate()
     {
         if value == valueToFind // 只有实现Equatable协议的才可以==
         {
@@ -49,6 +49,8 @@ func findIndex<T:Equatable>(array:[T],valueToFind:T) -> Int?
     }
     return nil
 }
+
+findIndex([1,2,3], valueToFind: 2)
 
 // 关联类型行为
 

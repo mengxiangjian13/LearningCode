@@ -17,9 +17,13 @@ class Movie : MediaItem
     var director : String
     init(name: String, director:NSString)
     {
-        self.director = director
+        self.director = director as String
         super.init(name: name)
     }
+}
+
+class LittleMovie : Movie {
+    
 }
 
 class Song : MediaItem
@@ -27,7 +31,7 @@ class Song : MediaItem
     var artist : String
     init(name: String, artist:NSString)
     {
-        self.artist = artist
+        self.artist = artist as String
         super.init(name: name)
     }
 }
@@ -37,7 +41,8 @@ let library = [
     Song(name: "Blue Suede Shoes", artist: "Elvis Presley"),
     Movie(name: "Citizen Kane", director: "Orson Welles"),
     Song(name: "The One And Only", artist: "Chesney Hawkes"),
-    Song(name: "Never Gonna Give You Up", artist: "Rick Astley")
+    Song(name: "Never Gonna Give You Up", artist: "Rick Astley"),
+    LittleMovie(name: "Little wazi", director: "mengxiangjian")
 ]
 
 // type checking
@@ -63,11 +68,11 @@ for item in library
 {
     if let movie = item as? Movie
     {
-        println("Movie:\(movie.name),dir.\(movie.director)")
+        print("Movie:\(movie.name),dir.\(movie.director)")
     }
     else if let song = item as? Song
     {
-        println("Song:\(song.name),by\(song.artist)")
+        print("Song:\(song.name),by\(song.artist)")
     }
 }
 
