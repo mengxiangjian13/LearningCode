@@ -8,21 +8,43 @@
 
 import UIKit
 import RxSwift
-//import Alamofire
+import Alamofire
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var a = [1,2,3,4,5,6]
-        a.append(7)
-        a.toObservable().subscribeNext {
-            x in
-            print(x)
+        
+        let observer = self.requestObservable("http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=2de143494c0b295cca9337e1e96b00e0")
+        observer.subscribe(onNext: { json in
+            print(json)
+            }, onError: { error in
+                print(error)
+            }, onCompleted: {
+                print("finish!")
+            }) {
+                
         }
         
-        
+    }
+    
+    func requestObservable(url:String) -> Observable<AnyObject> {
+        return Observable.create({ observer -> Disposable in
+            let req = Alamofire.request(.GET, url)
+            req.responseJSON(completionHandler: {response -> Void in
+                switch response.result {
+                case Alamofire.Result.Success(let json):
+                    observer.on(RxSwift.Event.Next(json))
+                    observer.on(RxSwift.Event.Completed)
+                case Alamofire.Result.Failure(let error):
+                    observer.on(RxSwift.Event.Error(error))
+                }
+            })
+            return AnonymousDisposable {
+                req.cancel()
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
