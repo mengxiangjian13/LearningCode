@@ -12,7 +12,7 @@ import RealmSwift
 class TaskList: Object {
     
     dynamic var name = ""
-    dynamic var createAt = NSDate()
+    dynamic var createdAt = NSDate()
     let tasks = List<Task>()
     
 // Specify properties to ignore (Realm won't persist these)

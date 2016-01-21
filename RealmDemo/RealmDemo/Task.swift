@@ -12,7 +12,7 @@ import RealmSwift
 class Task: Object {
     
     dynamic var name = ""
-    dynamic var createAt = NSDate()
+    dynamic var createdAt = NSDate()
     dynamic var notes = ""
     dynamic var isCompleted = false
     
