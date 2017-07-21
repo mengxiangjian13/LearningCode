@@ -297,10 +297,10 @@ var aNil : String? = nil
 var anotherNil : String?? = aNil
 var literalNil : String?? = nil
 if let a = anotherNil {
-    print("another \(a) nil")
+    print("another \(String(describing: a)) nil")
 }
 if let b = literalNil {
-    print("literal \(b) nil")
+    print("literal \(String(describing: b)) nil")
 }
 
 // optional map
@@ -309,4 +309,79 @@ let optionalInt = optionalMap.map {
     $0 * 2
 }
 optionalInt
+
+// protocol extension
+protocol protocolA {
+    func method1()
+}
+
+extension protocolA {
+    func method1() {
+        print("method1")
+    }
+    
+    func method2() { // 在protocol中没有定义
+        print("method2")
+    }
+}
+struct ProtocolStructA : protocolA {
+    func method1() {
+        print("ProtocolStructA method1")
+    }
+    func method2() {
+        print("ProtocolStructA method2")
+    }
+}
+let protocolStructA = ProtocolStructA()
+protocolStructA.method1()
+let protocolStructB = protocolStructA as protocolA
+protocolStructB.method2() // 不会动态派发到ProtocolStructA类型，而是protocolA类型
+
+// where 的实用  4. 泛型 5 extension protocol
+let scores : [Int?] = [46,99,nil]
+scores.flatMap{return $0}.forEach {
+    switch $0 {
+    case let x where x > 60:
+        print("及格了")
+    default:
+        print("不及格")
+    }
+}
+
+let fScores = scores.flatMap{return $0}
+for i in fScores where i > 60 {
+    print("\(i)分及格了")
+}
+
+if let a = scores[1], a > 60 { // 在if和guard中省略where
+    print("\(a)分及格了")
+}
+
+// indrect 和 嵌套 以enum模拟链表
+indirect enum LinkList<Element:Equatable> {
+    case empty
+    case node(Element, LinkList<Element>)
+    func removeNode(_ element: Element) -> LinkList<Element>{
+        guard case let .node(value, next) = self else {
+            return .empty
+        }
+        return (value == element) ? next : .node(value, next.removeNode(element))
+    }
+}
+
+var linkList : LinkList = .node(1, .node(2, .node(3, .node(4, .empty))))
+// 1->2->3->4
+print(linkList)
+let linkList2 = linkList.removeNode(2)
+// 1->3->4
+print(linkList2)
+
+
+
+
+
+
+
+
+
 
