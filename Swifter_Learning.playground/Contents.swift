@@ -304,7 +304,7 @@ if let b = literalNil {
 }
 
 // optional map
-let optionalMap : Int? = 3
+let optionalMap : Int? = nil
 let optionalInt = optionalMap.map {
     $0 * 2
 }
@@ -377,10 +377,78 @@ let linkList2 = linkList.removeNode(2)
 print(linkList2)
 
 
+// Swift Objc
+// selector
+class ObjcClass {
+    init() {
+        NotificationCenter.default.addObserver(self, selector: #selector(objcSelector), name: NSNotification.Name(rawValue:"notificationname"), object: nil)
+    }
+    @objc func objcSelector() {
+        
+    }
+    func someFunc() {
+        print("type instance method")
+    }
+}
+
+// Type.instanceMethod
+let typeInstanceMethod = ObjcClass.someFunc
+typeInstanceMethod(ObjcClass())()
+
+// singleton
+
+class SingletonClass {
+    static let shared = SingletonClass()
+    private init() {
+        // 保证不能在外面通过正常的方式创建新对象，只能使用单例
+    }
+}
+let singleton = SingletonClass.shared
+
+// 条件编译
+#if os(iOS)
+#endif
+
+// 编译标记
+// MARK:
+// TODO:
+// FIXME:
 
 
+// Swift 与 Objective-C 互相调用
+/**
+ 1. Swift调用OC,需要生成一个 {product-module-name}-Bridging-Header.h，将暴露出来的OC头文件写入，Swift就可以调用了。
+ 2. OC调用Swift的framework，与一般的framework一样，使用@import。
+ 3. OC调用同一个项目中的Swift，则需要import {product-module-name}-Swift.h
+ 4. 对于2、3，Swift被暴露给OC调用的类，方法等，需要加@objc修饰符，因为OC为动态调用，Swift是静态的，没有运行时信息。
+ */
 
+// weak unonwed
+class WeakClass {
+    var name : String
+    init(name:String) {
+        self.name = name
+    }
+    lazy var printself : ()->() = {
+        [weak self] in
+        // weak 必须是optional类型
+        if let strongSelf = self {
+            print("weak class print \(strongSelf.name)")
+        }
+    }
+}
 
+// autorelease pool
+autoreleasepool {
+    // 释放autorelease对象
+}
+
+// 值类型和引用类型
+/**
+ Array和Dictionary被设计成了值类型，从而降低了堆上的内存的分配和回收的次数
+ 只有在值类型改变的时候，才会复制。值类型容器里面的值类型会复制，引用类型只会复制一份引用。
+ 但当容器内元素个数过多，或者增加删除操作过于频繁，就会造成复制起来开销太大。所以这种情况，我们可以采用引用型容器，NSMutableArray、NSMutableDictionary
+ */
 
 
 
