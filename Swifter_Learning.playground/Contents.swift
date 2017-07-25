@@ -450,6 +450,53 @@ autoreleasepool {
  但当容器内元素个数过多，或者增加删除操作过于频繁，就会造成复制起来开销太大。所以这种情况，我们可以采用引用型容器，NSMutableArray、NSMutableDictionary
  */
 
+// unsafepointer
+var pointer : CInt = 2
+func printPointerContent(_ num:UnsafePointer<CInt>) {
+    // pointee为指针响应内存中存储的内容
+    print(num.pointee)
+}
+printPointerContent(&pointer)
 
+// GCD
+let queue = DispatchQueue(label: "QQQQQQ")
+queue.async {
+    print("async queue")
+    DispatchQueue.main.async {
+        print("main queue")
+    }
+}
+queue.asyncAfter(deadline: DispatchTime.now() + 2) {
+    print("2 second after")
+}
 
+// 通过dispatch_after，来及时 cancel
+
+typealias Task = (Bool) -> ()
+
+func delay(_ delay:TimeInterval, task: @escaping ()->()) -> Task {
+    func dispatch_after(block: @escaping ()->()) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delay, execute: block)
+    }
+    
+    var canceled = false
+    
+    let madeTask : Task = {
+        cancel in
+        canceled = cancel
+    }
+    
+    dispatch_after {
+        if !canceled {
+            task()
+        }
+    }
+    return madeTask
+}
+
+let delay110 = delay(5) {
+    print("call 110")
+}
+
+delay110(true)
 
