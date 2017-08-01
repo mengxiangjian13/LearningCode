@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         startLiveVideo()
-        startDetect()
+        startTextDetection()
     }
     
     override func viewDidLayoutSubviews() {
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         session.startRunning()
     }
     
-    func startDetect() {
+    func startTextDetection() {
         let textDetectRequest = VNDetectTextRectanglesRequest { (request, error) in
             guard let observations = request.results else {
                 print("no result")
